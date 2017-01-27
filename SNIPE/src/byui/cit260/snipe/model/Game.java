@@ -13,7 +13,7 @@ import java.util.Objects;
  * @author Missy
  */
 public class Game implements Serializable{
-   private String moveCounter;
+   private double moveCounter;
    private double noCodes;
 
     public Game() {
@@ -21,11 +21,11 @@ public class Game implements Serializable{
    
    
 
-    public String getMoveCounter() {
+    public double getMoveCounter() {
         return moveCounter;
     }
 
-    public void setMoveCounter(String moveCounter) {
+    public void setMoveCounter(double moveCounter) {
         this.moveCounter = moveCounter;
     }
 
