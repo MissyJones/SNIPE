@@ -44,7 +44,7 @@ public class SNIPE {
        MentalChallenge mentalOne = new MentalChallenge();
        
        mentalOne.setDescription("circle question");
-       mentalOne.setReward(1);
+       mentalOne.setReward(2);
        mentalOne.setChallengeID(1);
        mentalOne.setChallengeType("easy");
        
