@@ -13,6 +13,7 @@ import java.util.Objects;
  * @author Maxwell
  */
 public class Location implements Serializable {
+    private String name;
     private String description;
     private String challengeType;
     private double placeID;
@@ -32,6 +33,14 @@ public class Location implements Serializable {
 
     public String getChallengeType() {
         return challengeType;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setChallengeType(String challengeType) {
@@ -64,12 +73,13 @@ public class Location implements Serializable {
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 79 * hash + Objects.hashCode(this.description);
-        hash = 79 * hash + Objects.hashCode(this.challengeType);
-        hash = 79 * hash + (int) (Double.doubleToLongBits(this.placeID) ^ (Double.doubleToLongBits(this.placeID) >>> 32));
-        hash = 79 * hash + (int) (Double.doubleToLongBits(this.passportAdd) ^ (Double.doubleToLongBits(this.passportAdd) >>> 32));
-        hash = 79 * hash + (int) (Double.doubleToLongBits(this.puzzleTrigger) ^ (Double.doubleToLongBits(this.puzzleTrigger) >>> 32));
+        int hash = 5;
+        hash = 17 * hash + Objects.hashCode(this.name);
+        hash = 17 * hash + Objects.hashCode(this.description);
+        hash = 17 * hash + Objects.hashCode(this.challengeType);
+        hash = 17 * hash + (int) (Double.doubleToLongBits(this.placeID) ^ (Double.doubleToLongBits(this.placeID) >>> 32));
+        hash = 17 * hash + (int) (Double.doubleToLongBits(this.passportAdd) ^ (Double.doubleToLongBits(this.passportAdd) >>> 32));
+        hash = 17 * hash + (int) (Double.doubleToLongBits(this.puzzleTrigger) ^ (Double.doubleToLongBits(this.puzzleTrigger) >>> 32));
         return hash;
     }
 
@@ -94,6 +104,9 @@ public class Location implements Serializable {
         if (Double.doubleToLongBits(this.puzzleTrigger) != Double.doubleToLongBits(other.puzzleTrigger)) {
             return false;
         }
+        if (!Objects.equals(this.name, other.name)) {
+            return false;
+        }
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
@@ -105,8 +118,9 @@ public class Location implements Serializable {
 
     @Override
     public String toString() {
-        return "Location{" + "description=" + description + ", challengeType=" + challengeType + ", placeID=" + placeID + ", passportAdd=" + passportAdd + ", puzzleTrigger=" + puzzleTrigger + '}';
+        return "Location{" + "name=" + name + ", description=" + description + ", challengeType=" + challengeType + ", placeID=" + placeID + ", passportAdd=" + passportAdd + ", puzzleTrigger=" + puzzleTrigger + '}';
     }
+
     
     
     

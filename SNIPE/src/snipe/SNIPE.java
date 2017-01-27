@@ -85,6 +85,7 @@ public class SNIPE {
        stgrad.setPassportAdd(1);
        stgrad.setPlaceID(0);
        stgrad.setPuzzleTrigger(1);
+       stgrad.setName("Stalingrad");
        
        String locaInfo = stgrad.toString();
        System.out.println(locaInfo);
