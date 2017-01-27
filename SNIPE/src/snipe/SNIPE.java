@@ -40,13 +40,19 @@ public class SNIPE {
        
        String descriptionInfo = challengeOne.toString();
        System.out.println(descriptionInfo); 
-
-       MentalChallenge mentalOne = new MentalChallenge();
        
-       mentalOne.setDescription("circle question");
-       mentalOne.setReward(2);
-       mentalOne.setChallengeID(1);
-       mentalOne.setChallengeType("easy");
+       MentalChallenge mentalChallengeOne = new MentalChallenge();
+       
+       mentalChallengeOne.setDescription("Circle Puzzle");
+       mentalChallengeOne.setReward(1);
+       mentalChallengeOne.setChallengeID(2);
+       mentalChallengeOne.setChallengType("easy");
+       
+       String DescriptionInfo = mentalChallengeOne.toString();
+       System.out.println(descriptionInfo);
+       
+       String challengeTypeInfo = mentalChallengeOne.toString();
+       System.out.println(challengeTypeInfo);
        
        Game gameOne = new Game();
        

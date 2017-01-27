@@ -15,9 +15,9 @@ public class MentalChallenge implements Serializable {
     private String description;
     private double reward;
     private double challengeID;
-    private String challengeType;
-      
-    public MentalChallenge(){
+    private String challengType;
+
+    public MentalChallenge() {
     }
 
     public String getDescription() {
@@ -44,21 +44,21 @@ public class MentalChallenge implements Serializable {
         this.challengeID = challengeID;
     }
 
-    public String getChallengeType() {
-        return challengeType;
+    public String getChallengType() {
+        return challengType;
     }
 
-    public void setChallengeType(String challengeType) {
-        this.challengeType = challengeType;
+    public void setChallengType(String challengType) {
+        this.challengType = challengType;
     }
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 53 * hash + Objects.hashCode(this.description);
-        hash = 53 * hash + (int) (Double.doubleToLongBits(this.reward) ^ (Double.doubleToLongBits(this.reward) >>> 32));
-        hash = 53 * hash + (int) (Double.doubleToLongBits(this.challengeID) ^ (Double.doubleToLongBits(this.challengeID) >>> 32));
-        hash = 53 * hash + Objects.hashCode(this.challengeType);
+        int hash = 7;
+        hash = 43 * hash + Objects.hashCode(this.description);
+        hash = 43 * hash + (int) (Double.doubleToLongBits(this.reward) ^ (Double.doubleToLongBits(this.reward) >>> 32));
+        hash = 43 * hash + (int) (Double.doubleToLongBits(this.challengeID) ^ (Double.doubleToLongBits(this.challengeID) >>> 32));
+        hash = 43 * hash + Objects.hashCode(this.challengType);
         return hash;
     }
 
@@ -83,7 +83,7 @@ public class MentalChallenge implements Serializable {
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
-        if (!Objects.equals(this.challengeType, other.challengeType)) {
+        if (!Objects.equals(this.challengType, other.challengType)) {
             return false;
         }
         return true;
@@ -91,11 +91,9 @@ public class MentalChallenge implements Serializable {
 
     @Override
     public String toString() {
-        return "MentalChallenge{" + "description=" + description + ", reward=" + reward + ", challengeID=" + challengeID + ", challengeType=" + challengeType + '}';
+        return "MentalChallenge{" + "description=" + description + ", reward=" + reward + ", challengeID=" + challengeID + ", challengType=" + challengType + '}';
     }
     
     
     
-    
-    }
 }
