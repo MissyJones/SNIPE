@@ -67,17 +67,5 @@ public class Game implements Serializable{
         return "Game{" + "moveCounter=" + moveCounter + ", noCodes=" + noCodes + '}';
     }
 
-    public void setMoveCounter(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setMoveCounter() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setNoCodes() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-   
-   
+ 
 }

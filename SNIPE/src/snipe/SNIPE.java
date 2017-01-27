@@ -10,6 +10,9 @@ import byui.cit260.snipe.model.PhysChallenge;
 import byui.cit260.snipe.model.MentalChallenge;
 import byui.cit260.snipe.model.Player;
 import byui.cit260.snipe.model.Character;
+import byui.cit260.snipe.model.Country;
+import byui.cit260.snipe.model.Item;
+import byui.cit260.snipe.model.Location;
 /**
  *
  * @author Maxwell, Missy
@@ -67,6 +70,34 @@ public class SNIPE {
        
        String moveInfo = gameOne.toString();
        System.out.println(moveInfo);
+       
+       Country russia = new Country();
+       russia.setCountryID(001);
+       russia.setName("The Motherland");
+       russia.setVisited(0);
+       
+       String countryInfo = russia.toString();
+       System.out.println(countryInfo);
+       
+       Location stgrad = new Location();
+       stgrad.setChallengeType("Endurance");
+       stgrad.setDescription("Freaking cold");
+       stgrad.setPassportAdd(1);
+       stgrad.setPlaceID(0);
+       stgrad.setPuzzleTrigger(1);
+       
+       String locaInfo = stgrad.toString();
+       System.out.println(locaInfo);
+       
+       Item painting = new Item();
+       painting.setItemDescription("A spooky painting");
+       painting.setItemType("Key_Item");
+       painting.setItemIDNumber(15);
+       
+       String itemInfo = painting.toString();
+       System.out.println(itemInfo);
+       
+       
        
     }
     
