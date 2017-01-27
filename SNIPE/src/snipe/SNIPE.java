@@ -5,8 +5,9 @@
  */
 package snipe;
 
+import byui.cit260.snipe.model.Game;
+import byui.cit260.snipe.model.PhysChallenge;
 import byui.cit260.snipe.model.Player;
-
 /**
  *
  * @author Maxwell
@@ -24,6 +25,23 @@ public class SNIPE {
        
        String playerInfo = playerOne.toString();
        System.out.println(playerInfo);
+       
+       PhysChallenge challengeOne = new PhysChallenge();
+       
+       challengeOne.setDescription("underwater hop scotch");
+       challengeOne.setCountry(0);
+       
+       String descriptionInfo = challengeOne.toString();
+       System.out.println(descriptionInfo);        
+       
+       Game gameOne = new Game();
+       
+       gameOne.setMoveCounter(0);
+       gameOne.setNoCodes(0);
+       
+       String moveInfo = gameOne.toString();
+       System.out.println(moveInfo);
+       
     }
     
 }
