@@ -33,6 +33,12 @@ public class SNIPE {
        characterOne.setCodeName("Dark Phoenix");
        characterOne.setDescription("Veteran Player");
        
+       String CodeNameInfo = characterOne.toString();
+       System.out.println(CodeNameInfo);
+       
+       String CharacterInfo = characterOne.toString();
+       System.out.println(CharacterInfo);
+       
        PhysChallenge challengeOne = new PhysChallenge();
        
        challengeOne.setDescription("underwater hop scotch");
@@ -49,7 +55,7 @@ public class SNIPE {
        mentalChallengeOne.setChallengType("easy");
        
        String DescriptionInfo = mentalChallengeOne.toString();
-       System.out.println(descriptionInfo);
+       System.out.println(DescriptionInfo);
        
        String challengeTypeInfo = mentalChallengeOne.toString();
        System.out.println(challengeTypeInfo);
