@@ -55,7 +55,7 @@ public class SNIPE {
        mentalChallengeOne.setDescription("Circle Puzzle");
        mentalChallengeOne.setReward(1);
        mentalChallengeOne.setChallengeID(2);
-       mentalChallengeOne.setChallengType("easy");
+       mentalChallengeOne.setChallengeType("easy");
        
        String DescriptionInfo = mentalChallengeOne.toString();
        System.out.println(DescriptionInfo);

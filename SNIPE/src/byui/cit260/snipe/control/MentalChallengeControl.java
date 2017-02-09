@@ -11,11 +11,11 @@ import byui.cit260.snipe.model.Game;
  *
  * @author Home
  */
-public class MentalChallenge{
+public class MentalChallengeControl{
 public String mathPuzzleThree(double height, double width, double answer){
  double area= height*width;
  String response;
-if (area <1){
+if (answer <1){
 response="validation error";
 }
 else if (area != answer){
