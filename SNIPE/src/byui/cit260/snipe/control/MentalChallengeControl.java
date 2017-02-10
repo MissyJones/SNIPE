@@ -4,25 +4,23 @@
  * and open the template in the editor.
  */
 package byui.cit260.snipe.control;
-import java.io.Serializable;
-import java.util.Objects;
-import byui.cit260.snipe.model.Game;
+
 /**
  *
  * @author Home
  */
 public class MentalChallengeControl{
-public String mathPuzzleThree(double height, double width, double answer){
+public Boolean mathPuzzleThree(double height, double width, double answer){
  double area= height*width;
- String response;
+ Boolean response;
 if (answer <1){
-response="validation error";
+response = false;
 }
 else if (area != answer){
-response= "No script for you!";}
+response= false;}
 
 else { 
-response="CONGRATS!";
+response=true;
 }
 return response;
 }
