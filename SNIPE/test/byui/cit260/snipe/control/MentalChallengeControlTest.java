@@ -28,8 +28,8 @@ public class MentalChallengeControlTest {
         double width = 3;
         double answer = 0;
         MentalChallengeControl instance = new MentalChallengeControl();
-        String expResult = "validation error";
-        String result = instance.mathPuzzleThree(height, width, answer);
+        Boolean expResult = false;
+        Boolean result = instance.mathPuzzleThree(height, width, answer);
         assertEquals(expResult, result);
 
         
@@ -37,7 +37,7 @@ public class MentalChallengeControlTest {
         height = 6;
         width = 3;
         answer = 18;
-        expResult = "CONGRATS!";
+        expResult = true;
         result = instance.mathPuzzleThree(height, width, answer);
         assertEquals(expResult, result);
         
@@ -45,7 +45,7 @@ public class MentalChallengeControlTest {
         height = 6;
         width = 3;
         answer = 15;
-        expResult = "No script for you!";
+        expResult = false;
         result = instance.mathPuzzleThree(height, width, answer);
         assertEquals(expResult, result);
         
@@ -53,7 +53,7 @@ public class MentalChallengeControlTest {
         height = 6;
         width = 3;
         answer = 73;
-        expResult = "No script for you!";
+        expResult = false;
         result = instance.mathPuzzleThree(height, width, answer);
         assertEquals(expResult, result);
     }
