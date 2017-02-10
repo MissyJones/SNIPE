@@ -15,8 +15,17 @@ import java.util.Objects;
 public class PhysChallenge implements  Serializable  {
     private String description;
     private double country;
+    private double challengeID;
 
     public PhysChallenge() {
+    }
+
+    public double getChallengeID() {
+        return challengeID;
+    }
+
+    public void setChallengeID(double challengeID) {
+        this.challengeID = challengeID;
     }
     
     

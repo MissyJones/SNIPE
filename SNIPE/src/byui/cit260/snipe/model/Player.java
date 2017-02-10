@@ -15,7 +15,7 @@ import java.util.Objects;
 public class Player implements Serializable{
     private String name;
     private double numberOfMoves;   
-
+    private double healthPoints = 100;
     public Player() {
     }
     
@@ -35,11 +35,20 @@ public class Player implements Serializable{
         this.numberOfMoves = numberOfMoves;
     }
 
+    public double getHealthPoints() {
+        return healthPoints;
+    }
+
+    public void setHealthPoints(double healthPoints) {
+        this.healthPoints = healthPoints;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 17 * hash + Objects.hashCode(this.name);
-        hash = 17 * hash + (int) (Double.doubleToLongBits(this.numberOfMoves) ^ (Double.doubleToLongBits(this.numberOfMoves) >>> 32));
+        hash = 23 * hash + Objects.hashCode(this.name);
+        hash = 23 * hash + (int) (Double.doubleToLongBits(this.numberOfMoves) ^ (Double.doubleToLongBits(this.numberOfMoves) >>> 32));
+        hash = 23 * hash + (int) (Double.doubleToLongBits(this.healthPoints) ^ (Double.doubleToLongBits(this.healthPoints) >>> 32));
         return hash;
     }
 
@@ -58,6 +67,9 @@ public class Player implements Serializable{
         if (Double.doubleToLongBits(this.numberOfMoves) != Double.doubleToLongBits(other.numberOfMoves)) {
             return false;
         }
+        if (Double.doubleToLongBits(this.healthPoints) != Double.doubleToLongBits(other.healthPoints)) {
+            return false;
+        }
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
@@ -66,11 +78,10 @@ public class Player implements Serializable{
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", numberOfMoves=" + numberOfMoves + '}';
+        return "Player{" + "name=" + name + ", numberOfMoves=" + numberOfMoves + ", healthPoints=" + healthPoints + '}';
     }
 
-    
-    
+   
 
     
 }
