@@ -25,8 +25,9 @@ public class PhysicalChallengeControlTest {
     @Test
     public void testDmgCalc() {
         System.out.println("dmgCalc");
-        PhysChallenge physChallenge = null;
-        Player player = null;
+        PhysChallenge physChallenge = new PhysChallenge();
+        physChallenge.setDescription("You narrowly dodge the bullets, however one gets your leg! You have ");
+        Player player = new Player();
         PhysicalChallengeControl instance = new PhysicalChallengeControl();
         String expResult = "";
         String result = instance.dmgCalc(physChallenge, player);

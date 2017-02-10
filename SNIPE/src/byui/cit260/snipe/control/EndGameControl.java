@@ -10,8 +10,8 @@ import byui.cit260.snipe.model.Player;
  * @author Maxwell
  */
 public class EndGameControl {
-    public String checkHealth() {
-        double healthPoints = Player.playerOne.getHealthPoints();
+    public String checkHealth(Player player) {
+        double healthPoints = player.getHealthPoints();
         String check;
         if (healthPoints > 10) {
             check = "You made it past that one easy peasy. You're so good, maybe you should ask for a pay raise.";
@@ -24,7 +24,5 @@ public class EndGameControl {
         }
     return check;
     }
-    public double checkCodes(double noCodes) {
-        
-    }
+
 }
