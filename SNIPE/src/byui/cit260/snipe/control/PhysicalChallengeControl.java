@@ -19,7 +19,7 @@ public class PhysicalChallengeControl {
         Random rand = new Random();
         String reply;
         double damage;
-        damage = (rand.nextInt(29))+1;
+        damage = (Math.ceil(rand.nextInt(29)))+1;
         
     if (damage < 1) {
         reply = "ERROR '-1', you can't have negative damage.";}
