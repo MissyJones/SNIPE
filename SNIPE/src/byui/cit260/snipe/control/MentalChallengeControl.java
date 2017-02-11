@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 package byui.cit260.snipe.control;
-
 /**
  *
- * @author Home
+ * @author Missy
  */
+
 public class MentalChallengeControl{
-public Boolean mathPuzzleThree(double height, double width, double answer){
+public boolean mathPuzzleThree(double height, double width, double answer){
  double area= height*width;
  Boolean response;
 if (answer <1){
@@ -24,6 +24,18 @@ response=true;
 }
 return response;
 }
+public String mathPuzzleOne(double number){
+String answer;
+    if (number == Math.sqrt(20857489)){
+answer = "The door unlocks, enter at your own risk.";
+}
+else
+{
+answer = "Think again sucker!";
+}
+return answer;
+    
+}   
+
 }
 
-    
