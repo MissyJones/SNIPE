@@ -57,5 +57,20 @@ public class MentalChallengeControlTest {
         result = instance.mathPuzzleThree(height, width, answer);
         assertEquals(expResult, result);
     }
-    
+      public void testMathPuzzleOne() {
+        System.out.println("mathPuzzleOne");
+        System.out.println("\tTest Case 1");
+        double number = 12032084;
+        MentalChallengeControl instance = new MentalChallengeControl();
+        String expResult = "Think again sucker!";
+        String result = instance.mathPuzzleOne(number);
+        assertEquals(expResult, result);
+        
+        System.out.println("mathPuzzleOne");
+        System.out.println("\tTest Case 2");
+        number = 4567;
+        expResult = "The door unlocks, enter at your own risk.";
+        result = instance.mathPuzzleOne(number);
+        assertEquals(expResult, result);
+}
 }
