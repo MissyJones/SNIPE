@@ -27,7 +27,10 @@ return response;
 public String mathPuzzleTwo (double radius, double height1, double number1){
     double volume = Math.PI*height1*radius*radius;
     String answer;
-    if (number1 == 4825.49){
+    if (number1<=0){
+    answer = "Please enter a positive, rational number, silly!";
+    }
+    else if (number1 == 4825.49){
         answer =  "A compartment opens and you safely retrieve the code.";
     }
     else {

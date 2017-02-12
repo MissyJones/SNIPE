@@ -84,6 +84,15 @@ public class MentalChallengeControlTest {
         System.out.println("\tTest Case 2");
         radius = 8;
         height1 = 24;
+        number1 = 0;
+        expResult3 = "Please enter a positive, rational number, silly!";
+        result3 = instance.mathPuzzleTwo(radius, height, number1);
+        assertEquals(expResult3, result3);
+        
+        System.out.println("mathPuzzleTwo");
+        System.out.println("\tTest Case 2");
+        radius = 8;
+        height1 = 24;
         number1 = 4825.49;
         expResult3 = "A compartment opens and you safely retrieve the code.";
         result3 = instance.mathPuzzleTwo(radius, height, number1);
