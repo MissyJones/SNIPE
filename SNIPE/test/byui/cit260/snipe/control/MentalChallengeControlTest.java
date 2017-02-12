@@ -75,8 +75,8 @@ public class MentalChallengeControlTest {
         System.out.println("\tTest Case 1");
         double radius = 8;
         double height1 = 24;
-        double number1 = 99.99;
-        String expResult3 = "Oops! You won’t be getting this code!";
+        double number1 = 4825.49;
+        String expResult3 = "A compartment opens and you safely retrieve the code.";
         String result3 = instance.mathPuzzleTwo(radius, height, number1);
         assertEquals(expResult3, result3);
         
@@ -84,7 +84,7 @@ public class MentalChallengeControlTest {
         System.out.println("\tTest Case 2");
         radius = 8;
         height1 = 24;
-        number1 = 0;
+        number1 = -4825.49;
         expResult3 = "Please enter a positive, rational number, silly!";
         result3 = instance.mathPuzzleTwo(radius, height, number1);
         assertEquals(expResult3, result3);
@@ -93,8 +93,26 @@ public class MentalChallengeControlTest {
         System.out.println("\tTest Case 3");
         radius = 8;
         height1 = 24;
-        number1 = 4825.49;
-        expResult3 = "A compartment opens and you safely retrieve the code.";
+        number1 = 0;
+        expResult3 = "Please enter a positive, rational number, silly!";
+        result3 = instance.mathPuzzleTwo(radius, height, number1);
+        assertEquals(expResult3, result3);
+        
+        System.out.println("mathPuzzleTwo");
+        System.out.println("\tTest Case 4");
+        radius = 8;
+        height1 = 24;
+        number1 = 4733.33;
+        expResult3 = "Oops! You won’t be getting this code!";
+        result3 = instance.mathPuzzleTwo(radius, height, number1);
+        assertEquals(expResult3, result3);
+        
+        System.out.println("mathPuzzleTwo");
+        System.out.println("\tTest Case 5");
+        radius = 8;
+        height1 = 24;
+        number1 = 1206.47;
+        expResult3 = "Oops! You won’t be getting this code!";
         result3 = instance.mathPuzzleTwo(radius, height, number1);
         assertEquals(expResult3, result3);
 }
