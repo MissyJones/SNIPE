@@ -24,6 +24,17 @@ response=true;
 }
 return response;
 }
+public String mathPuzzleTwo (double radius, double height1, double number1){
+    double volume = Math.PI*height1*radius*radius;
+    String answer;
+    if (number1 == 4825.49){
+        answer =  "A compartment opens and you safely retrieve the code.";
+    }
+    else {
+            answer = "Oops! You won’t be getting this code!";
+}
+    return answer;
+}
 public String mathPuzzleOne(double number){
 String answer;
     if (number == Math.sqrt(20857489)){

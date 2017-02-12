@@ -70,5 +70,23 @@ public class MentalChallengeControlTest {
         expResult2 = "The door unlocks, enter at your own risk.";
         result2 = instance.mathPuzzleOne(number);
         assertEquals(expResult2, result2);
+        
+        System.out.println("mathPuzzleTwo");
+        System.out.println("\tTest Case 1");
+        double radius = 8;
+        double height1 = 24;
+        double number1 = 99.99;
+        String expResult3 = "Oops! You won’t be getting this code!";
+        String result3 = instance.mathPuzzleTwo(radius, height, number1);
+        assertEquals(expResult3, result3);
+        
+        System.out.println("mathPuzzleTwo");
+        System.out.println("\tTest Case 2");
+        radius = 8;
+        height1 = 24;
+        number1 = 4825.49;
+        expResult3 = "A compartment opens and you safely retrieve the code.";
+        result3 = instance.mathPuzzleTwo(radius, height, number1);
+        assertEquals(expResult3, result3);
 }
 }
