@@ -90,7 +90,7 @@ public class MentalChallengeControlTest {
         assertEquals(expResult3, result3);
         
         System.out.println("mathPuzzleTwo");
-        System.out.println("\tTest Case 2");
+        System.out.println("\tTest Case 3");
         radius = 8;
         height1 = 24;
         number1 = 4825.49;
