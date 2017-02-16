@@ -10,15 +10,15 @@ package byui.cit260.snipe.view;
  * @author Maxwell
  */
 public class StartProgramView {
-        private String promptMessage;
+        private final String promptMessage;
     
-    public void startProgramView() {
-        this.promptMessage = "\nPlease enter your name:";
+    public StartProgramView() {
+        this.promptMessage = "\nPlease enter your name: ";
         this.displayBanner();
 }
     
    
-    public void displayBanner() {
+    public final void displayBanner() {
         System.out.println("\n---------------------------------------------"
                           +"\n|  This is a text based international spy   |"
                           +"\n|  adventure game. Upon completion of this  |"
