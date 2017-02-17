@@ -20,9 +20,9 @@ import byui.cit260.snipe.view.StartProgramView;
  */
 public class SNIPE {
 
-    /**
-     * @param args the command line arguments
-     */
+    private static Game currentGame = null;
+    private static Player player = null;
+    
     public static void main(String[] args) {
         
       StartProgramView startProgramView = new StartProgramView();
@@ -30,5 +30,27 @@ public class SNIPE {
       
        
     }
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        SNIPE.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        SNIPE.player = player;
+    }
     
+
+
+
+
+
+
 }

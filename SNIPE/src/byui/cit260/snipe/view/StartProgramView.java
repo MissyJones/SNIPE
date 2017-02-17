@@ -86,16 +86,18 @@ public class StartProgramView {
                 System.out.println("Looks like that name won't work. Try again.");
                 return false;
             }
-        System.out.println("Welcome to the world of SNIPE, "+playersName+". \n"
-                + "As you know, SNIPE stands for Super Nice Interesting People, Everywhere!\n"
-                + "Good luck!");
-        this.nextDisplayView();
+
+        this.nextDisplayView(player);
                return true;
     }
 
-    private void nextDisplayView() {
-        System.out.println("nextDisplayView() called");
-    }
+    private void nextDisplayView(Player player) {
+        System.out.println("Welcome to the world of SNIPE, " + player.getName() + ". \n"
+                + "As you know, SNIPE stands for Super Nice Interesting People, Everywhere!\n"
+                + "Good luck!");
+
+    MainMenuView mainMenuView = new MainMenuView();
+    mainMenuView.displayMainMenuView();
             
-            
+    }            
             }

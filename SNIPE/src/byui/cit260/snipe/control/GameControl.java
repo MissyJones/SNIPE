@@ -6,6 +6,7 @@
 package byui.cit260.snipe.control;
 
 import byui.cit260.snipe.model.Player;
+import snipe.SNIPE;
 
 /**
  *
@@ -14,8 +15,14 @@ import byui.cit260.snipe.model.Player;
 public class GameControl {
 
     public static Player createPlayer(String playersName) {
-       System.out.println("createPlayer() called");
-       return new Player();
+        if (playersName == null) {
+            return null;
+        }
+        
+        Player player = new Player();
+        player.setName(playersName);
+        SNIPE.setPlayer(player);
+        return player;
     }
     
 }
