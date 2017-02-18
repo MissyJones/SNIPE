@@ -29,14 +29,15 @@ public HelpMenuView() {
             + "\n\n";
 }
     
-    public void displayMainMenuView() {
+    public void displayHelpMenuView() {
         boolean done = false;
         do {
             //prompt for ang get things
-            String menuOption = this.getMenuOption(this.menu);
-            if (menuOption.toUpperCase().equals("R"))
+            String menuOption = this.getHelpMenuOption(this.menu);
+            if (menuOption.toUpperCase().equals("M")) {
+                System.out.println("Going to the main menu.........");
                 return;
-            
+        }
             done = this.doAction(menuOption);
             
         }  while (!done);
@@ -45,7 +46,7 @@ public HelpMenuView() {
         
     }
 
-    private String getMenuOption(String menu) {
+    private String getHelpMenuOption(String menu) {
  
         Scanner keyboard = new Scanner(System.in);  //get infile for keyboard
         String value = ""; //value to be returned
@@ -82,7 +83,7 @@ public HelpMenuView() {
                     case "r":
                         break OUTER;
                     default:
-                        System.out.println("\nInvalid input: That doesn't make sense. You so silly!");
+                        System.out.println("\nInvalid input: That doesn't make sense, silly!");
                 }
             }
         return value;
@@ -104,7 +105,6 @@ choice = choice.toUpperCase();
             this.collectingCodes();
             break;
         case "M":
-            this.mainMenu();
             break;
         case "R":
             this.playerLocation();
@@ -132,12 +132,10 @@ choice = choice.toUpperCase();
         System.out.println("Comming to an assignment soon. Learn what codes are and how to use them, You must collect ALL codes or you flunk out SNIPE academy, and that would be so sad.");
     }
 
-    private void mainMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+
 
     private void playerLocation() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       System.out.println("called playerLocation*******");
     }
 
     

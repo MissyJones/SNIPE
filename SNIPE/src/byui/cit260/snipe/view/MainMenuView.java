@@ -5,7 +5,9 @@
  */
 package byui.cit260.snipe.view;
 
+import byui.cit260.snipe.control.GameControl;
 import java.util.Scanner;
+import snipe.SNIPE;
 
 /**
  *
@@ -50,10 +52,9 @@ public MainMenuView() {
         Scanner keyboard = new Scanner(System.in);  //get infile for keyboard
         String value = ""; //value to be returned
         boolean valid = false; //initialize to not be void
-        System.out.println(menu);
         OUTER:
         while (!valid) {
-            System.out.println("\n Please select an option:");
+            System.out.println("\n"+menu+"\n\n Please select an option:");
             value = keyboard.nextLine();
             value = value.trim();
                 switch (value) {
@@ -99,9 +100,6 @@ choice = choice.toUpperCase();
         case "S":
             this.saveGame();
             break;
-        case "Q":
-            System.out.println("Game over, man");
-            break;
         default:
             System.out.println("Tnavlid entry, bro. Try again!");
             break;
@@ -110,7 +108,10 @@ choice = choice.toUpperCase();
     }
 
     private void startNewGame() {
-        System.out.println("called startNewGame*******");
+        GameControl.createNewGame(SNIPE.getPlayer());
+        
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
     }
 
     private void saveGame() {
@@ -118,7 +119,8 @@ choice = choice.toUpperCase();
     }
 
     private void displayHelpMenu() {
-        System.out.println("called displayHelpMenu*******");
+        HelpMenuView helpMenuView = new HelpMenuView();
+        helpMenuView.displayHelpMenuView();
     }
 
     private void loadGame() {
