@@ -33,9 +33,10 @@ public MainMenuView() {
         do {
             //prompt for ang get things
             String menuOption = this.getMenuOption(this.menu);
-            if (menuOption.toUpperCase().equals("Q"))
+            if (menuOption.toUpperCase().equals("Q")){
+                System.out.println("Game over, man. Game over.");
                 return;
-            
+            }
             done = this.doAction(menuOption);
             
         }  while (!done);
@@ -98,6 +99,9 @@ choice = choice.toUpperCase();
         case "S":
             this.saveGame();
             break;
+        case "Q":
+            System.out.println("Game over, man");
+            break;
         default:
             System.out.println("Tnavlid entry, bro. Try again!");
             break;
@@ -106,19 +110,19 @@ choice = choice.toUpperCase();
     }
 
     private void startNewGame() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("called startNewGame*******");
     }
 
     private void saveGame() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("called saveGame*******");
     }
 
     private void displayHelpMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("called displayHelpMenu*******");
     }
 
     private void loadGame() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("called loadGame*******");
     }
     
 }
