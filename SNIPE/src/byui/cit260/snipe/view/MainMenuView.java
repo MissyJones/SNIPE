@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 class MainMenuView {
     
-    private String menu;
+    private final String menu;
 public MainMenuView() {
     this.menu =
               "\n#############################"
@@ -78,7 +78,6 @@ public MainMenuView() {
                         break OUTER;
                     default:
                         System.out.println("\nInvalid input: That doesn't make sense, dummy.");
-                        continue;
                 }
             }
         return value;
@@ -91,19 +90,35 @@ choice = choice.toUpperCase();
             this.startNewGame();
             break;
         case "G":
-            this.loadGame;
+            this.loadGame();
             break;
         case "H":
             this.displayHelpMenu();
             break;
         case "S":
-            this.saveGame;
+            this.saveGame();
             break;
         default:
             System.out.println("Tnavlid entry, bro. Try again!");
             break;
     }
         return false;
+    }
+
+    private void startNewGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void saveGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void displayHelpMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void loadGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
