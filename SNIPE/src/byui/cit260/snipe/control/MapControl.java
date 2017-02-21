@@ -10,5 +10,5 @@ package byui.cit260.snipe.control;
  * @author Maxwell
  */
 public class MapControl {
-    
+
 }

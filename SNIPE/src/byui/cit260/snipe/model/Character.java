@@ -13,6 +13,7 @@ import java.util.Objects;
  * @author elizabethkirby
  */
 public class Character implements Serializable {
+
     private String codeName;
     private String description;
 
@@ -68,7 +69,5 @@ public class Character implements Serializable {
     public String toString() {
         return "Character{" + "codeName=" + codeName + ", description=" + description + '}';
     }
-    
-    
-    
+
 }

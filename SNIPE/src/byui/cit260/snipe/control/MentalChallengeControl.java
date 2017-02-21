@@ -9,7 +9,6 @@ package byui.cit260.snipe.control;
  *
  * @author Missy
  */
-
 public class MentalChallengeControl {
 
     public boolean mathPuzzleThree(double height, double width, double answer) {

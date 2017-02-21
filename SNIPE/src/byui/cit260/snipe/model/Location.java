@@ -13,6 +13,7 @@ import java.util.Objects;
  * @author Maxwell
  */
 public class Location implements Serializable {
+
     private String name;
     private String description;
     private String challengeType;
@@ -121,10 +122,4 @@ public class Location implements Serializable {
         return "Location{" + "name=" + name + ", description=" + description + ", challengeType=" + challengeType + ", placeID=" + placeID + ", passportAdd=" + passportAdd + ", puzzleTrigger=" + puzzleTrigger + '}';
     }
 
-    
-    
-    
-    
-    
-    
 }

@@ -12,13 +12,15 @@ import java.util.Objects;
  *
  * @author Maxwell
  */
-public class Player implements Serializable{
+public class Player implements Serializable {
+
     private String name;
-    private double numberOfMoves;   
+    private double numberOfMoves;
     private double healthPoints = 100;
+
     public Player() {
     }
-    
+
     public String getName() {
         return name;
     }
@@ -81,7 +83,4 @@ public class Player implements Serializable{
         return "Player{" + "name=" + name + ", numberOfMoves=" + numberOfMoves + ", healthPoints=" + healthPoints + '}';
     }
 
-   
-
-    
 }

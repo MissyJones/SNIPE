@@ -13,6 +13,7 @@ import java.util.Objects;
  * @author Maxwell
  */
 public class Item implements Serializable {
+
     private String itemDescription;
     private String itemType;
     private double itemIDNumber;
@@ -81,7 +82,5 @@ public class Item implements Serializable {
     public String toString() {
         return "Item{" + "itemDescription=" + itemDescription + ", itemType=" + itemType + ", itemIDNumber=" + itemIDNumber + '}';
     }
-    
-    
-    
+
 }

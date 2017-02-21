@@ -14,6 +14,7 @@ import byui.cit260.snipe.model.Country;
 import byui.cit260.snipe.model.Item;
 import byui.cit260.snipe.model.Location;
 import byui.cit260.snipe.view.StartProgramView;
+
 /**
  *
  * @author Maxwell, Missy
@@ -22,13 +23,12 @@ public class SNIPE {
 
     private static Game currentGame = null;
     private static Player player = null;
-    
+
     public static void main(String[] args) {
-        
-      StartProgramView startProgramView = new StartProgramView();
-      startProgramView.displayStartProgramView();
-      
-       
+
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayStartProgramView();
+
     }
 
     public static Game getCurrentGame() {
@@ -46,11 +46,5 @@ public class SNIPE {
     public static void setPlayer(Player player) {
         SNIPE.player = player;
     }
-    
-
-
-
-
-
 
 }

@@ -18,7 +18,7 @@ public class GameControl {
         if (playersName == null) {
             return null;
         }
-        
+
         Player player = new Player();
         player.setName(playersName);
         SNIPE.setPlayer(player);
@@ -28,5 +28,5 @@ public class GameControl {
     public static void createNewGame(Player player) {
         System.out.println("called GameControl.createNewGame*******");
     }
-    
+
 }

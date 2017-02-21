@@ -12,23 +12,24 @@ import java.util.Scanner;
  * @author Maxwell
  */
 class HelpMenuView {
-    
+
     private final String menu;
-public HelpMenuView() {
-    this.menu =
-              "\n#################################"
-            + "\n|        Help Menu              |"
-            + "\n#################################"
-            + "\nS -- Saving Your Game"
-            + "\nT -- Travel Help"
-            + "\nD -- Dossier Inventory Help"
-            + "\nC -- Collecting Codes"
-            + "\nM -- Main Menu"
-            + "\nR -- Return to Player Location"
-            + "\n#################################"
-            + "\n\n";
-}
-    
+
+    public HelpMenuView() {
+        this.menu
+                = "\n#################################"
+                + "\n|        Help Menu              |"
+                + "\n#################################"
+                + "\nS -- Saving Your Game"
+                + "\nT -- Travel Help"
+                + "\nD -- Dossier Inventory Help"
+                + "\nC -- Collecting Codes"
+                + "\nM -- Main Menu"
+                + "\nR -- Return to Player Location"
+                + "\n#################################"
+                + "\n\n";
+    }
+
     public void displayHelpMenuView() {
         boolean done = false;
         do {
@@ -37,17 +38,15 @@ public HelpMenuView() {
             if (menuOption.toUpperCase().equals("M")) {
                 System.out.println("Going to the main menu.........");
                 return;
-        }
+            }
             done = this.doAction(menuOption);
-            
-        }  while (!done);
-        
-        
-        
+
+        } while (!done);
+
     }
 
     private String getHelpMenuOption(String menu) {
- 
+
         Scanner keyboard = new Scanner(System.in);  //get infile for keyboard
         String value = ""; //value to be returned
         boolean valid = false; //initialize to not be void
@@ -57,62 +56,62 @@ public HelpMenuView() {
             System.out.println("\n Please select an option:");
             value = keyboard.nextLine();
             value = value.trim();
-                switch (value) {
-                    case "S":
-                        break OUTER;
-                    case "T":
-                        break OUTER;
-                    case "D":
-                        break OUTER;
-                    case "C":
-                        break OUTER;
-                    case "M":
-                        break OUTER;
-                    case "R":
-                        break OUTER;
-                    case "s":
-                        break OUTER;
-                    case "t":
-                        break OUTER;
-                    case "d":
-                        break OUTER;
-                    case "c":
-                        break OUTER;
-                    case "m":
-                        break OUTER;
-                    case "r":
-                        break OUTER;
-                    default:
-                        System.out.println("\nInvalid input: That doesn't make sense, silly!");
-                }
+            switch (value) {
+                case "S":
+                    break OUTER;
+                case "T":
+                    break OUTER;
+                case "D":
+                    break OUTER;
+                case "C":
+                    break OUTER;
+                case "M":
+                    break OUTER;
+                case "R":
+                    break OUTER;
+                case "s":
+                    break OUTER;
+                case "t":
+                    break OUTER;
+                case "d":
+                    break OUTER;
+                case "c":
+                    break OUTER;
+                case "m":
+                    break OUTER;
+                case "r":
+                    break OUTER;
+                default:
+                    System.out.println("\nInvalid input: That doesn't make sense, silly!");
             }
+        }
         return value;
     }
 
-   public boolean doAction(String choice) {
-choice = choice.toUpperCase();
-    switch (choice) {
-        case "S":
-            this.savingYourGame();
-            break;
-        case "T":
-            this.travelHelp();
-            break;
-        case "D":
-            this.dossierIventroyHelp();
-            break;
-        case "C":
-            this.collectingCodes();
-            break;
-        case "M":
-            break;
-        case "R":
-            this.playerLocation();
-            break;
-        default:
-            System.out.println("Why did you choose an invalid option? Try again!");
-            break;
-    }
+    public boolean doAction(String choice) {
+        choice = choice.toUpperCase();
+        switch (choice) {
+            case "S":
+                this.savingYourGame();
+                break;
+            case "T":
+                this.travelHelp();
+                break;
+            case "D":
+                this.dossierIventroyHelp();
+                break;
+            case "C":
+                this.collectingCodes();
+                break;
+            case "M":
+                break;
+            case "R":
+                this.playerLocation();
+                break;
+            default:
+                System.out.println("Why did you choose an invalid option? Try again!");
+                break;
+        }
         return false;
     }
 
@@ -132,11 +131,8 @@ choice = choice.toUpperCase();
         System.out.println("Comming to an assignment soon. Learn what codes are and how to use them, You must collect ALL codes or you flunk out SNIPE academy, and that would be so sad.");
     }
 
-
-
     private void playerLocation() {
-       System.out.println("called playerLocation*******");
+        System.out.println("called playerLocation*******");
     }
 
-    
 }

@@ -7,11 +7,13 @@ package byui.cit260.snipe.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *
  * @author elizabethkirby
  */
 public class MentalChallenge implements Serializable {
+
     private String description;
     private double reward;
     private double challengeID;
@@ -93,7 +95,5 @@ public class MentalChallenge implements Serializable {
     public String toString() {
         return "MentalChallenge{" + "description=" + description + ", reward=" + reward + ", challengeID=" + challengeID + ", challengeType=" + challengeType + '}';
     }
-    
-    
-    
+
 }

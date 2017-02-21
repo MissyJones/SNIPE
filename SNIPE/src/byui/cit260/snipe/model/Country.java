@@ -7,11 +7,13 @@ package byui.cit260.snipe.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *
  * @author Maxwell
  */
 public class Country implements Serializable {
+
     private String name;
     private double countryID;
     private double visited;
@@ -80,6 +82,5 @@ public class Country implements Serializable {
     public String toString() {
         return "Country{" + "name=" + name + ", countryID=" + countryID + ", visited=" + visited + '}';
     }
-    
-    
+
 }

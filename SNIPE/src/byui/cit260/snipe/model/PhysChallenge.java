@@ -12,7 +12,8 @@ import java.util.Objects;
  *
  * @author Home
  */
-public class PhysChallenge implements  Serializable  {
+public class PhysChallenge implements Serializable {
+
     private String description;
     private double country;
     private double challengeID;
@@ -27,8 +28,6 @@ public class PhysChallenge implements  Serializable  {
     public void setChallengeID(double challengeID) {
         this.challengeID = challengeID;
     }
-    
-    
 
     public String getDescription() {
         return description;
@@ -81,14 +80,5 @@ public class PhysChallenge implements  Serializable  {
     public void setCountry(String america) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    }
 
-
-
-
-
-
-
-
-
+}

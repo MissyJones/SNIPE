@@ -12,14 +12,13 @@ import java.util.Objects;
  *
  * @author Missy
  */
-public class Game implements Serializable{
-   private double moveCounter;
-   private double noCodes;
+public class Game implements Serializable {
+
+    private double moveCounter;
+    private double noCodes;
 
     public Game() {
     }
-   
-   
 
     public double getMoveCounter() {
         return moveCounter;
@@ -45,8 +44,6 @@ public class Game implements Serializable{
         return hash;
     }
 
-   
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -62,10 +59,9 @@ public class Game implements Serializable{
         return true;
     }
 
-     @Override
+    @Override
     public String toString() {
         return "Game{" + "moveCounter=" + moveCounter + ", noCodes=" + noCodes + '}';
     }
 
- 
 }

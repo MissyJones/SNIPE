@@ -12,7 +12,7 @@ package byui.cit260.snipe.view;
 public class GameMenuView {
 
     void displayMenu() {
-         System.out.println("called GameMenuView.displayMenu*******");
+        System.out.println("called GameMenuView.displayMenu*******");
     }
-    
+
 }
