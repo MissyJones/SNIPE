@@ -79,7 +79,7 @@ public MainMenuView() {
                     case "q":
                         break OUTER;
                     default:
-                        System.out.println("\nInvalid input: That doesn't make sense, dummy.");
+                        System.out.println("\nInvalid input: That doesn't make sense, homes.");
                 }
             }
         return value;
@@ -101,7 +101,7 @@ choice = choice.toUpperCase();
             this.saveGame();
             break;
         default:
-            System.out.println("Tnavlid entry, bro. Try again!");
+            System.out.println("Invalid entry, bro. Try again!");
             break;
     }
         return false;

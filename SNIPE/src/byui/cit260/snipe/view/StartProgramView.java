@@ -78,7 +78,7 @@ public class StartProgramView {
 
     private boolean doAction(String playersName) {
        if (playersName.length() < 2) {
-           System.out.println("You need more than one character in your name, silly. Try again.");
+           System.out.println("You need more than one character in your name, buddy. Try again.");
            return false;
        }
        Player player = GameControl.createPlayer(playersName);
