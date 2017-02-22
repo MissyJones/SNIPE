@@ -128,7 +128,7 @@ class HelpMenuView {
     }
 
     private void collectingCodes() {
-        System.out.println("Comming to an assignment soon. Learn what codes are and how to use them, You must collect ALL codes or you flunk out SNIPE academy, and that would be so sad.");
+        System.out.println("Coming to an assignment soon. Learn what codes are and how to use them, You must collect ALL codes or you flunk out SNIPE academy, and that would be so sad.");
     }
 
     private void playerLocation() {
