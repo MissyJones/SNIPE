@@ -303,7 +303,7 @@ private String getHelpMenuOption(String menu) {
     }
 
     private void englandAbbeyView() {
-        System.out.print("You chose a place! Congrats.");
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void englandPalaceView() {

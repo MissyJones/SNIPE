@@ -13,13 +13,20 @@ import java.util.Objects;
  * @author Maxwell
  */
 public class Location implements Serializable {
-
+/**
+ *
+ * +"| WORDS     | MORE WORDS               |\n"
+ * +"|-----------|--------------------------|\n"
+ * 
+ * 
+ */
     private String name;
     private String description;
     private String challengeType;
     private double placeID;
-    private double passportAdd;
+    private Boolean passportAdd;
     private double puzzleTrigger;
+    private String passportView;
 
     public Location() {
     }
@@ -56,11 +63,11 @@ public class Location implements Serializable {
         this.placeID = placeID;
     }
 
-    public double getPassportAdd() {
+    public Boolean getPassportAdd() {
         return passportAdd;
     }
 
-    public void setPassportAdd(double passportAdd) {
+    public void setPassportAdd(Boolean passportAdd) {
         this.passportAdd = passportAdd;
     }
 
@@ -79,7 +86,6 @@ public class Location implements Serializable {
         hash = 17 * hash + Objects.hashCode(this.description);
         hash = 17 * hash + Objects.hashCode(this.challengeType);
         hash = 17 * hash + (int) (Double.doubleToLongBits(this.placeID) ^ (Double.doubleToLongBits(this.placeID) >>> 32));
-        hash = 17 * hash + (int) (Double.doubleToLongBits(this.passportAdd) ^ (Double.doubleToLongBits(this.passportAdd) >>> 32));
         hash = 17 * hash + (int) (Double.doubleToLongBits(this.puzzleTrigger) ^ (Double.doubleToLongBits(this.puzzleTrigger) >>> 32));
         return hash;
     }
@@ -97,9 +103,6 @@ public class Location implements Serializable {
         }
         final Location other = (Location) obj;
         if (Double.doubleToLongBits(this.placeID) != Double.doubleToLongBits(other.placeID)) {
-            return false;
-        }
-        if (Double.doubleToLongBits(this.passportAdd) != Double.doubleToLongBits(other.passportAdd)) {
             return false;
         }
         if (Double.doubleToLongBits(this.puzzleTrigger) != Double.doubleToLongBits(other.puzzleTrigger)) {

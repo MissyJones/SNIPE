@@ -22,6 +22,8 @@ public class GameControl {
         Player player = new Player();
         player.setName(playersName);
         
+        
+        
         SNIPE.setPlayer(player);
         return player;
     }

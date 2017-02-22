@@ -24,7 +24,7 @@ class HelpMenuView {
                 + "\n|---|---------------------------|"
                 + "\n| T |  Travel Help              |"
                 + "\n|---|---------------------------|"
-                + "\n| D |  Dossier Inventory Help   |"
+                + "\n| D |  Dossier Help             |"
                 + "\n|---|---------------------------|"
                 + "\n| C |  Collecting Codes         |"
                 + "\n|---|---------------------------|"

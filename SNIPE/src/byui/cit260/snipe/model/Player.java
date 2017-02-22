@@ -18,7 +18,7 @@ public class Player implements Serializable {
     private String name;
     private double numberOfMoves;
     private double healthPoints = 100;
-    private static String codeName;
+    private String codeName;
 
     public Player() {
     }
@@ -47,12 +47,12 @@ public class Player implements Serializable {
         this.healthPoints = healthPoints;
     }
 
-    public static String getCodeName() {
+    public String getCodeName() {
         return codeName;
     }
 
-    public static void setCodeName(String codeName) {
-        Player.codeName = codeName;
+    public void setCodeName(String codeName) {
+        this.codeName = codeName;
     }
 
     @Override
