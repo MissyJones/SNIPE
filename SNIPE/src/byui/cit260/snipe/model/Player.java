@@ -7,6 +7,7 @@ package byui.cit260.snipe.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+import snipe.SNIPE;
 
 /**
  *
@@ -17,6 +18,7 @@ public class Player implements Serializable {
     private String name;
     private double numberOfMoves;
     private double healthPoints = 100;
+    private static String codeName;
 
     public Player() {
     }
@@ -45,12 +47,21 @@ public class Player implements Serializable {
         this.healthPoints = healthPoints;
     }
 
+    public static String getCodeName() {
+        return codeName;
+    }
+
+    public static void setCodeName(String codeName) {
+        Player.codeName = codeName;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 23 * hash + Objects.hashCode(this.name);
-        hash = 23 * hash + (int) (Double.doubleToLongBits(this.numberOfMoves) ^ (Double.doubleToLongBits(this.numberOfMoves) >>> 32));
-        hash = 23 * hash + (int) (Double.doubleToLongBits(this.healthPoints) ^ (Double.doubleToLongBits(this.healthPoints) >>> 32));
+        hash = 41 * hash + Objects.hashCode(this.name);
+        hash = 41 * hash + (int) (Double.doubleToLongBits(this.numberOfMoves) ^ (Double.doubleToLongBits(this.numberOfMoves) >>> 32));
+        hash = 41 * hash + (int) (Double.doubleToLongBits(this.healthPoints) ^ (Double.doubleToLongBits(this.healthPoints) >>> 32));
+        hash = 41 * hash + Objects.hashCode(this.codeName);
         return hash;
     }
 
@@ -75,12 +86,17 @@ public class Player implements Serializable {
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
+        if (!Objects.equals(this.codeName, other.codeName)) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", numberOfMoves=" + numberOfMoves + ", healthPoints=" + healthPoints + '}';
+        return "Player{" + "name=" + name + ", numberOfMoves=" + numberOfMoves + ", healthPoints=" + healthPoints + ", codeName=" + codeName + '}';
     }
+
+    
 
 }

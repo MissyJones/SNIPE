@@ -23,23 +23,54 @@ public class StartProgramView {
     }
 
     public final void displayBanner() {
-        System.out.println("\n---------------------------------------------"
-                + "\n|  This is a text based international spy   |"
-                + "\n|  adventure game. Upon completion of this  |"
-                + "\n|  final set of training missions, the user |"
-                + "\n|  becomes a secret agent. The user is      |"
-                + "\n|  assigned a secret agent name and given a |"
-                + "\n|  dossier containing a brief description of|"
-                + "\n|  the country, the names of three cities   |"
-                + "\n|  which hold clues, and details about the  |"
-                + "\n|  physical or mental challenge in each     |"
-                + "\n|  city. Upon successful completion of at   |"
-                + "\n|  least one challenge per country, the user|"
-                + "\n|  receives part of a master code that is   |"
-                + "\n|  needed to win the game. A user can become|"
-                + "\n|  injured and lose health points, or die in|"
-                + "\n|  physical challenges.                     |"
-                + "\n---------------------------------------------"
+        System.out.println(
+                  "\n*----------------------------------------------*"
+                + "\n|                   ______                     |"
+                + "\n|                .-'      `-.                  |"
+                + "\n|              .'            `.                |"
+                + "\n|            /                 \\               |"
+                + "\n|           ;                   ;`             |"
+                + "\n|           |          /        |;             |"
+                + "\n|           ;          / / /    ;|             |"
+                + "\n|           '\\       / / /    /;               |"
+                + "\n|             \\      / /    .'/                |"
+                + "\n|               `. -._____.-'.'                |"
+                + "\n|                / /`_____.-'                  |"
+                + "\n|               / / /                          |"
+                + "\n|              / / /                           |"
+                + "\n|             / / /                            |"
+                + "\n|            / / /                             |"
+                + "\n|           / / /                              |"
+                + "\n|          / / /                               |"
+                + "\n|         / / /                                |"
+                + "\n|        / / /                                 |"
+                + "\n|       / / /                                  |"
+                + "\n|       \\/_/                                   |"
+                + "\n|  _______  _       _________ _______  _______ |\n" +
+                    "|(  ____ \\( (    /|\\__   __/(  ____ )(  ____ \\ |\n" +
+                    "|| (    \\/|  \\  ( |   ) (   | (    )|| (    \\/ |\n" +
+                    "|| (_____ |   \\ | |   | |   | (____)|| (__     |\n" +
+                    "|(_____  )| (\\ \\) |   | |   |  _____)|  __)    |\n" +
+                    "|      ) || | \\   |   | |   | (      | (       |\n" +
+                    "|/\\____) || )  \\  |___) (___| )      | (____/\\ |\n" +
+                    "|\\_______)|/    )_)\\_______/|/       (_______/ |\n" +
+                    "|                                              |"
+                + "\n|   This is a text based international spy     |"
+                + "\n|   adventure game. Upon completion of this    |"
+                + "\n|   final set of training missions, the user   |"
+                + "\n|   becomes a secret agent. The user is        |"
+                + "\n|   assigned a secret agent name and given a   |"
+                + "\n|   dossier containing a brief description of  |"
+                + "\n|   the country, the names of three cities     |"
+                + "\n|   which hold clues, and details about the    |"
+                + "\n|   physical or mental challenge in each       |"
+                + "\n|   city. Upon successful completion of at     |"
+                + "\n|   least one challenge per country, the user  |"
+                + "\n|   receives part of a master code that is     |"
+                + "\n|   needed to win the game. A user can become  |"
+                + "\n|   injured and lose health points, or die in  |"
+                + "\n|   physical challenges.                       |"
+                + "\n*----------------------------------------------*"
         );
 
     }

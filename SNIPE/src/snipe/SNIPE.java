@@ -23,7 +23,8 @@ public class SNIPE {
 
     private static Game currentGame = null;
     private static Player player = null;
-
+    private static String passportList = null;
+    
     public static void main(String[] args) {
 
         StartProgramView startProgramView = new StartProgramView();
@@ -31,6 +32,15 @@ public class SNIPE {
 
     }
 
+    public static String getPassportList() {
+        return passportList;
+    }
+
+    public static void setPassportList(String passportList) {
+        SNIPE.passportList = passportList;
+    }
+
+    
     public static Game getCurrentGame() {
         return currentGame;
     }

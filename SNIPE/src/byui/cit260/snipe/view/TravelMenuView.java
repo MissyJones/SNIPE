@@ -16,39 +16,71 @@ public class TravelMenuView {
     
     public TravelMenuView() {
         this.menu
-         ="\n##################################"
-         +"\n|           Travel Menu          |"
-         +"\n##################################"
-         +"\n1 -- USA SNIPE Academy"
-         +"\n2 -- USA Library of Congress"
-         +"\n3 -- USA Gateway Arch"
-         +"\n4 -- Germany Berlin Wall"
-         +"\n5 -- Germany Cologne Cathedral"
-         +"\n6 -- Germany Rhine River"
-         +"\n7 -- England Big Ben"
-         +"\n8 -- England Westminster Abbey"
-         +"\n9 -- England Buckingham Palace"
-         +"\n10 -- Spain Tarragona"
-         +"\n11 -- Spain Cathedral of Seville"
-         +"\n12 -- Spain Valencia"
-         +"\n13 -- France Eiffel Tower"
-         +"\n14 -- France The Louvre"
-         +"\n15 -- France A Sidewalk Cafe"
-         +"\n16 -- Canada Montreal Olympic Stadium"
-         +"\n17 -- Canada Library of Parliment"
-         +"\n18 -- Canada CN Tower"
-         +"\n19 -- Brazil Beach, Rio de Janeiro"
-         +"\n20 -- Brazil Amazon Forest"
-         +"\n21 -- Brazil Sao Paulo, Capital"
-         +"\n22 -- Australia, Sydney Opera House"
-         +"\n23 -- Australia, Old Melbourne jail"
-         +"\n24 -- Australia, Bridge"
-         +"\n25 -- Russia, St. Peter's Square"
-         +"\n26 -- Russia, Lenin's Mausoleum"
-         +"\n27 -- Russia, St. Basil's Cathedral"
-         +"\nV -- View Map"
-         +"\nM -- Main Menu"
-         +"\nH -- Help Menu"  
+         ="\n*-------------------------------------------*"
+         +"\n|                 Travel Menu               |"
+         +"\n*-------------------------------------------*"
+         +"\n| 1  | USA       |  SNIPE Academy           |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 2  | USA       |  Library of Congress     |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 3  | USA       |  Gateway Arch            |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 4  | Germany   |  Grandenburg Gate        |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 5  | Germany   |  Cologne Cathedral       |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 6  | Germany   |  Rhine River             |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 7  | England   |  Big Ben                 |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 8  | England   |  Westminster Abbey       |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 9  | England   |  Buckingham Palace       |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 10 | Spain     |  Tarragona               |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 11 | Spain     |  Cathedral of Seville    |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 12 | Spain     |  Valencia                |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 13 | France    |  Eiffel Tower            |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 14 | France    |  The Louvre              |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 15 | France    |  A Sidewalk Cafe         |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 16 | Canada    |  Montreal Olympic Stadium|"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 17 | Canada    |  Library of Parliment    |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 18 | Canada    |  CN Tower                |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 19 | Brazil    |  Beach, Rio de Janeiro   |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 20 | Brazil    |  Amazon Forest           |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 21 | Brazil    |  Sao Paulo, Capital      |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 22 | Australia |  Sydney Opera House      |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 23 | Australia |  Old Melbourne jail      |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 24 | Australia |  Bridge                  |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 25 | Russia    |  St. Peter's Square      |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 26 | Russia    |  Lenin's Mausoleum       |"
+         +"\n|----|-----------|--------------------------|"
+         +"\n| 27 | Russia    |  St. Basil's Cathedral   |"
+         +"\n*----------------------------*--------------*"
+         +"\n|       Other Options        |"
+         +"\n|----------------------------|"
+         +"\n| V  |   View Map            |"
+         +"\n|----|-----------------------|"
+         +"\n| M  |   Main Menu           |"
+         +"\n|----|-----------------------|"
+         +"\n| H  |   Help Menu           |"
+         +"\n*----------------------------*"
          +"\n\n";
         }
     public void displayTravelMenuView(){
@@ -243,115 +275,115 @@ private String getHelpMenuOption(String menu) {
     }
 
     private void usaSnipeView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.print("You chose a place! Congrats.");
     }
 
     private void usaCongressView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.print("You chose a place! Congrats.");
     }
 
     private void usaArchView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.print("You chose a place! Congrats.");
     }
 
     private void germanyBerlinView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void germanyCologneView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void germanyRhineView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void englandBenView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void englandAbbeyView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.print("You chose a place! Congrats.");
     }
 
     private void englandPalaceView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void englandBuckinghamView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void spainTarragonaView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void spainSevilleView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void spainValenciaView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void franceTowerView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void franceCafeView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void canadaMontrealView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void canadaParlimentView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void canadaCNTowerView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void brazilBeachView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void brazilAmazonView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void brazilSaoPauloView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void australiaOperaView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void australiaJailView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void australiaBridgeView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void russiaSquareView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void russiaLeninView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void russiaCathedralView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
     private void viewMap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                System.out.print("You chose a place! Congrats.");
     }
 
        }

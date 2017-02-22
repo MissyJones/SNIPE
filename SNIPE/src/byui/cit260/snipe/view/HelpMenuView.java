@@ -17,16 +17,21 @@ class HelpMenuView {
 
     public HelpMenuView() {
         this.menu
-                = "\n#################################"
-                + "\n|        Help Menu              |"
-                + "\n#################################"
-                + "\nS -- Saving Your Game"
-                + "\nT -- Travel Help"
-                + "\nD -- Dossier Inventory Help"
-                + "\nC -- Collecting Codes"
-                + "\nM -- Main Menu"
-                + "\nR -- Return to Player Location"
-                + "\n#################################"
+                = "\n*-------------------------------*"
+                + "\n|           Help Menu           |"
+                + "\n*-------------------------------*"
+                + "\n| S |  Saving Your Game         |"
+                + "\n|---|---------------------------|"
+                + "\n| T |  Travel Help              |"
+                + "\n|---|---------------------------|"
+                + "\n| D |  Dossier Inventory Help   |"
+                + "\n|---|---------------------------|"
+                + "\n| C |  Collecting Codes         |"
+                + "\n|---|---------------------------|"
+                + "\n| M |  Main Menu                |"
+                + "\n|---|---------------------------|"
+                + "\n| R |  Return to Player Location|"
+                + "\n*-------------------------------*"
                 + "\n\n";
     }
 
