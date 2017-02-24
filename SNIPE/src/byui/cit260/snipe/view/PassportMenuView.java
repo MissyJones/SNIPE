@@ -15,14 +15,14 @@ public class PassportMenuView {
              +"\n|               Passports              |"
              +"\n";            
     private String passportMenuEnd = 
-              "*--------------------------------------*";
+               "*--------------------------------------*";
     private String beginString = 
-              "|-----------|--------------------------|\n"
-            + "| ";
+               "|-----------|--------------------------|\n"
+             + "| ";
     private String middleString = 
-              " |  ";
+               " |  ";
     private String endString = 
-              "|\n";
+               "|\n";
     private String passportConstructed;
     
     public PassportMenuView() {
