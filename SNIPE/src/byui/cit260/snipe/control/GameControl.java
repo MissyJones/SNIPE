@@ -60,7 +60,7 @@ public static String codeNameGen () {
                 code1 = "Steel ";
                 break;
             case 5:
-                code1 = "Golden";
+                code1 = "Golden ";
                 break;
             default:
                 code1 = "Broken ";

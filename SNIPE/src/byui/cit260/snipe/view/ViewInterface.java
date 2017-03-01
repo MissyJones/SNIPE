@@ -9,10 +9,8 @@ package byui.cit260.snipe.view;
  *
  * @author Maxwell
  */
-public class GameMenuView  {
-
-    void displayMenu() {
-        System.out.println("called GameMenuView.displayMenu*******");
-    }
-
+public interface ViewInterface {
+    public void display();
+    public String getInput();
+    public boolean doAction(String value);
 }

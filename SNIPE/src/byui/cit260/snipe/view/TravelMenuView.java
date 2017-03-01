@@ -262,10 +262,10 @@ private String getHelpMenuOption(String menu) {
                     this.viewMap();
                     break;
                 case "M":
-                    new MainMenuView().displayMainMenuView();
+                    new MainMenuView().display();
                     break;
                 case "H":
-                    new HelpMenuView().displayHelpMenuView();
+                    new HelpMenuView().display();
                     break;
             default:
                 System.out.println("Why did you choose an invalid option? Try again!");

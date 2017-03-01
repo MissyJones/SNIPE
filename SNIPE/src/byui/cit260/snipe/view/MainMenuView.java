@@ -13,81 +13,27 @@ import snipe.SNIPE;
  *
  * @author Maxwell
  */
-class MainMenuView {
-
-    private final String menu;
+public class MainMenuView extends View {
 
     public MainMenuView() {
-        this.menu
-                = "\n*---------------------------*"
-                + "\n|        Main Menu          |"
-                + "\n*---------------------------*"
-                + "\n|  N  |        New Game     |"
-                + "\n|-----|---------------------|"
-                + "\n|  G  |        Load Game    |"
-                + "\n|-----|---------------------|"
-                + "\n|  H  |        Help Menu    |"
-                + "\n|-----|---------------------|"
-                + "\n|  S  |        Save Game    |"
-                + "\n|-----|---------------------|"
-                + "\n|  Q  |        Quit         |"
-                + "\n*---------------------------*"
-                + "\n\n";
+super("\n*---------------------------*"
+    + "\n|        Main Menu          |"
+    + "\n*---------------------------*"
+    + "\n|  N  |        New Game     |"
+    + "\n|-----|---------------------|"
+    + "\n|  G  |        Load Game    |"
+    + "\n|-----|---------------------|"
+    + "\n|  H  |        Help Menu    |"
+    + "\n|-----|---------------------|"
+    + "\n|  S  |        Save Game    |"
+    + "\n|-----|---------------------|"
+    + "\n|  Q  |        Quit         |"
+    + "\n*---------------------------*"
+    + "\n\n");
     }
 
-    public void displayMainMenuView() {
-        boolean done = false;
-        do {
-            //prompt for ang get things
-            String menuOption = this.getMenuOption(this.menu);
-            if (menuOption.toUpperCase().equals("Q")) {
-                System.out.println("Game over, man. Game over.");
-                return;
-            }
-            done = this.doAction(menuOption);
 
-        } while (!done);
-
-    }
-
-    private String getMenuOption(String menu) {
-
-        Scanner keyboard = new Scanner(System.in);  //get infile for keyboard
-        String value = ""; //value to be returned
-        boolean valid = false; //initialize to not be void
-        OUTER:
-        while (!valid) {
-            System.out.println("\n" + menu + "\n\n Please select an option:");
-            value = keyboard.nextLine();
-            value = value.trim();
-            switch (value) {
-                case "N":
-                    break OUTER;
-                case "G":
-                    break OUTER;
-                case "H":
-                    break OUTER;
-                case "S":
-                    break OUTER;
-                case "Q":
-                    break OUTER;
-                case "n":
-                    break OUTER;
-                case "g":
-                    break OUTER;
-                case "h":
-                    break OUTER;
-                case "s":
-                    break OUTER;
-                case "q":
-                    break OUTER;
-                default:
-                    System.out.println("\nInvalid input: That doesn't make sense, homes.");
-            }
-        }
-        return value;
-    }
-
+    @Override
     public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
@@ -123,7 +69,7 @@ class MainMenuView {
 
     private void displayHelpMenu() {
         HelpMenuView helpMenuView = new HelpMenuView();
-        helpMenuView.displayHelpMenuView();
+        helpMenuView.display();
     }
 
     private void loadGame() {

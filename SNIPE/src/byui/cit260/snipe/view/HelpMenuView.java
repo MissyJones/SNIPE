@@ -11,13 +11,10 @@ import java.util.Scanner;
  *
  * @author Maxwell
  */
-class HelpMenuView {
-
-    private final String menu;
+class HelpMenuView extends View {
 
     public HelpMenuView() {
-        this.menu
-                = "\n*-------------------------------*"
+        super("\n*-------------------------------*"
                 + "\n|           Help Menu           |"
                 + "\n*-------------------------------*"
                 + "\n| S |  Saving Your Game         |"
@@ -32,67 +29,10 @@ class HelpMenuView {
                 + "\n|---|---------------------------|"
                 + "\n| R |  Return to Player Location|"
                 + "\n*-------------------------------*"
-                + "\n\n";
+                + "\n\n");
     }
 
-    public void displayHelpMenuView() {
-        boolean done = false;
-        do {
-            //prompt for ang get things
-            String menuOption = this.getHelpMenuOption(this.menu);
-            if (menuOption.toUpperCase().equals("M")) {
-                System.out.println("Going to the main menu.........");
-                return;
-            }
-            done = this.doAction(menuOption);
-
-        } while (!done);
-
-    }
-
-    private String getHelpMenuOption(String menu) {
-
-        Scanner keyboard = new Scanner(System.in);  //get infile for keyboard
-        String value = ""; //value to be returned
-        boolean valid = false; //initialize to not be void
-        System.out.println(menu);
-        OUTER:
-        while (!valid) {
-            System.out.println("\n Please select an option:");
-            value = keyboard.nextLine();
-            value = value.trim();
-            switch (value) {
-                case "S":
-                    break OUTER;
-                case "T":
-                    break OUTER;
-                case "D":
-                    break OUTER;
-                case "C":
-                    break OUTER;
-                case "M":
-                    break OUTER;
-                case "R":
-                    break OUTER;
-                case "s":
-                    break OUTER;
-                case "t":
-                    break OUTER;
-                case "d":
-                    break OUTER;
-                case "c":
-                    break OUTER;
-                case "m":
-                    break OUTER;
-                case "r":
-                    break OUTER;
-                default:
-                    System.out.println("\nInvalid input: That doesn't make sense, silly!");
-            }
-        }
-        return value;
-    }
-
+ @Override
     public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {

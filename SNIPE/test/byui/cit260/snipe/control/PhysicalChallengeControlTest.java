@@ -25,14 +25,20 @@ public class PhysicalChallengeControlTest {
     @Test
     public void testDmgCalc() {
         System.out.println("dmgCalc");
-        PhysChallenge physChallenge = null;
-        Player player = null;
+        PhysChallenge physChallenge = new PhysChallenge();
+        physChallenge.setDescription("You run away! You have");
+        Player player = new Player();
+        player.setHealthPoints(100);
         PhysicalChallengeControl instance = new PhysicalChallengeControl();
-        String expResult = "";
+        String expResult = "You run away! You have 28 points of health left.";
         String result = instance.dmgCalc(physChallenge, player);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-
+    
+        player.setHealthPoints(5);
+        expResult = "You died.";
+        result = instance.dmgCalc(physChallenge, player);
+        assertEquals(expResult, result);
+        
     }
     
 }
