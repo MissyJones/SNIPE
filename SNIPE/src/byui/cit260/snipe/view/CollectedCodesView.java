@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package byui.cit260.snipe.view;
-
+import java.util.Scanner;
 /**
  *
  * @author elizabethkirby
@@ -12,6 +12,7 @@ package byui.cit260.snipe.view;
 public class CollectedCodesView {
 
 	private String collectedCodesMenu;
+    private final String menu;
 	
 	public CollectedCodesView() {
 		 this.menu
@@ -46,11 +47,16 @@ public class CollectedCodesView {
          +"\n*----------------------------*"
          +"\n\n";
         }
-    public void displayCollectedCodesMenuView(){
+
+    /**
+     *
+     */
+    public void displayCollectedCodesView(){
         boolean done = false;
         do {
             //prompt for ang get things
-            String menuOption = this.getHelpMenuOption(this.menu);
+            String menuOption;
+            menuOption = this.getHelpMenuOption(this.menu);
             if (menuOption.toUpperCase().equals("M")) {
                 System.out.println("OK. Returning to Main Menu.");
                 return;
@@ -133,11 +139,58 @@ private String getHelpMenuOption(String menu) {
                 this.russiaView();
                 break;
              case "V":
-                this.viewMap();
+                    this.viewMap();
+                    break;
+                case "M":
+                    new MainMenuView().display();
+                    break;
+                case "H":
+                    new HelpMenuView().display();
+                    break;
+            default:
+                System.out.println("Why did you choose an invalid option? Try again!");
                 break;
-	     case "H":
-		this.helpMenu():
-		break;
-             case "M":
-                new MainMenuView().display();
-break;
+        }
+        return false;
+    }
+
+    private void australiaView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void russiaView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void usaView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void germanyView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void englandView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void spainView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void franceView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void canadaView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void brazilView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void viewMap() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+}
