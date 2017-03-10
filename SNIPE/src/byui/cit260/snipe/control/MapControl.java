@@ -5,10 +5,16 @@
  */
 package byui.cit260.snipe.control;
 
+import byui.cit260.snipe.model.Location;
+import java.io.Serializable;
+
 /**
  *
  * @author Maxwell
  */
-public class MapControl {
+public class MapControl implements Serializable {
+    private int noOfRows;
+    private int noOfColumns;
+    private Location[][] locations;
 
 }
