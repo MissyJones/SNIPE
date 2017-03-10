@@ -18,7 +18,7 @@ public class Item implements Serializable {
     private String itemType;
     private double itemIDNumber;
 
-    public Item() {
+    public Item[] item; static {
     }
 
     public String getItemDescription() {
@@ -43,6 +43,14 @@ public class Item implements Serializable {
 
     public void setItemIDNumber(double itemIDNumber) {
         this.itemIDNumber = itemIDNumber;
+    }
+    
+    public Item[] getItem() {
+        return item;
+    }
+    
+    public void setItem(Item[] item) {
+        this.item = item;
     }
 
     @Override

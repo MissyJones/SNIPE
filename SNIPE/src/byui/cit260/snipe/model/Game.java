@@ -8,6 +8,7 @@ package byui.cit260.snipe.model;
 import java.io.Serializable;
 import java.util.Objects;
 
+
 /**
  *
  * @author Missy
@@ -16,6 +17,9 @@ public class Game implements Serializable {
 
     private double moveCounter;
     private double noCodes;
+    
+    private Player player;
+    private Country country;
 
     public Game() {
     }
@@ -35,7 +39,23 @@ public class Game implements Serializable {
     public void setNoCodes(double noCodes) {
         this.noCodes = noCodes;
     }
+   
+    public Player getPlayer() {
+        return player;
+}
 
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+    
+    public Country getCountry() {
+        return country;
+    }
+    
+    public void setCountry(Country country) {
+        this.country = country;
+    }	
+    
     @Override
     public int hashCode() {
         int hash = 5;

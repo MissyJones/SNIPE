@@ -17,6 +17,10 @@ public class Country implements Serializable {
     private String name;
     private double countryID;
     private double visited;
+    
+    private MentalChallenge mentalChallenge;
+    private PhysChallenge physChallenge;
+    private Location location;
 
     public Country() {
     }
@@ -43,6 +47,25 @@ public class Country implements Serializable {
 
     public void setVisited(double visited) {
         this.visited = visited;
+    }
+    
+    public MentalChallenge getMentalChallenge() {
+        return mentalChallenge;
+    }
+    public void setMentalChallenge(MentalChallenge mentalChallenge) {
+        this.mentalChallenge = mentalChallenge;
+    }
+    public PhysChallenge getPhysChallenge() {
+        return physChallenge;
+    }
+    public void setPhysChallenge(PhysChallenge physChallenge) {
+        this.physChallenge = physChallenge;
+    }
+    public Location getLocation() {
+        return location;
+    }
+    public void setLocation (Location location) {
+        this.location =  location;
     }
 
     @Override

@@ -19,6 +19,8 @@ public class Player implements Serializable {
     private double numberOfMoves;
     private double healthPoints = 100;
     private String codeName;
+    
+    private Character character;
 
     public Player() {
     }
@@ -55,6 +57,14 @@ public class Player implements Serializable {
         this.codeName = codeName;
     }
 
+    public Character getCharacter() {
+        return character;
+    }
+    
+    public void setCharacter(Character character) {
+        this.character = character;
+    }
+    
     @Override
     public int hashCode() {
         int hash = 7;
