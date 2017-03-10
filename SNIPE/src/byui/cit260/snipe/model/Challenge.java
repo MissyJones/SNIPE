@@ -12,15 +12,27 @@ import java.util.Objects;
  *
  * @author elizabethkirby
  */
-public class MentalChallenge implements Serializable {
+public class Challenge implements Serializable {
 
     private String description;
     private double reward;
     private double challengeID;
     private String challengeType;
+    private boolean usedFlag;
+    private Game game;
 
-    public MentalChallenge() {
+    public Challenge() {
     }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+    
+    
 
     public String getDescription() {
         return description;
@@ -54,6 +66,14 @@ public class MentalChallenge implements Serializable {
         this.challengeType = challengeType;
     }
 
+    public boolean isUsedFlag() {
+        return usedFlag;
+    }
+
+    public void setUsedFlag(boolean usedFlag) {
+        this.usedFlag = usedFlag;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
@@ -75,7 +95,7 @@ public class MentalChallenge implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final MentalChallenge other = (MentalChallenge) obj;
+        final Challenge other = (Challenge) obj;
         if (Double.doubleToLongBits(this.reward) != Double.doubleToLongBits(other.reward)) {
             return false;
         }

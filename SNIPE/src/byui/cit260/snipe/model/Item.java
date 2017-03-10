@@ -17,10 +17,21 @@ public class Item implements Serializable {
     private String itemDescription;
     private String itemType;
     private double itemIDNumber;
+    private Game game;
 
     public Item[] item; static {
     }
 
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+
+    
+    
     public String getItemDescription() {
         return itemDescription;
     }

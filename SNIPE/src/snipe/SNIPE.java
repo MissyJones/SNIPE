@@ -6,10 +6,8 @@
 package snipe;
 
 import byui.cit260.snipe.model.Game;
-import byui.cit260.snipe.model.PhysChallenge;
-import byui.cit260.snipe.model.MentalChallenge;
+import byui.cit260.snipe.model.Challenge;
 import byui.cit260.snipe.model.Player;
-import byui.cit260.snipe.model.Character;
 import byui.cit260.snipe.model.Country;
 import byui.cit260.snipe.model.Item;
 import byui.cit260.snipe.model.Location;

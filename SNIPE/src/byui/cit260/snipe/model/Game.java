@@ -1,4 +1,4 @@
-/*
+/*]
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -17,13 +17,16 @@ public class Game implements Serializable {
 
     private double moveCounter;
     private double noCodes;
-    
+    Item[] items = new Item[9];
     private Player player;
     private Country country;
+    Challenge[] challenges = new Challenge[4];
 
     public Game() {
     }
 
+ 
+    
     public double getMoveCounter() {
         return moveCounter;
     }

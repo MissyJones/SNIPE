@@ -19,10 +19,17 @@ public class Player implements Serializable {
     private double numberOfMoves;
     private double healthPoints = 100;
     private String codeName;
-    
-    private Character character;
-
+    private Game game;
+  
     public Player() {
+    }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
     }
 
     public String getName() {
@@ -57,14 +64,7 @@ public class Player implements Serializable {
         this.codeName = codeName;
     }
 
-    public Character getCharacter() {
-        return character;
-    }
-    
-    public void setCharacter(Character character) {
-        this.character = character;
-    }
-    
+   
     @Override
     public int hashCode() {
         int hash = 7;

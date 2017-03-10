@@ -18,7 +18,7 @@ public class MentalChallengeControlTest {
     }
 
     /**
-     * Test of mathPuzzleThree method, of class MentalChallengeControl.
+     * Test of mathPuzzleThree method, of class ChallengeControl.
      */
     @Test
     public void testMathPuzzleThree() {
@@ -27,7 +27,7 @@ public class MentalChallengeControlTest {
         double height = 6;
         double width = 3;
         double answer = 0;
-        MentalChallengeControl instance = new MentalChallengeControl();
+        ChallengeControl instance = new ChallengeControl();
         Boolean expResult = false;
         Boolean result = instance.mathPuzzleThree(height, width, answer);
         assertEquals(expResult, result);
