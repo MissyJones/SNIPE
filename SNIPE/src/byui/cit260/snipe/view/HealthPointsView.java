@@ -12,8 +12,7 @@ package byui.cit260.snipe.view;
 public class HealthPointsView extends View {
     
     public HealthPointsView() {
-        super("You have " + getHealthpoints + " health points")
-            + "*------------------------------------*"
+        super("\n*----------------------------------*"
             + "\n|  Menu Options                    |"
             + "\n*----------------------------------*"
             + "\n|  H  | Help Menu                  |"
@@ -21,7 +20,9 @@ public class HealthPointsView extends View {
             + "\n|  M  | Main Menu                  |"
             + "\n|----------------------------------|"
             + "\n|  R  | Return to Player Location  |"
-            + "\n*----------------------------------*");        
+            + "\n*----------------------------------*");
+System.out.print("You have "+points+" points of helth left.");
+        
     }
 @Override
     public boolean doAction(String choice) {
@@ -47,9 +48,6 @@ public class HealthPointsView extends View {
         mainMenuView.display();
     }   
 
-    private void displayHelpMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     private void displayHelpMenu() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
