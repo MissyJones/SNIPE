@@ -5,7 +5,9 @@
  */
 package byui.cit260.snipe.view;
 
+import byui.cit260.snipe.control.GameControl;
 import java.util.Scanner;
+import snipe.SNIPE;
 
 /**
  *
@@ -17,6 +19,8 @@ class HelpMenuView extends View {
         super("\n*-------------------------------*"
                 + "\n|           Help Menu           |"
                 + "\n*-------------------------------*"
+                + "\n| V |  View Health Pnts         |"
+                + "\n|---|---------------------------|"
                 + "\n| S |  Saving Your Game         |"
                 + "\n|---|---------------------------|"
                 + "\n| T |  Travel Help              |"
@@ -36,6 +40,9 @@ class HelpMenuView extends View {
     public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
+            case "V":
+                this.points();
+                break;
             case "S":
                 this.savingYourGame();
                 break;
@@ -80,4 +87,10 @@ class HelpMenuView extends View {
         System.out.println("called playerLocation*******");
     }
 
-}
+    private void points() {
+        HealthPointsView healthPointsView = new HealthPointsView();
+        healthPointsView.display();
+    }
+    }
+
+
