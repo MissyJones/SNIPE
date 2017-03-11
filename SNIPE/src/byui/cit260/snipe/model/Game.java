@@ -6,6 +6,7 @@
 package byui.cit260.snipe.model;
 
 import java.io.Serializable;
+import java.util.Map;
 import java.util.Objects;
 
 
@@ -82,6 +83,10 @@ public class Game implements Serializable {
     @Override
     public String toString() {
         return "Game{" + "moveCounter=" + moveCounter + ", noCodes=" + noCodes + '}';
+    }
+
+    public void setMap(Map map) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

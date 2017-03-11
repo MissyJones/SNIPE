@@ -85,10 +85,7 @@ public class MentalChallenge implements Serializable {
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
-        if (!Objects.equals(this.challengeType, other.challengeType)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.challengeType, other.challengeType);
     }
 
     @Override

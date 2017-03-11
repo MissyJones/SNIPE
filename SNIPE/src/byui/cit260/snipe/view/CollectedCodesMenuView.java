@@ -115,7 +115,8 @@ public class CollectedCodesMenuView {
 	     case "R":
                    break OUTER;
             default:
-                System.out.println("Sorry kid! We do not understand your command. Try again!");
+                System.out.println("Sorry kid! We do not understand"
+                        + "\n\nyour command. Try again!");
                 break;
             }
         }
