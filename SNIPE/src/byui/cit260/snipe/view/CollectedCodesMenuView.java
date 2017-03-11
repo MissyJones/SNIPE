@@ -16,37 +16,37 @@ public class CollectedCodesMenuView {
     
     public CollectedCodesMenuView() {
         this.menu
-         ="\n*-------------------------------------------*"
-         +"\n|             Collected Codes Menu          |"
-	 +"\n*-------------------------------------------*"
-         +"\n| U  |		 USA                     |"
-         +"\n|----|--------------------------------------|"
-         +"\n| G  |	      	Germany   		 |"
-         +"\n|----|--------------------------------------|"
-         +"\n| E  | 		England                  |"
-         +"\n|----|--------------------------------------|"
-         +"\n| S  | 		Spain                    |"
-         +"\n|----|--------------------------------------|"
-         +"\n| F  | 		France                   |"
-         +"\n|----|--------------------------------------|"
-         +"\n| C  | 		Canada   		 |"
-         +"\n|----|--------------------------------------|"
-         +"\n| B  | 		Brazil    	         |"
-         +"\n|----|--------------------------------------|"
-         +"\n| A  | 		Australia 		 |"
-         +"\n|----|--------------------------------------|"
-         +"\n| R  | 		Russia        		 |"
-         +"\n*----------------------------*--------------*"
-         +"\n|       Other Options        |"
-         +"\n|----------------------------|"
-         +"\n| V  |   View Map            |"
-         +"\n|----|-----------------------|"
-         +"\n| M  |   Main Menu           |"
-         +"\n|----|-----------------------|"
-         +"\n| H  |   Help Menu           |"
-	 +"\n|----|-----------------------|"
-	 +"\n| X  |   Exit Menu	     	  |"
-         +"\n*----------------------------*"
+         ="\n*----------------------------------------------*"
+         +"\n|             Collected Codes Menu             |"
+	 +"\n*----------------------------------------------*"
+         +"\n| 1  |		 USA                        |"
+         +"\n|----|-----------------------------------------|"
+         +"\n| 2  |	      	Germany                     |"
+         +"\n|----|-----------------------------------------|"
+         +"\n| 3  | 		England                     |"
+         +"\n|----|-----------------------------------------|"
+         +"\n| 4  | 		Spain                       |"
+         +"\n|----|-----------------------------------------|"
+         +"\n| 5  | 		France                      |"
+         +"\n|----|-----------------------------------------|"
+         +"\n| 6  | 		Canada                      |"
+         +"\n|----|-----------------------------------------|"
+         +"\n| 7  | 		Brazil                      |"
+         +"\n|----|-----------------------------------------|"
+         +"\n| 8  | 		Australia                   |"
+         +"\n|----|-----------------------------------------|"
+         +"\n| 9  | 		Russia                      |"
+         +"\n*----------------------------*-----------------*"
+         +"\n|       Other Options                        |"
+         +"\n|--------------------------------------------|"
+         +"\n| V  |   View Map                            |"
+         +"\n|----|---------------------------------------|"
+         +"\n| M  |   Main Menu                           |"
+         +"\n|----|---------------------------------------|"
+         +"\n| H  |   Help Menu                           |"
+	 +"\n|----|---------------------------------------|"
+	 +"\n| R  |   Return to Location	     	  |"
+         +"\n*--------------------------------------------*"
          +"\n\n";
     }
     public void displayCollectedCodesMenuView(){
@@ -54,7 +54,7 @@ public class CollectedCodesMenuView {
         do {
             //prompt for player to choose something
             String menuOption = this.getExitMenuOption(this.menu);
-            if (menuOption.toUpperCase().equals("X")) {
+            if (menuOption.toUpperCase().equals("R")) {
                 System.out.println("Hi ho! Hi ho! It's back to our location we go.");
                 return;
             }
@@ -76,31 +76,31 @@ public class CollectedCodesMenuView {
             chosen = chosen.trim();
 
         switch (chosen) {
-             case "U":
+             case "1":
                 this.usaCode();
                 break OUTER;
-             case "G":
+             case "2":
                 this.germanyCode();
                 break OUTER;
-             case "E":
+             case "3":
                 this.englandCode();
                 break OUTER;
-             case "S":
+             case "4":
                 this.spainCode();
 		break OUTER;
-             case "F":
+             case "5":
                 this.franceCode();
 		break OUTER;
-             case "C":
+             case "6":
                 this.canadaCode();
                 break OUTER;
-             case "B":
+             case "7":
                 this.brazilCode();
                 break OUTER;
-             case "A":
+             case "8":
                 this.australiaCode();
                 break OUTER;
-             case "R":
+             case "9":
                 this.russiaCode();
                 break OUTER;
              case "V":
@@ -112,7 +112,7 @@ public class CollectedCodesMenuView {
              case "H":
                     new HelpMenuView().display();
                     break OUTER;
-	     case "X":
+	     case "R":
                    break OUTER;
             default:
                 System.out.println("Sorry kid! We do not understand your command. Try again!");
