@@ -20,7 +20,7 @@ public class Country implements Serializable {
     
     private MentalChallenge mentalChallenge;
     private PhysChallenge physChallenge;
-    private Location location;
+    private Location[] location;
 
     public Country() {
     }
@@ -61,10 +61,10 @@ public class Country implements Serializable {
     public void setPhysChallenge(PhysChallenge physChallenge) {
         this.physChallenge = physChallenge;
     }
-    public Location getLocation() {
+    public Location[] getLocation() {
         return location;
     }
-    public void setLocation (Location location) {
+    public void setLocation (Location[] location) {
         this.location =  location;
     }
 
