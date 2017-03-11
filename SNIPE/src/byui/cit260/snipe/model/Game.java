@@ -25,6 +25,22 @@ public class Game implements Serializable {
     public Game() {
     }
 
+    public Item[] getItems() {
+        return items;
+    }
+
+    public void setItems(Item[] items) {
+        this.items = items;
+    }
+
+    public Challenge[] getChallenges() {
+        return challenges;
+    }
+
+    public void setChallenges(Challenge[] challenges) {
+        this.challenges = challenges;
+    }
+
  
     
     public double getMoveCounter() {

@@ -28,7 +28,8 @@ public class Location implements Serializable {
     private double puzzleTrigger;
     private String passportView;
     private Country country;
-
+    private int row;
+    private int column;
     public Location() {
     }
 
@@ -36,6 +37,26 @@ public class Location implements Serializable {
         return passportView;
     }
 
+    public int getRow() {
+        return row;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public void setColumn(int column) {
+        this.column = column;
+    }
+
+    
+    
+    
+    
     public void setPassportView(String passportView) {
         this.passportView = passportView;
     }
