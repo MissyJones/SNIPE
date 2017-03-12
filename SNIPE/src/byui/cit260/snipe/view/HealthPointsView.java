@@ -49,6 +49,8 @@ System.out.print("You have "+points+" points of helth left.");
     }   
 
     private void displayHelpMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Off to get some help!");
+        HelpMenuView helpMenuView = new HelpMenuView();
+        helpMenuView.display();
     }
 }

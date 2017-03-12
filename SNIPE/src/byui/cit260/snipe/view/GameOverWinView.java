@@ -18,7 +18,10 @@ public GameOverWinView(){
                           
       private void MainMenuView(){
                 System.out.print("Back to the Main Menu.");
-    }                     
+    }   
+      private void Credits(){
+                System.out.print("The usual credit block:");
+      }
     
 }
 
