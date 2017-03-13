@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 package byui.cit260.snipe.view;
+
+import byui.cit260.snipe.control.GameControl;
 import java.util.Scanner;
+import snipe.SNIPE;
 /**
  *
  * @author elizabethkirby
@@ -208,6 +211,10 @@ public class CollectedCodesMenuView {
     }
 
     private void franceCode() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void display() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
