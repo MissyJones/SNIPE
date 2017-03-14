@@ -27,7 +27,7 @@ public class Location implements Serializable {
     private Boolean passportAdd;
     private double puzzleTrigger;
     private String passportView;
-    private Country country;
+    private String country;
     private int row;
     private int column;
     public Location() {
@@ -59,14 +59,6 @@ public class Location implements Serializable {
     
     public void setPassportView(String passportView) {
         this.passportView = passportView;
-    }
-
-    public Country getCountry() {
-        return country;
-    }
-
-    public void setCountry(Country country) {
-        this.country = country;
     }
 
     

@@ -8,8 +8,7 @@ package snipe;
 import byui.cit260.snipe.model.Game;
 import byui.cit260.snipe.model.Challenge;
 import byui.cit260.snipe.model.Player;
-import byui.cit260.snipe.model.Country;
-import byui.cit260.snipe.model.Item;
+import byui.cit260.snipe.model.Code;
 import byui.cit260.snipe.model.Location;
 import byui.cit260.snipe.view.StartProgramView;
 

@@ -6,10 +6,9 @@
 package byui.cit260.snipe.control;
 
 import byui.cit260.snipe.model.Challenge;
-import byui.cit260.snipe.model.Country;
 import byui.cit260.snipe.model.Game;
 import byui.cit260.snipe.model.Code;
-import enums.CodeList;
+import byui.cit260.snipe.enums.CodeList;
 import byui.cit260.snipe.model.Map;
 import byui.cit260.snipe.model.Player;
 import static jdk.nashorn.internal.objects.NativeArray.map;
