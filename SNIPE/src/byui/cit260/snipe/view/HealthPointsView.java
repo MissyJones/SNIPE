@@ -12,8 +12,7 @@ package byui.cit260.snipe.view;
 public class HealthPointsView extends View {
     
     public HealthPointsView() {
-        super("You have " + getHealthpoints + " health points")
-            + "*------------------------------------*"
+        super("*------------------------------------*"
             + "\n|  Menu Options                    |"
             + "\n*----------------------------------*"
             + "\n|  H  | Help Menu                  |"
@@ -50,7 +49,5 @@ public class HealthPointsView extends View {
     private void displayHelpMenu() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    private void displayHelpMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+
 }
