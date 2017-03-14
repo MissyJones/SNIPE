@@ -30,6 +30,7 @@ super("\n*---------------------------*"
     + "\n|  Q  |        Quit         |"
     + "\n*---------------------------*"
     + "\n\n");
+System.out.print("You have "+points+" points of helth left.");
     }
 
 
