@@ -17,7 +17,7 @@ public class Game implements Serializable {
 
     private double moveCounter;
     private double noCodes;
-    Item[] items = new Item[9];
+    Code[] codes = new Code[9];
     private Player player;
     private Country country;
     Challenge[] challenges = new Challenge[4];
@@ -25,13 +25,15 @@ public class Game implements Serializable {
     public Game() {
     }
 
-    public Item[] getItems() {
-        return items;
+    public Code[] getCodes() {
+        return codes;
     }
 
-    public void setItems(Item[] items) {
-        this.items = items;
+    public void setCodes(Code[] codes) {
+        this.codes = codes;
     }
+
+
 
     public Challenge[] getChallenges() {
         return challenges;

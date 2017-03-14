@@ -10,6 +10,7 @@ import byui.cit260.snipe.model.Country;
 import byui.cit260.snipe.model.Game;
 import byui.cit260.snipe.model.Code;
 import byui.cit260.snipe.model.CodeList;
+import byui.cit260.snipe.model.Map;
 import byui.cit260.snipe.model.Player;
 import static jdk.nashorn.internal.objects.NativeArray.map;
 import snipe.SNIPE;
@@ -45,11 +46,11 @@ public class GameControl {
        
        game.setPlayer(player);
        
-       Country country = new Country();
-       game.setCountry(country);
+       Map map = new Map();
+       game.setMap(map);
        
        Code[] item = GameControl.createCodes();
-       game.setItems(item);
+       game.setCodes(item);
        
        Challenge[] challenges = GameControl.createChallenges();
        game.setChallenges(challenges);
