@@ -19,7 +19,7 @@ public class Game implements Serializable {
     private double noCodes;
     Code[] codes = new Code[9];
     private Player player;
-    private Country country;
+    private Map map;
     Challenge[] challenges = new Challenge[4];
 
     public Game() {
@@ -68,14 +68,16 @@ public class Game implements Serializable {
     public void setPlayer(Player player) {
         this.player = player;
     }
-    
-    public Country getCountry() {
-        return country;
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
     }
     
-    public void setCountry(Country country) {
-        this.country = country;
-    }	
+
     
     @Override
     public int hashCode() {

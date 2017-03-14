@@ -46,7 +46,7 @@ public class GameControl {
        
        game.setPlayer(player);
        
-       Map map = new Map();
+       Map map = new Map(3, 9);
        game.setMap(map);
        
        Code[] item = GameControl.createCodes();

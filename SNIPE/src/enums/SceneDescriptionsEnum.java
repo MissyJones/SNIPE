@@ -19,7 +19,7 @@ public enum SceneDescriptionsEnum implements Serializable {
     Cologne_Cathedral("The top midnight mass vacation destination."),
     Rhine_river("Wilder than a mile, I'm passing you in style someday."),
     Large_Ben("AKA Benny. Hey Benny! What time you got?"),
-    Westminster_Abbey("One of the least famous Jane Austen books."),
+    Westminster_Abbey("The only Abigail in all of... Westminster. Or however you pronounce it."),
     Buckingham_palace("God save your mom!"),
     Tarragona("My favorite spice."),
     Cathedral_Seville("So I guess some people like to look at this building. It's alright."),
@@ -38,7 +38,8 @@ public enum SceneDescriptionsEnum implements Serializable {
     Bridge("Dude, I've totally seen a bridge before!"),
     StPeters_Square("Blah blah blah"),
     Lenins_Mausoleum("RIP dawg."),
-    StBasils_Cathedral("A big church");
+    StBasils_Cathedral("A big church"),
+    SafeHouse("Home, sweet safe house.");
     
     private final String description;
     

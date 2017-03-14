@@ -7,6 +7,8 @@ package byui.cit260.snipe.control;
 
 import byui.cit260.snipe.model.Location;
 import byui.cit260.snipe.model.Map;
+import byui.cit260.snipe.model.Scene;
+import enums.SceneDescriptionsEnum;
 import java.io.Serializable;
 
 /**
@@ -26,6 +28,15 @@ public class MapControl implements Serializable {
     
     
     return map;
+    }
+
+    static void setStartingLocation(Map map) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static Scene[] createScene() {
+        Scene[] scenes = new Scene[SceneDescriptionsEnum.values().length];
+        return scenes;
     }
 
 }
