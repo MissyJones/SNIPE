@@ -19,5 +19,10 @@ public GameOverLoseView(){
       private void MainMenuView(){
                 System.out.print("Back to the Main Menu.");
     }                     
-    
+      private void Credits(){
+                System.out.print("The usual credit block:");
+    }  
+      private void FamousSNIPGrads(){
+                System.out.print("Maybe talk to these SNIPE graduates?");
+    }  
 }   

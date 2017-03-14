@@ -4,16 +4,19 @@
  * and open the template in the editor.
  */
 package byui.cit260.snipe.view;
+
+import byui.cit260.snipe.control.GameControl;
 import java.util.Scanner;
+import snipe.SNIPE;
 /**
  *
  * @author elizabethkirby
  */
-public class CollectedCodesMenuView {
-  
-    private boolean hasCode;
-    private final String menu;
-    
+public class CollectedCodesMenuView extends View {
+
+    private String menu;
+    private boolean hasCode = false;
+      
     public CollectedCodesMenuView() {
         this.menu
          ="\n*----------------------------------------------*"
@@ -49,7 +52,7 @@ public class CollectedCodesMenuView {
          +"\n*--------------------------------------------*"
          +"\n\n";
     }
-    public void displayCollectedCodesMenuView(){
+     public void displayCollectedCodesMenuView(){
         boolean done = false;
         do {
             //prompt for player to choose something
@@ -124,7 +127,7 @@ public class CollectedCodesMenuView {
     }
 
      private void usaCode() {
-        if(hasCode == true) {
+        if(hasCode = true) {
 	    System.out.println("This code you have. Yes.");
 	}
 	else {
@@ -133,7 +136,7 @@ public class CollectedCodesMenuView {
     }
     
     private void germanyCode() {
-        if(hasCode == true) {
+        if(hasCode = true) {
 	    System.out.println("This code you have. Yes.");
 	}
 	else {
@@ -142,7 +145,7 @@ public class CollectedCodesMenuView {
     }
 
     private void englandCode() {
-        if(hasCode == true) {
+        if(hasCode = true) {
 	    System.out.println("This code you have. Yes.");
 	}
 	else {
@@ -151,7 +154,7 @@ public class CollectedCodesMenuView {
     }
 
     private void spainCode() {
-        if(hasCode == true) {
+        if(hasCode = true) {
 	    System.out.println("This code you have. Yes.");
 	}
 	else {
@@ -160,7 +163,7 @@ public class CollectedCodesMenuView {
     }
 
     private void canadaCode() {
-        if(hasCode == true) {
+        if(hasCode = true) {
 	    System.out.println("This code you have. Yes.");
 	}
 	else {
@@ -169,7 +172,7 @@ public class CollectedCodesMenuView {
     }
 
     private void brazilCode() {
-        if(hasCode == true) {
+        if(hasCode = true) {
 	    System.out.println("This code you have. Yes.");
 	}
 	else {
@@ -178,7 +181,7 @@ public class CollectedCodesMenuView {
     }
 
     private void australiaCode() {
-        if(hasCode == true) {
+        if(hasCode = true) {
 	    System.out.println("This code you have. Yes.");
 	}
 	else {
@@ -187,7 +190,7 @@ public class CollectedCodesMenuView {
     }
 
     private void russiaCode() {
-        if(hasCode == true) {
+        if(hasCode = true) {
 	    System.out.println("This code you have. Yes.");
 	}
 	else {
@@ -199,7 +202,7 @@ public class CollectedCodesMenuView {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private boolean doAction(String menuOption) {
+    public boolean doAction(String menuOption) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -208,6 +211,14 @@ public class CollectedCodesMenuView {
     }
 
     private void franceCode() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void display() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void Super(String string) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

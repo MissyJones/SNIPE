@@ -5,7 +5,6 @@
  */
 package byui.cit260.snipe.model;
 
-import java.awt.Point;
 import java.io.Serializable;
 
 /**
@@ -26,16 +25,19 @@ public enum FamousSNIPGrads implements Serializable {
     SECRET_AGENT_MAN("The best of the best. He's so good he got is own song.");
     
     private final String description;
-    private final Point coordinates;
-
+    
     FamousSNIPGrads(String description) {
         this.description = description;
-        coordinates = new Point(1,1);
 }
     public String getDescriptionJ() {
         return description;
     }
-    public Point getCoordinates() {
-        return coordinates;
+    @Override
+    public String toString() {
+        System.out.println(java.util.Arrays.asList(FamousSNIPGrads.values()));
+        return null;
     }
+    private void FamousSNIPGrads(){
+                System.out.print("You are in good company - well mostlly good.");
+    }  
 }
