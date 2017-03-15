@@ -5,8 +5,10 @@
  */
 package byui.cit260.snipe.control;
 
+import byui.cit260.snipe.exceptions.CodeControlException;
 import byui.cit260.snipe.model.Code;
 import byui.cit260.snipe.model.Player;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,18 +16,15 @@ import byui.cit260.snipe.model.Player;
  */
 public class CodeControl {
 
-    public int addCode(Code code, Player player) {
-        boolean owned = code.isOwned();
-        if (owned = true) {
-            System.out.println("Yeah, you've already got that.");
-            return 0;
-        } else if (owned = false) {
-            code.setOwned(true);
+    public void addCode(Code code, Player player) throws CodeControlException {
+        ArrayList <Code> codeList = player.getCodeInventory();
+        if (codeList.contains(code)) {
+            throw new CodeControlException("This code has already been acquired."
+                    + "\nYou're going to have to find another code for this to work.");
+        } else {
             player.addObjectToCodeInventory(code);
             System.out.println("You've got a new code!");
-            return 1;
-        } else {
-            return -1;
+
         }
     }
 }

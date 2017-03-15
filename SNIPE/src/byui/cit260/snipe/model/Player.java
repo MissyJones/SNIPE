@@ -34,13 +34,8 @@ public class Player implements Serializable {
         this.codeInventory = codeInventory;
     }
 
-    public boolean addObjectToCodeInventory(Code code) {
-        if (codeInventory.contains(code)) {
-            return false;
-        } else {
-            codeInventory.add(code);
-            return true;
-        }
+    public void addObjectToCodeInventory(Code code) {
+            this.codeInventory.add(code);
     }
 
     public Game getGame() {

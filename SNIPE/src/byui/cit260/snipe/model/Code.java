@@ -15,21 +15,11 @@ import java.util.Objects;
 public class Code implements Serializable {
 
     private String itemDescription;
-    private boolean owned;
 
     public Code[] item;
 
     static {
     }
-
-    public boolean isOwned() {
-        return owned;
-    }
-
-    public void setOwned(boolean owned) {
-        this.owned = owned;
-    }
-
     public String getItemDescription() {
         return itemDescription;
     }

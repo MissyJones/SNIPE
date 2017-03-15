@@ -23,9 +23,17 @@ public class SNIPE {
     private static String passportList = null;
 
     public static void main(String[] args) {
-
         StartProgramView startProgramView = new StartProgramView();
-        startProgramView.displayStartProgramView();
+        try { 
+            startProgramView.displayStartProgramView();
+        }
+        catch (Throwable te) {
+            System.out.println("Your game has crashed. The specific error will"
+                    + "\n be displayed below. Your game will be restarted.");
+            te.printStackTrace();
+            startProgramView.displayStartProgramView();
+            
+        }
 
     }
 
