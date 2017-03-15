@@ -14,6 +14,7 @@ import byui.cit260.snipe.model.Player;
 import static jdk.nashorn.internal.objects.NativeArray.map;
 import snipe.SNIPE;
 
+
 /**
  *
  * @author Maxwell
@@ -52,6 +53,7 @@ public class GameControl {
         game.setChallenges(challenges);
 
         MapControl.setStartingLocation(map);
+
 
     }
 

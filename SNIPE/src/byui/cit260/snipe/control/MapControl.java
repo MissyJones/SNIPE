@@ -17,6 +17,7 @@ import java.io.Serializable;
  */
 public class MapControl implements Serializable {
 
+
     public static Map createMap() {
         Map map = new Map(9, 3);
 

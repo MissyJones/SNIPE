@@ -45,29 +45,5 @@ public class Code implements Serializable {
     public void setItem(Code[] item) {
         this.item = item;
     }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Code other = (Code) obj;
-        if (!Objects.equals(this.itemDescription, other.itemDescription)) {
-            return false;
-        }
-
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "Item{" + "itemDescription=" + itemDescription + '}';
-    }
-
 }
+

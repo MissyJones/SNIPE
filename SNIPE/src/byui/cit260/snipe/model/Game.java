@@ -6,7 +6,6 @@
 package byui.cit260.snipe.model;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  *
@@ -70,34 +69,6 @@ public class Game implements Serializable {
 
     public void setMap(Map map) {
         this.map = map;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 97 * hash + Objects.hashCode(this.moveCounter);
-        hash = 97 * hash + (int) (Double.doubleToLongBits(this.noCodes) ^ (Double.doubleToLongBits(this.noCodes) >>> 32));
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Game other = (Game) obj;
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "Game{" + "moveCounter=" + moveCounter + ", noCodes=" + noCodes + '}';
     }
 
 }
