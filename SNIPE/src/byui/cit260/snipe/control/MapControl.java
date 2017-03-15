@@ -6,7 +6,10 @@
 package byui.cit260.snipe.control;
 
 import java.io.Serializable;
-import byui.cit260.snipe.model.Map /**
+import byui.cit260.snipe.model.Map;
+import byui.cit260.snipe.model.Scene;
+import byui.cit260.snipe.enums.SceneDescriptionsEnum;
+    /**
          *
          * @author Maxwell
          */
