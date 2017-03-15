@@ -13,7 +13,7 @@ import java.io.Serializable;
  */
 public enum SceneDescriptionsEnum implements Serializable {
     SNIPE_HQ("Headquarters of the super secret SNIPE Agency"),
-    LIB_OF_Congress("\nThe research library that officially serves the United "
+    Lib_Of_Congress("\nThe research library that officially serves the United "
             + "\nStates Congress and is the de facto national library of the "
             + "\nUnited States. "),
     Gateway_Arch("\nThe world's tallest arch,the tallest man-made monument in "

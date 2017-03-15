@@ -6,6 +6,7 @@
 package byui.cit260.snipe.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 import snipe.SNIPE;
 
@@ -20,10 +21,30 @@ public class Player implements Serializable {
     private double healthPoints = 100;
     private String codeName;
     private Game game;
-  
+    ArrayList<Code> codeInventory = new ArrayList<>();
+    
     public Player() {
     }
 
+    public ArrayList<Code> getCodeInventory() {
+        return codeInventory;
+    }
+
+    public void setCodeInventory(ArrayList<Code> codeInventory) {
+        this.codeInventory = codeInventory;
+    }
+
+    public boolean addObjectToCodeInventory(Code code){
+        if(codeInventory.contains(code)) {
+            return false;
+        }
+        else {
+            codeInventory.add(code);
+            return true;
+        }
+    }
+    
+    
     public Game getGame() {
         return game;
     }

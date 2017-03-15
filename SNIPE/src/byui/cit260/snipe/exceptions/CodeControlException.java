@@ -9,24 +9,24 @@ package byui.cit260.snipe.exceptions;
  *
  * @author Maxwell
  */
-public class ChallengeControlException extends Exception {
+public class CodeControlException extends Exception {
 
-    public ChallengeControlException() {
+    public CodeControlException() {
     }
 
-    public ChallengeControlException(String message) {
+    public CodeControlException(String message) {
         super(message);
     }
 
-    public ChallengeControlException(String message, Throwable cause) {
+    public CodeControlException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public ChallengeControlException(Throwable cause) {
+    public CodeControlException(Throwable cause) {
         super(cause);
     }
 
-    public ChallengeControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public CodeControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
     
