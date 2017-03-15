@@ -13,7 +13,7 @@ import java.io.Serializable;
  * @author elizabethkirby
  */
 public enum Credits implements Serializable {
- 
+
     BROTHER_DANIEL_GILLILAND("Brother Daniel Gilliland, AKA Bro G. Our "
             + "Instructor: This semester and project could not exist without "
             + " Bro G's direction, encouragement, and help. Thank you Bro G!"),
@@ -32,18 +32,20 @@ public enum Credits implements Serializable {
             + "fictional. No humans were harmed during this project."
             + "The destuction of computers is an entirely different story, but"
             + "purely acciendtal and beyond the creators' control.");
-    
+
     private final String description;
-    
-    Credits (String description) {
+
+    Credits(String description) {
         this.description = description;
     }
+
     public String getDescription() {
         return description;
     }
+
     @Override
     public String toString() {
         System.out.println(java.util.Arrays.asList(Credits.values()));
         return null;
     }
- }
+}

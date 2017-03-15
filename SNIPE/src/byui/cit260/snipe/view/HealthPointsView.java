@@ -10,21 +10,22 @@ package byui.cit260.snipe.view;
  * @author elizabethkirby
  */
 public class HealthPointsView extends View {
-    
+
     public HealthPointsView() {
         super("\n*----------------------------------*"
-            + "\n|  Menu Options                    |"
-            + "\n*----------------------------------*"
-            + "\n|  H  | Help Menu                  |"
-            + "\n|----------------------------------|"
-            + "\n|  M  | Main Menu                  |"
-            + "\n|----------------------------------|"
-            + "\n|  R  | Return to Player Location  |"
-            + "\n*----------------------------------*");
-System.out.print("You have "+points+" points of helth left.");
-        
+                + "\n|  Menu Options                    |"
+                + "\n*----------------------------------*"
+                + "\n|  H  | Help Menu                  |"
+                + "\n|----------------------------------|"
+                + "\n|  M  | Main Menu                  |"
+                + "\n|----------------------------------|"
+                + "\n|  R  | Return to Player Location  |"
+                + "\n*----------------------------------*");
+        System.out.print("You have " + points + " points of helth left.");
+
     }
-@Override
+
+    @Override
     public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
@@ -46,7 +47,7 @@ System.out.print("You have "+points+" points of helth left.");
         System.out.println("Going to the main menu...");
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.display();
-    }   
+    }
 
     private void displayHelpMenu() {
         System.out.println("Off to get some help!");

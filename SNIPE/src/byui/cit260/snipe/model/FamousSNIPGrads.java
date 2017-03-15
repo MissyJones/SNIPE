@@ -23,21 +23,24 @@ public enum FamousSNIPGrads implements Serializable {
     MACGUYVER("Our most innovative and clever graduate. EVER!"),
     NATASHA("Female half of the team known as Boris and Natasha. The don't like Moose. Wwe admit to failure on this one."),
     SECRET_AGENT_MAN("The best of the best. He's so good he got is own song.");
-    
+
     private final String description;
-    
+
     FamousSNIPGrads(String description) {
         this.description = description;
-}
+    }
+
     public String getDescriptionJ() {
         return description;
     }
+
     @Override
     public String toString() {
         System.out.println(java.util.Arrays.asList(FamousSNIPGrads.values()));
         return null;
     }
-    private void FamousSNIPGrads(){
-                System.out.print("You are in good company - well mostlly good.");
-    }  
+
+    private void FamousSNIPGrads() {
+        System.out.print("You are in good company - well mostlly good.");
+    }
 }

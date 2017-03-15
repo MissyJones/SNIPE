@@ -39,14 +39,14 @@ public enum SceneDescriptionsEnum implements Serializable {
     StPeters_Square("Blah blah blah"),
     Lenins_Mausoleum("RIP dawg."),
     StBasils_Cathedral("A big church");
-    
+
     private final String description;
-    
+
     SceneDescriptionsEnum(String description) {
         this.description = description;
-}
+    }
 
-    public String getDescription(){
-       return description;
-   } 
+    public String getDescription() {
+        return description;
+    }
 }

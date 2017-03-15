@@ -91,6 +91,4 @@ class HelpMenuView extends View {
         HealthPointsView healthPointsView = new HealthPointsView();
         healthPointsView.display();
     }
-    }
-
-
+}

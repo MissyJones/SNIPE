@@ -16,9 +16,8 @@ public abstract class View implements ViewInterface {
     protected String displayMessage;
     protected double points = (snipe.SNIPE.getPlayer()).getHealthPoints();
 
-    
-    public View (){
-        
+    public View() {
+
     }
 
     public View(String message) {

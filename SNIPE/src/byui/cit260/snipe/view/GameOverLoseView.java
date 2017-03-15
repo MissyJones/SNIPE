@@ -21,10 +21,11 @@ public class GameOverLoseView {
         System.out.print("Back to the Main Menu.");
     }
 
-      private void Credits(){
-                System.out.print("The usual credit block:");
-    }  
-      private void FamousSNIPGrads(){
-                System.out.print("Maybe talk to these SNIPE graduates?");
-    }  
-}   
+    private void Credits() {
+        System.out.print("The usual credit block:");
+    }
+
+    private void FamousSNIPGrads() {
+        System.out.print("Maybe talk to these SNIPE graduates?");
+    }
+}

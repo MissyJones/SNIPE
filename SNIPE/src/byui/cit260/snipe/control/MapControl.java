@@ -5,18 +5,13 @@
  */
 package byui.cit260.snipe.control;
 
-import byui.cit260.snipe.model.Location;
-import byui.cit260.snipe.model.Map;
-import byui.cit260.snipe.model.Scene;
-import byui.cit260.snipe.enums.SceneDescriptionsEnum;
 import java.io.Serializable;
+import byui.cit260.snipe.model.Map /**
+         *
+         * @author Maxwell
+         */
 
-/**
- *
- * @author Maxwell
- */
 public class MapControl implements Serializable {
-
 
     public static Map createMap() {
         Map map = new Map(9, 3);
@@ -27,7 +22,7 @@ public class MapControl implements Serializable {
     }
 
     static void setStartingLocation(Map map) {
-
+        System.out.println("Trying so hard. But not yet setting player loaction");
     }
 
     private static Scene[] createScene() {
