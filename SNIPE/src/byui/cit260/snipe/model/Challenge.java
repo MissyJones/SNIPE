@@ -31,8 +31,6 @@ public class Challenge implements Serializable {
     public void setGame(Game game) {
         this.game = game;
     }
-    
-    
 
     public String getDescription() {
         return description;

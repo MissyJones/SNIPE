@@ -10,38 +10,35 @@ package byui.cit260.snipe.model;
  * @author Maxwell
  */
 public class Map {
+
     private int rowCount;
     private int columnCount;
     private Location[][] locations;
 
     public Map(int rowCount, int columnCount) {
-        if (rowCount <1 || columnCount < 1) {
-        System.out.println("Nice try, but hacking won't get you anywhere in this game.");
-        return;
+        if (rowCount < 1 || columnCount < 1) {
+            System.out.println("Nice try, but hacking won't get you anywhere in this game.");
+            return;
         }
-        
+
         this.rowCount = rowCount;
-        this.columnCount = columnCount; 
-        
-        
+        this.columnCount = columnCount;
+
         this.locations = new Location[rowCount][columnCount];
-        
+
         for (int i = 0; i < rowCount; i++) {
-            for (int j = 0; i < columnCount; j++ ) {
-                
+            for (int j = 0; i < columnCount; j++) {
+
                 Location location = new Location();
                 location.setColumn(j);
                 location.setRow(i);
                 location.setPassportAdd(false);
-                
+
                 locations[i][j] = location;
             }
         }
     }
 
-    
-    
-    
     public Location[][] getLocations() {
         return locations;
     }
@@ -50,9 +47,6 @@ public class Map {
         this.locations = locations;
     }
 
-    
-    
-    
     public int getRowCount() {
         return rowCount;
     }
@@ -68,6 +62,5 @@ public class Map {
     public void setColumnCount(int columnCount) {
         this.columnCount = columnCount;
     }
-    
-    
+
 }

@@ -32,7 +32,7 @@ class HelpMenuView extends View {
                 + "\n\n");
     }
 
- @Override
+    @Override
     public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {

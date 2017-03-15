@@ -17,24 +17,24 @@ import static org.junit.Assert.*;
  * @author elizabethkirby
  */
 public class MentalChallengeMenuViewTest {
-    
+
     public MentalChallengeMenuViewTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
-    
+
 }

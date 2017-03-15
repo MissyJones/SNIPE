@@ -10,5 +10,5 @@ package byui.cit260.snipe.model;
  * @author Maxwell
  */
 public class Scene {
-    
+
 }

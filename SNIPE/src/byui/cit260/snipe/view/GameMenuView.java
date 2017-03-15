@@ -15,22 +15,21 @@ import snipe.SNIPE;
 public class GameMenuView extends View {
 
     public GameMenuView() {
-super("\n*---------------------------*"
-    + "\n|        Game Menu          |"
-    + "\n*---------------------------*"
-    + "\n|  N  |        New Game     |"
-    + "\n|-----|---------------------|"
-    + "\n|  G  |        Load Game    |"
-    + "\n|-----|---------------------|"
-    + "\n|  H  |        Help Menu    |"
-    + "\n|-----|---------------------|"
-    + "\n|  S  |        Save Game    |"
-    + "\n|-----|---------------------|"
-    + "\n|  Q  |        Quit         |"
-    + "\n*---------------------------*"
-    + "\n\n");
+        super("\n*---------------------------*"
+                + "\n|        Game Menu          |"
+                + "\n*---------------------------*"
+                + "\n|  N  |        New Game     |"
+                + "\n|-----|---------------------|"
+                + "\n|  G  |        Load Game    |"
+                + "\n|-----|---------------------|"
+                + "\n|  H  |        Help Menu    |"
+                + "\n|-----|---------------------|"
+                + "\n|  S  |        Save Game    |"
+                + "\n|-----|---------------------|"
+                + "\n|  Q  |        Quit         |"
+                + "\n*---------------------------*"
+                + "\n\n");
     }
-
 
     @Override
     public boolean doAction(String choice) {
@@ -57,7 +56,7 @@ super("\n*---------------------------*"
 
     private void startNewGame() {
         GameControl.createNewGame(SNIPE.getPlayer());
-        
+
     }
 
     private void saveGame() {
@@ -72,7 +71,6 @@ super("\n*---------------------------*"
     private void loadGame() {
         System.out.println("called loadGame*******");
     }
-  
 
     void displayMenu() {
         System.out.println("called GameMenuView.displayMenu*******");

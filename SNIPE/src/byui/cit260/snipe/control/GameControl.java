@@ -20,52 +20,48 @@ import snipe.SNIPE;
  */
 public class GameControl {
 
-
-    
-    
     public static Player createPlayer(String playersName) {
         if (playersName == null) {
             return null;
         }
-        
+
         Player player = new Player();
         player.setName(playersName);
         player.setCodeName(codeNameGen());
-        
-                System.out.println("\n"+playersName+"! Your codename is: "+player.getCodeName()+". "
-                + "\n\n Go get the bad guys, "+player.getCodeName()+"!");
-        
+
+        System.out.println("\n" + playersName + "! Your codename is: " + player.getCodeName() + ". "
+                + "\n\n Go get the bad guys, " + player.getCodeName() + "!");
+
         SNIPE.setPlayer(player);
         return player;
     }
 
     public static void createNewGame(Player player) {
-       Game game = new Game();
-       SNIPE.setCurrentGame(game);
-       
-       game.setPlayer(player);
-       
-       Map map = new Map(3, 9);
-       game.setMap(map);
-       
-       Code[] item = GameControl.createCodes();
-       game.setCodes(item);
-       
-       Challenge[] challenges = GameControl.createChallenges();
-       game.setChallenges(challenges);
-       
-       MapControl.setStartingLocation(map);
-       
+        Game game = new Game();
+        SNIPE.setCurrentGame(game);
+
+        game.setPlayer(player);
+
+        Map map = new Map(3, 9);
+        game.setMap(map);
+
+        Code[] item = GameControl.createCodes();
+        game.setCodes(item);
+
+        Challenge[] challenges = GameControl.createChallenges();
+        game.setChallenges(challenges);
+
+        MapControl.setStartingLocation(map);
+
     }
-    
-    
-public static String codeNameGen () {
-        int rand1 = (int) Math.ceil(Math.random()*5);
-        int rand2 = (int) Math.ceil(Math.random()*5);
-        
+
+    public static String codeNameGen() {
+        int rand1 = (int) Math.ceil(Math.random() * 5);
+        int rand2 = (int) Math.ceil(Math.random() * 5);
+
         String code1;
         String code2;
-        
+
         switch (rand1) {
             case 0:
                 code1 = "Silent ";
@@ -112,9 +108,8 @@ public static String codeNameGen () {
                 code2 = "Code";
                 break;
         }
-        
-        String codeName = code1+code2;
 
+        String codeName = code1 + code2;
 
         return codeName;
 
@@ -122,59 +117,58 @@ public static String codeNameGen () {
 
     private static Code[] createCodes() {
         Code[] codes = new Code[9];
-        
+
         Code codeOne = new Code();
         codeOne.setItemDescription(CodeList.Code_USA.getDescription());
         codeOne.setOwned(false);
         codes[CodeList.Code_USA.ordinal()] = codeOne;
-        
+
         Code codeTwo = new Code();
         codeTwo.setItemDescription(CodeList.Code_Germany.getDescription());
         codeTwo.setOwned(false);
         codes[CodeList.Code_Germany.ordinal()] = codeTwo;
-        
+
         Code codeThree = new Code();
         codeThree.setItemDescription(CodeList.Code_England.getDescription());
         codeThree.setOwned(false);
         codes[CodeList.Code_England.ordinal()] = codeThree;
-        
+
         Code codeFour = new Code();
-        codeFour.setItemDescription(CodeList.Code_Spain.getDescription()); 
+        codeFour.setItemDescription(CodeList.Code_Spain.getDescription());
         codeFour.setOwned(false);
         codes[CodeList.Code_Spain.ordinal()] = codeFour;
-        
+
         Code codeFive = new Code();
         codeFive.setItemDescription(CodeList.Code_France.getDescription());
         codeFive.setOwned(false);
         codes[CodeList.Code_France.ordinal()] = codeFive;
-        
+
         Code codeSix = new Code();
         codeSix.setItemDescription(CodeList.Code_Canada.getDescription());
         codeSix.setOwned(false);
         codes[CodeList.Code_Canada.ordinal()] = codeSix;
-        
+
         Code codeSeven = new Code();
         codeSeven.setItemDescription(CodeList.Code_Brazil.getDescription());
         codeSeven.setOwned(false);
         codes[CodeList.Code_Brazil.ordinal()] = codeSeven;
-        
+
         Code codeEight = new Code();
         codeEight.setItemDescription(CodeList.Code_Austrailia.getDescription());
         codeEight.setOwned(false);
         codes[CodeList.Code_Austrailia.ordinal()] = codeEight;
-        
+
         Code codeNine = new Code();
         codeNine.setItemDescription(CodeList.Code_Russia.getDescription());
         codeNine.setOwned(false);
         codes[CodeList.Code_Russia.ordinal()] = codeNine;
-        
+
         return null;
     }
-    
 
     private static Challenge[] createChallenges() {
-       System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-       
-       return null;
+        System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+        return null;
     }
 }

@@ -22,7 +22,7 @@ public class Player implements Serializable {
     private String codeName;
     private Game game;
     ArrayList<Code> codeInventory = new ArrayList<>();
-    
+
     public Player() {
     }
 
@@ -34,17 +34,15 @@ public class Player implements Serializable {
         this.codeInventory = codeInventory;
     }
 
-    public boolean addObjectToCodeInventory(Code code){
-        if(codeInventory.contains(code)) {
+    public boolean addObjectToCodeInventory(Code code) {
+        if (codeInventory.contains(code)) {
             return false;
-        }
-        else {
+        } else {
             codeInventory.add(code);
             return true;
         }
     }
-    
-    
+
     public Game getGame() {
         return game;
     }
@@ -85,7 +83,6 @@ public class Player implements Serializable {
         this.codeName = codeName;
     }
 
-   
     @Override
     public int hashCode() {
         int hash = 7;
@@ -127,7 +124,5 @@ public class Player implements Serializable {
     public String toString() {
         return "Player{" + "name=" + name + ", numberOfMoves=" + numberOfMoves + ", healthPoints=" + healthPoints + ", codeName=" + codeName + '}';
     }
-
-    
 
 }

@@ -14,10 +14,12 @@ import java.util.Objects;
  */
 public class Code implements Serializable {
 
-    private String itemDescription; 
+    private String itemDescription;
     private boolean owned;
 
-    public Code[] item; static {
+    public Code[] item;
+
+    static {
     }
 
     public boolean isOwned() {
@@ -28,9 +30,6 @@ public class Code implements Serializable {
         this.owned = owned;
     }
 
-
-    
-    
     public String getItemDescription() {
         return itemDescription;
     }
@@ -39,15 +38,13 @@ public class Code implements Serializable {
         this.itemDescription = itemDescription;
     }
 
-   
     public Code[] getItem() {
         return item;
     }
-    
+
     public void setItem(Code[] item) {
         this.item = item;
     }
-
 
     @Override
     public boolean equals(Object obj) {
@@ -70,7 +67,7 @@ public class Code implements Serializable {
 
     @Override
     public String toString() {
-        return "Item{" + "itemDescription=" + itemDescription +'}';
+        return "Item{" + "itemDescription=" + itemDescription + '}';
     }
 
 }

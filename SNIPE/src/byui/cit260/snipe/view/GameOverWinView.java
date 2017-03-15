@@ -4,21 +4,21 @@
  * and open the template in the editor.
  */
 package byui.cit260.snipe.view;
+
 /**
  *
  * @author Home
  */
 public class GameOverWinView {
 
-private final String displayMessage;
+    private final String displayMessage;
 
-public GameOverWinView(){
-    this.displayMessage = "\nCONGRATULATIONS! YOU WON! Welcome to the elite S.N.I.P.E.";
-}
-                          
-      private void MainMenuView(){
-                System.out.print("Back to the Main Menu.");
-    }                     
-    
-}
+    public GameOverWinView() {
+        this.displayMessage = "\nCONGRATULATIONS! YOU WON! Welcome to the elite S.N.I.P.E.";
+    }
 
+    private void MainMenuView() {
+        System.out.print("Back to the Main Menu.");
+    }
+
+}

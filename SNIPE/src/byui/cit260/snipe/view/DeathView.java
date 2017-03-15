@@ -12,25 +12,24 @@ import java.util.Scanner;
  * @author Maxwell
  */
 public class DeathView extends View {
-    
 
     public DeathView() {
         super("It seems as though you have failed your mission..."
-                               + "\n\n\nIn a somewhat... permanent way.\n"
-                               + "Would you like to load your game,\n"
-                               + "or would it be more helpful to go to the main menu?\n\n"
-                             + "*------------------------*"
-                           + "\n|  You have been offed   |"
-                           + "\n*------------------------*"
-                           + "\n|  L  |       Load Game  |"
-                           + "\n|------------------------|"
-                           + "\n|  M  |       Main Menu  |"
-                           + "\n|------------------------|"
-                           + "\n|  Q  |       Quit Game  |"
-                           + "\n*------------------------*");        
+                + "\n\n\nIn a somewhat... permanent way.\n"
+                + "Would you like to load your game,\n"
+                + "or would it be more helpful to go to the main menu?\n\n"
+                + "*------------------------*"
+                + "\n|  You have been offed   |"
+                + "\n*------------------------*"
+                + "\n|  L  |       Load Game  |"
+                + "\n|------------------------|"
+                + "\n|  M  |       Main Menu  |"
+                + "\n|------------------------|"
+                + "\n|  Q  |       Quit Game  |"
+                + "\n*------------------------*");
     }
-    
-@Override
+
+    @Override
     public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
@@ -56,7 +55,5 @@ public class DeathView extends View {
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.display();
     }
-    
-    
-    
+
 }

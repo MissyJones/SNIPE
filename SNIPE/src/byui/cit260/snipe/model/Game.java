@@ -8,7 +8,6 @@ package byui.cit260.snipe.model;
 import java.io.Serializable;
 import java.util.Objects;
 
-
 /**
  *
  * @author Missy
@@ -33,8 +32,6 @@ public class Game implements Serializable {
         this.codes = codes;
     }
 
-
-
     public Challenge[] getChallenges() {
         return challenges;
     }
@@ -43,8 +40,6 @@ public class Game implements Serializable {
         this.challenges = challenges;
     }
 
- 
-    
     public double getMoveCounter() {
         return moveCounter;
     }
@@ -60,10 +55,10 @@ public class Game implements Serializable {
     public void setNoCodes(double noCodes) {
         this.noCodes = noCodes;
     }
-   
+
     public Player getPlayer() {
         return player;
-}
+    }
 
     public void setPlayer(Player player) {
         this.player = player;
@@ -76,9 +71,7 @@ public class Game implements Serializable {
     public void setMap(Map map) {
         this.map = map;
     }
-    
 
-    
     @Override
     public int hashCode() {
         int hash = 5;

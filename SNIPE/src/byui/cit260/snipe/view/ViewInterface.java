@@ -10,7 +10,10 @@ package byui.cit260.snipe.view;
  * @author Maxwell
  */
 public interface ViewInterface {
+
     public void display();
+
     public String getInput();
+
     public boolean doAction(String value);
 }

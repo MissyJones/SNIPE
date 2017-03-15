@@ -10,14 +10,15 @@ package byui.cit260.snipe.view;
  * @author Home
  */
 public class GameOverLoseView {
-private final String displayMessage;
 
-public GameOverLoseView(){
-    this.displayMessage = "\nEPIC Mission FAIL!Go back to the Main Menu and try again.";
+    private final String displayMessage;
+
+    public GameOverLoseView() {
+        this.displayMessage = "\nEPIC Mission FAIL!Go back to the Main Menu and try again.";
+    }
+
+    private void MainMenuView() {
+        System.out.print("Back to the Main Menu.");
+    }
+
 }
-                          
-      private void MainMenuView(){
-                System.out.print("Back to the Main Menu.");
-    }                     
-    
-}   

@@ -13,13 +13,13 @@ import java.util.Objects;
  * @author Maxwell
  */
 public class Location implements Serializable {
-/**
- *
- * +"| WORDS     | MORE WORDS               |\n"
- * +"|-----------|--------------------------|\n"
- * 
- * 
- */
+
+    /**
+     *
+     * +"| WORDS | MORE WORDS |\n" +"|-----------|--------------------------|\n"
+     *
+     *
+     */
     private String name;
     private String description;
     private String challengeType;
@@ -30,6 +30,7 @@ public class Location implements Serializable {
     private String country;
     private int row;
     private int column;
+
     public Location() {
     }
 
@@ -53,16 +54,10 @@ public class Location implements Serializable {
         this.column = column;
     }
 
-    
-    
-    
-    
     public void setPassportView(String passportView) {
         this.passportView = passportView;
     }
 
-    
-    
     public String getDescription() {
         return description;
     }

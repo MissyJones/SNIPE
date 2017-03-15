@@ -21,7 +21,7 @@ public class SNIPE {
     private static Game currentGame = null;
     private static Player player = null;
     private static String passportList = null;
-    
+
     public static void main(String[] args) {
 
         StartProgramView startProgramView = new StartProgramView();
@@ -37,7 +37,6 @@ public class SNIPE {
         SNIPE.passportList = passportList;
     }
 
-    
     public static Game getCurrentGame() {
         return currentGame;
     }

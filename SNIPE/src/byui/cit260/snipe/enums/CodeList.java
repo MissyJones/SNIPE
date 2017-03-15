@@ -21,18 +21,15 @@ public enum CodeList implements Serializable {
     Code_Brazil("7"),
     Code_Austrailia("?"),
     Code_Russia("If you can't figure out this answer, please look it up on Goggle.");
-    
-    
+
     private final String description;
-    
-    CodeList(String description){
+
+    CodeList(String description) {
         this.description = description;
     }
 
-      public String getDescription() {
+    public String getDescription() {
         return description;
     }
-    
-    
-    
+
 }

@@ -72,14 +72,14 @@ public enum SceneDescriptionsEnum implements Serializable {
     StBasils_Cathedral("Built from 1555–61 on orders from Ivan the Terrible "
             + "\nand commemorates the capture of Kazan and Astrakhan."),
     SafeHouse("Home, sweet safe house.");
-    
+
     private final String description;
-    
+
     SceneDescriptionsEnum(String description) {
         this.description = description;
-}
+    }
 
-    public String getDescription(){
-       return description;
-   } 
+    public String getDescription() {
+        return description;
+    }
 }

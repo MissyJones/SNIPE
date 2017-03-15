@@ -12,17 +12,18 @@ import java.util.Scanner;
  * @author Maxwell
  */
 public abstract class View implements ViewInterface {
+
     protected String displayMessage;
-    
-    public View (){
-        
+
+    public View() {
+
     }
-    
-   public View (String message){
+
+    public View(String message) {
         this.displayMessage = message;
     }
-    
-   @Override
+
+    @Override
     public void display() {
 
         boolean done = false;
@@ -35,7 +36,7 @@ public abstract class View implements ViewInterface {
             done = this.doAction(value);
         } while (!done);
     }
-    
+
     @Override
     public String getInput() {
         Scanner keyboard = new Scanner(System.in);  //get infile for keyboard
@@ -56,7 +57,5 @@ public abstract class View implements ViewInterface {
         }
         return value;
     }
-    
-    
-    
+
 }

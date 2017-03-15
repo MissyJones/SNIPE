@@ -52,7 +52,7 @@ public class ChallengeControl {
 
     }
 
-public String dmgCalc(Challenge physChallenge, Player player) {
+    public String dmgCalc(Challenge physChallenge, Player player) {
         Random rand = new Random();
         String reply;
         double damage;
@@ -76,10 +76,5 @@ public String dmgCalc(Challenge physChallenge, Player player) {
         }
         return reply;
     }
-
-
-
-
-
 
 }
