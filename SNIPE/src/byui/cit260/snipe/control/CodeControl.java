@@ -17,13 +17,16 @@ public class CodeControl {
         boolean owned = code.isOwned();
         if(owned=true){
             System.out.println("Yeah, you've already got that.");
-            return -1;
+            return 0;
         }
-        else {
+        else if (owned=false) {
             code.setOwned(true);
             player.addObjectToCodeInventory(code);
             System.out.println("You've got a new code!");
-            return 0;
+            return 1;
+        }
+        else {
+            return -1;
         }
     }
 }
