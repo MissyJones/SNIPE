@@ -39,7 +39,7 @@ public class ChallengeControl {
             answer = "Oops! You won’t be getting this code!";
         }
         return answer;
-    }
+}
 
     public String mathPuzzleOne(double number) {
         String answer;
@@ -76,5 +76,4 @@ public class ChallengeControl {
         }
         return reply;
     }
-
 }

@@ -31,7 +31,8 @@ public enum SceneDescriptionsEnum implements Serializable {
             + "\nbuildings and the traditional place of coronation and burial "
             + "\nsite for English and, later, British monarchs."),
     Buckingham_palace(" The London residence and administrative headquarters "
-            + "\nof the reigning monarch of the United Kingdom. God save your mom!"),
+            + "\nof the reigning monarch of the United Kingdom. God save "
+            + "\nyour mom!"),
     Tarragona("A port city located in northeast Spain on the Costa Daurada "
             + "\nby the Mediterranean Sea."),
     Cathedral_Seville("The largest Gothic cathedral and the third-largest "
