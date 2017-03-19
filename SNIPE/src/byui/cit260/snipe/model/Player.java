@@ -22,10 +22,30 @@ public class Player implements Serializable {
     private String codeName;
     private Game game;
     ArrayList<Code> codeInventory = new ArrayList<>();
+    private int row;
+    private int column;
 
     public Player() {
     }
 
+    public int getRow() {
+        return row;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public void setColumn(int column) {
+        this.column = column;
+    }
+
+    
+    
     public ArrayList<Code> getCodeInventory() {
         return codeInventory;
     }
