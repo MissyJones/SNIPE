@@ -13,15 +13,36 @@ import java.io.Serializable;
  */
 public enum FamousSNIPGrads implements Serializable {
     //List of Famous SNIPE Graduates who can help, though you might be better off without the help of some of them
-    JAMES_BOND("The Brits were so happy with how well we trained, they gave us money to grow"),
-    MAXWELLL_SMART("We promise you when he graduated he really was top notch. We don't know what happened."),
+    JAMES_BOND("The Brits were so happy with how well we trained him, they gave "
+            +"\nus money to grow"),
+    MAXWELLL_SMART("We promise you when he graduated he really was top notch. "
+            +"\nWe don't know what happened."),
     SECRET_SQUIRREL("Yep. We train talking critters too."),
-    LANCELOT_LINK("AKA Lance Link, Secret Chimp. Hey! IF chimps an go into space, they certainly can do spy type stuff."),
-    SIDNEY_BRISTOW("One of our finest graduates. We were so happy for her when she got to show her grit and smarts on TV."),
-    JACK_BAUER("Another top notch graduate, after all he got the job done in 24 hours!"),
-    NIKITA("Sometimes referd to as Nikita Le Femme. But we just call her Nikita."),
+    LANCELOT_LINK("AKA Lance Link, Secret Chimp. Hey! IF chimps an go into "
+            +"\nspace, they certainly can do spy type stuff."),
+    SIDNEY_BRISTOW("One of our finest graduates. We were so happy for her when "
+            +"\nshe got to show her grit and smarts on TV."),
+    JACK_BAUER("Another top notch graduate, after all he got the job done in "
+            +"\n24 hours!"),
+    NIKITA("Sometimes referd to as Nikita Le Femme. But we just call "
+            +"\nher Nikita."),
     MACGUYVER("Our most innovative and clever graduate. EVER!"),
-    NATASHA("Female half of the team known as Boris and Natasha. The don't like Moose. Wwe admit to failure on this one."),
+    BORIS_AND_NATASHA("They don't like Moose or Squirrel. We admit to failure "
+            +"\non these two. At least they alwalys seemed super nice!"),
+    INSPECTOR_GADGET("Another very clever and innovative graduate. We wish he "
+            +"\nwould share all his cool toys with us!"),
+    BULLWINKLE("Covert, so don't tell anyone he is one of us. We still can't "
+            +"\nfigure out if he's just acting like a he's not very bright or "
+            +"\nif he really is that dim. He is the \"Moose\" Boris and  "
+            +"\nNatasha don't like."),
+    ROCKET_J_SQUIRREL("AKA Rocky \"Hey Rocky! Watch this!\" Another covert. "
+            +"\nThis one has super powers! We suspect he picked them  up "
+            +"\nwhen he got bit by the irridiated golden goose. He is the"
+            +"\n\"Squirrel\" Boris and"
+            +"\nNatasha don't like."),
+   AUSTIN_POWERS("He's so shagadelic. Also another one who turned away from "
+            +"\nsuper nice to the dark side. What can we say? You win some. "
+            +"\nYou lose some."),
     SECRET_AGENT_MAN("The best of the best. He's so good he got is own song.");
 
     private final String description;
@@ -41,6 +62,6 @@ public enum FamousSNIPGrads implements Serializable {
     }
 
     private void FamousSNIPGrads() {
-        System.out.print("You are in good company - well mostlly good.");
+        System.out.println("You are in good company; well mostly good company.");
     }
 }

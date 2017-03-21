@@ -8,6 +8,7 @@ package byui.cit260.snipe.control;
 import byui.cit260.snipe.model.Challenge;
 import byui.cit260.snipe.model.Player;
 import java.util.Random;
+import byui.cit260.snipe.exceptions.ChallengeControlException;
 
 /**
  *
@@ -28,17 +29,19 @@ public class ChallengeControl {
         return response;
     }
 
-    public String mathPuzzleTwo(double radius, double height1, double number1) {
-        double volume = Math.PI * height1 * radius * radius;
-        String answer;
-        if (number1 <= 0) {
-            return "Please enter a positive, rational number, silly!";
-        } else if (number1 == 4825.49) {
-            answer = "A compartment opens and you safely retrieve the code.";
+    public void mathPuzzleTwo(int radius, int height1, int answer1) throws ChallengeControlException {
+        int volume = (int) (Math.PI * height1 * radius * radius);
+        
+        if (answer1 <= 0) {
+            throw new ChallengeControlException("Pleae enter a positive, "
+            +"\nrational number, silly!");
+        } else if (volume != answer1) {
+             throw new ChallengeControlException("Oops! You won't be getting "
+                     + "\nthis code. Too bad for you!");            
         } else {
-            answer = "Oops! You won’t be getting this code!";
+            System.out.println("A compartment opens and you safely retrieive "
+            +"\nmost carefully retrieve the code.");
         }
-        return answer;
 }
 
     public String mathPuzzleOne(double number) {

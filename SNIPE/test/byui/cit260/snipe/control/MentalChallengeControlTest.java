@@ -5,6 +5,7 @@
  */
 package byui.cit260.snipe.control;
 
+import org.junit.Assert;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -13,6 +14,8 @@ import static org.junit.Assert.*;
  * @author Maxwell
  */
 public class MentalChallengeControlTest {
+
+    private double delta;
 
     public MentalChallengeControlTest() {
     }
@@ -72,47 +75,47 @@ public class MentalChallengeControlTest {
 
         System.out.println("mathPuzzleTwo");
         System.out.println("\tTest Case 1");
-        double radius = 8;
-        double height1 = 24;
-        double number1 = 4825.49;
-        String expResult3 = "A compartment opens and you safely retrieve the code.";
-        String result3 = instance.mathPuzzleTwo(radius, height, number1);
+        int radius = 8;
+        int height1 = 24;
+        int answer1 = (int) 4825.49;
+        int expResult3 = 0;
+        int result3 = (int) instance.mathPuzzleTwo(radius, height1, answer1);
         assertEquals(expResult3, result3);
 
         System.out.println("mathPuzzleTwo");
         System.out.println("\tTest Case 2");
         radius = 8;
         height1 = 24;
-        number1 = -4825.49;
-        expResult3 = "Please enter a positive, rational number, silly!";
-        result3 = instance.mathPuzzleTwo(radius, height, number1);
+        answer1 = (int) -4825.49;
+        expResult3 = -1;
+        result3 = (int) instance.mathPuzzleTwo(radius, height1, answer1);
         assertEquals(expResult3, result3);
-
+        
         System.out.println("mathPuzzleTwo");
         System.out.println("\tTest Case 3");
         radius = 8;
         height1 = 24;
-        number1 = 0;
-        expResult3 = "Please enter a positive, rational number, silly!";
-        result3 = instance.mathPuzzleTwo(radius, height, number1);
+        answer1 = 0;
+        expResult3 = -1;
+        result3 = (int) instance.mathPuzzleTwo(radius, height1, answer1);
         assertEquals(expResult3, result3);
 
         System.out.println("mathPuzzleTwo");
         System.out.println("\tTest Case 4");
         radius = 8;
         height1 = 24;
-        number1 = 4733.33;
-        expResult3 = "Oops! You won’t be getting this code!";
-        result3 = instance.mathPuzzleTwo(radius, height, number1);
+        answer1 = (int) 4733.33;
+        expResult3 = -1;
+        result3 = (int) instance.mathPuzzleTwo(radius, height1, answer1);
         assertEquals(expResult3, result3);
 
         System.out.println("mathPuzzleTwo");
         System.out.println("\tTest Case 5");
         radius = 8;
         height1 = 24;
-        number1 = 1206.47;
-        expResult3 = "Oops! You won’t be getting this code!";
-        result3 = instance.mathPuzzleTwo(radius, height, number1);
+        answer1 = (int) 1206.47;
+        expResult3 = -1;
+        result3 = (int) instance.mathPuzzleTwo(radius, height1, answer1);
         assertEquals(expResult3, result3);
     }
 }
