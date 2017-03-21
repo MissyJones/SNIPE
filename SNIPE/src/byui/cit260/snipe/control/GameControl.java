@@ -51,7 +51,7 @@ public class GameControl {
         Challenge[] challenges = GameControl.createChallenges();
         game.setChallenges(challenges);
 
-        MapControl.setStartingLocation(map);
+        MapControl.setStartingLocation(map, player);
 
     }
 

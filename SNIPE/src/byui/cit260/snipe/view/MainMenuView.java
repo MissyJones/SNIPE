@@ -59,7 +59,7 @@ public class MainMenuView extends View {
         GameControl.createNewGame(SNIPE.getPlayer());
 
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+        gameMenu.display();
     }
 
     private void saveGame() {
