@@ -27,8 +27,8 @@ public class MapControl implements Serializable {
         return map;
     }
 
-    static void setStartingLocation(Map map) {
-        System.out.println("Trying so hard. But not yet setting player loaction");
+    static void setStartingLocation(Map map, Player player) {
+        player.setLocation(map.getLocations()[0][0]);
     }
 
     private static Scene[] createScene() {
