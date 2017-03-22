@@ -16,7 +16,7 @@ import snipe.SNIPE;
 public class MainMenuView extends View {
 
     public MainMenuView() {
-        super("\n*---------------------------*"
+            super("\n*---------------------------*"
                 + "\n|        Main Menu          |"
                 + "\n*---------------------------*"
                 + "\n|  N  |        New Game     |"

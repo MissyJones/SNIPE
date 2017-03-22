@@ -5,7 +5,13 @@
  */
 package byui.cit260.snipe.view;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import snipe.SNIPE;
 
 /**
  *
@@ -15,6 +21,9 @@ public abstract class View implements ViewInterface {
 
     protected String displayMessage;
     protected double points = (snipe.SNIPE.getPlayer()).getHealthPoints();
+    
+    protected final BufferedReader keyboard = SNIPE.getInFile();
+    protected final PrintWriter console = SNIPE.getOutFile();
 
     public View() {
 
@@ -40,14 +49,15 @@ public abstract class View implements ViewInterface {
 
     @Override
     public String getInput() {
-        Scanner keyboard = new Scanner(System.in);  //get infile for keyboard
         String value = ""; //value to be returned
         boolean valid = false; //initialize to not be void
 
-        while (!valid) { //loop while an invalid value is entered 
-            System.out.println("\n" + this.displayMessage);
+        while (!valid) { 
+            try {
+            //loop while an invalid value is entered
+            this.console.println("\n" + this.displayMessage);
 
-            value = keyboard.nextLine();
+            value = this.keyboard.readLine();
             value = value.trim();
 
             if (value.length() < 1) {
@@ -55,6 +65,9 @@ public abstract class View implements ViewInterface {
                 continue;
             }
             break;
+            } catch (IOException ex) {
+                ;
+            }
         }
         return value;
     }

@@ -11,6 +11,12 @@ import byui.cit260.snipe.model.Player;
 import byui.cit260.snipe.model.Code;
 import byui.cit260.snipe.model.Location;
 import byui.cit260.snipe.view.StartProgramView;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -22,17 +28,41 @@ public class SNIPE {
     private static Player player = null;
     private static String passportList = null;
 
+    private static PrintWriter outFile = null;
+    private static BufferedReader inFile = null;
+    
+    private static PrintWriter logFile = null;
+    
     public static void main(String[] args) {
         StartProgramView startProgramView = new StartProgramView();
         try { 
+            SNIPE.inFile = new BufferedReader(new InputStreamReader(System.in));
+            SNIPE.outFile = new PrintWriter(System.out, true);
+            
+            String filePath = "log.txt";
+            SNIPE.logFile = new PrintWriter(filePath);
+            
             startProgramView.displayStartProgramView();
         }
         catch (Throwable te) {
-            System.out.println("Your game has crashed. The specific error will"
+            System.out.println("Your game has crashed. Gracefully. The specific error will"
                     + "\n be displayed below. Your game will be restarted.");
             te.printStackTrace();
             startProgramView.displayStartProgramView();
             
+        } finally {
+            try {
+                if (SNIPE.inFile != null)
+                    SNIPE.inFile.close();
+                if(SNIPE.outFile !=null)
+                    SNIPE.outFile.close();
+                if(SNIPE.logFile != null)
+                    SNIPE.logFile.close();
+            } catch (IOException ex) {
+                System.out.println("There has been an error closing the files."
+                        + "\nConsider it gracefully caught.");
+                return;
+            }
         }
 
     }
@@ -59,6 +89,30 @@ public class SNIPE {
 
     public static void setPlayer(Player player) {
         SNIPE.player = player;
+    }
+
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+
+    public static void setOutFile(PrintWriter outFile) {
+        SNIPE.outFile = outFile;
+    }
+
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferedReader inFile) {
+        SNIPE.inFile = inFile;
+    }
+
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        SNIPE.logFile = logFile;
     }
 
 }

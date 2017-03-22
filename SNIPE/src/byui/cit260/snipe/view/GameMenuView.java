@@ -44,7 +44,7 @@ public class GameMenuView extends View {
                 this.travelMenu();
                 break;
             case "C":
-                this.displayHelpMenu();
+                this.codeView();
                 break;
             case "P":
                 this.passportsMenu();
@@ -68,9 +68,8 @@ public class GameMenuView extends View {
         System.out.println("called saveGame*******");
     }
 
-    private void displayHelpMenu() {
-        HelpMenuView helpMenuView = new HelpMenuView();
-        helpMenuView.display();
+    private void codeView() {
+
     }
 
     private void loadGame() {
@@ -87,7 +86,7 @@ public class GameMenuView extends View {
 
     private void travelMenu() {
         TravelMenuView travelMenu = new TravelMenuView();
-        travelMenu.displayTravelMenuView();
+        travelMenu.display();
     }
 
     private void passportsMenu() {

@@ -37,7 +37,7 @@ public class HealthPointsView extends View {
                 break;
             default:
                 System.out.println("Sorry kid! We do not understand"
-                        + "\n\nyour command. Try again!");
+                        + "\nyour command. Try again!");
                 break;
         }
         return false;

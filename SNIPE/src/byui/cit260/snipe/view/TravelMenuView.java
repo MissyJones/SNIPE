@@ -11,13 +11,10 @@ import java.util.Scanner;
  *
  * @author Missy
  */
-public class TravelMenuView {
-
-    private final String menu;
+public class TravelMenuView extends View{
 
     public TravelMenuView() {
-        this.menu
-                = "\n*-------------------------------------------*"
+            super("\n*-------------------------------------------*"
                 + "\n|                 Travel Menu               |"
                 + "\n*-------------------------------------------*"
                 + "\n| 1  | USA       |  SNIPE Academy           |"
@@ -82,103 +79,10 @@ public class TravelMenuView {
                 + "\n|----|-----------------------|"
                 + "\n| H  |   Help Menu           |"
                 + "\n*----------------------------*"
-                + "\n\n";
+                + "\n\n");
     }
-
-    public void displayTravelMenuView() {
-        boolean done = false;
-        do {
-            //prompt for ang get things
-            String menuOption = this.getHelpMenuOption(this.menu);
-            if (menuOption.toUpperCase().equals("M")) {
-                System.out.println("Going to the main menu.........");
-                return;
-            }
-            done = this.doAction(menuOption);
-
-        } while (!done);
-
-    }
-
-    private String getHelpMenuOption(String menu) {
-        Scanner keyboard = new Scanner(System.in);  //get infile for keyboard
-        String value = ""; //value to be returned
-        boolean valid = false; //initialize to not be void
-        System.out.println(menu);
-        OUTER:
-        while (!valid) {
-            System.out.println("\n Please select an option:");
-            value = keyboard.nextLine();
-            value = value.trim();
-            switch (value) {
-                case "1":
-                    break OUTER;
-                case "2":
-                    break OUTER;
-                case "3":
-                    break OUTER;
-                case "4":
-                    break OUTER;
-                case "5":
-                    break OUTER;
-                case "6":
-                    break OUTER;
-                case "7":
-                    break OUTER;
-                case "8":
-                    break OUTER;
-                case "9":
-                    break OUTER;
-                case "10":
-                    break OUTER;
-                case "11":
-                    break OUTER;
-                case "12":
-                    break OUTER;
-                case "13":
-                    break OUTER;
-                case "14":
-                    break OUTER;
-                case "15":
-                    break OUTER;
-                case "16":
-                    break OUTER;
-                case "17":
-                    break OUTER;
-                case "18":
-                    break OUTER;
-                case "19":
-                    break OUTER;
-                case "20":
-                    break OUTER;
-                case "21":
-                    break OUTER;
-                case "22":
-                    break OUTER;
-                case "23":
-                    break OUTER;
-                case "24":
-                    break OUTER;
-                case "25":
-                    break OUTER;
-                case "26":
-                    break OUTER;
-                case "27":
-                    break OUTER;
-                case "V":
-                    break OUTER;
-                case "M":
-                    break OUTER;
-                case "H":
-                    break OUTER;
-                default:
-                    System.out.println("\nInvalid input: That doesn't make sense, silly!");
-            }
-        }
-        return value;
-    }
-
-    private boolean doAction(String menuOption) {
+@Override
+    public boolean doAction(String menuOption) {
         switch (menuOption) {
             case "1":
                 this.usaSnipeView();
