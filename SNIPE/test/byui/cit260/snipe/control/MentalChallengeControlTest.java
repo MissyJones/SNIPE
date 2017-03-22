@@ -5,6 +5,7 @@
  */
 package byui.cit260.snipe.control;
 
+import byui.cit260.snipe.exceptions.ChallengeControlException;
 import org.junit.Assert;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -24,7 +25,7 @@ public class MentalChallengeControlTest {
      * Test of mathPuzzleThree method, of class ChallengeControl.
      */
     @Test
-    public void testMathPuzzleThree() {
+    public void testMathPuzzleThree() throws ChallengeControlException {
         System.out.println("mathPuzzleThree");
         System.out.println("\tTest Case 1");
         double height = 6;
@@ -75,12 +76,12 @@ public class MentalChallengeControlTest {
 
         System.out.println("mathPuzzleTwo");
         System.out.println("\tTest Case 1");
-        int radius = 8;
-        int height1 = 24;
-        int answer1 = (int) 4825.49;
-        int expResult3 = 0;
-        int result3 = (int) instance.mathPuzzleTwo(radius, height1, answer1);
-        assertEquals(expResult3, result3);
+        double radius = 8;
+        double height1 = 24;
+        double answer1 = 4825.49;
+        double expResult3 = 0;
+        double result3 = instance.mathPuzzleTwo(radius, height1, answer1);
+        assertEquals(expResult3, result3, 0.0d);
 
         System.out.println("mathPuzzleTwo");
         System.out.println("\tTest Case 2");

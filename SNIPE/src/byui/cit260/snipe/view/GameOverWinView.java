@@ -24,5 +24,8 @@ public class GameOverWinView {
     private void Credits() {
         System.out.print("The usual credit block:");
     }
-
+private void FamousSNIPGrads() {
+	System.out.print("You are in good, well mostly good, company. "
+                +"\nCongratulations!");
+}
 }

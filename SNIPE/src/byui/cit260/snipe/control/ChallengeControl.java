@@ -29,8 +29,8 @@ public class ChallengeControl {
         return response;
     }
 
-    public void mathPuzzleTwo(int radius, int height1, int answer1) throws ChallengeControlException {
-        int volume = (int) (Math.PI * height1 * radius * radius);
+    public void mathPuzzleTwo(double radius, double height1, double answer1) throws ChallengeControlException {
+        double volume = Math.PI * height1 * radius * radius;
         
         if (answer1 <= 0) {
             throw new ChallengeControlException("Pleae enter a positive, "
@@ -39,8 +39,10 @@ public class ChallengeControl {
              throw new ChallengeControlException("Oops! You won't be getting "
                      + "\nthis code. Too bad for you!");            
         } else {
-            System.out.println("A compartment opens and you safely retrieive "
-            +"\nmost carefully retrieve the code.");
+            System.out.println("A compartment opens and you carefully, "
+                               +"\nexercising the utmost of caution, retrieve "
+                               +"\nthe code. Be careful! It's a trap! Well, "
+                               + "\nmaybe. It could be perfectly safe too.");
         }
 }
 
