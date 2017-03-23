@@ -86,9 +86,12 @@ public class MainMenuView extends View {
         try {
             GameControl.loadGame(filePath);
             
-        } catch (Exception e) {
-            
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
         }
+        
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
 
 }

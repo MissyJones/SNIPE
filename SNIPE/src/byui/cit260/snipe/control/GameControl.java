@@ -14,6 +14,8 @@ import byui.cit260.snipe.model.Player;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import byui.cit260.snipe.exceptions.GameControlException;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
 import snipe.SNIPE;
 
 /**
@@ -174,5 +176,18 @@ public class GameControl {
         }
         
         
+    }
+
+    public static void loadGame(String filePath) throws GameControlException {
+        Game game = null;
+        
+        try (FileInputStream fips = new FileInputStream(filePath)) {
+            ObjectInputStream input = new ObjectInputStream(fips);
+            
+            game = (Game) input.readObject();
+        }catch (Exception ex) {
+            throw new GameControlException(ex.getMessage());
+        }
+        SNIPE.setCurrentGame(game);
     }
 }
