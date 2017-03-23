@@ -11,7 +11,9 @@ import byui.cit260.snipe.model.Code;
 import byui.cit260.snipe.enums.CodeList;
 import byui.cit260.snipe.model.Map;
 import byui.cit260.snipe.model.Player;
-import static jdk.nashorn.internal.objects.NativeArray.map;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import byui.cit260.snipe.exceptions.GameControlException;
 import snipe.SNIPE;
 
 /**
@@ -161,5 +163,16 @@ public class GameControl {
         System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 
         return null;
+    }
+
+    public static void saveGame(Game game, String filePath) throws GameControlException {
+        try (FileOutputStream fops = new FileOutputStream(filePath)) {
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+        } catch (Exception e) {
+            throw new GameControlException(e.getMessage());
+            
+        }
+        
+        
     }
 }

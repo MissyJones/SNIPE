@@ -63,7 +63,14 @@ public class MainMenuView extends View {
     }
 
     private void saveGame() {
-        System.out.println("called saveGame*******");
+        this.console.println("Where do you want this game to be saved?");
+        
+        String filePath = this.getInput();
+        
+        try {GameControl.saveGame(SNIPE.getCurrentGame(), filePath);
+        }catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
     }
 
     private void displayHelpMenu() {
@@ -72,7 +79,16 @@ public class MainMenuView extends View {
     }
 
     private void loadGame() {
-        System.out.println("called loadGame*******");
+        this.console.println("Where is the save file located?");
+        
+        String filePath = this.getInput();
+        
+        try {
+            GameControl.loadGame(filePath);
+            
+        } catch (Exception e) {
+            
+        }
     }
 
 }
