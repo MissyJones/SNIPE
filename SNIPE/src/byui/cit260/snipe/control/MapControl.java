@@ -20,12 +20,12 @@ import byui.cit260.snipe.model.Player;
 public class MapControl implements Serializable {
 
     public static Map createMap() {
-        Map map = new Map(9, 3);
+        Map map = new Map(26);
         return map;
     }
 
     static void setStartingLocation(Map map, Player player) {
-        player.setLocation(map.getLocations()[0][0]);
+        player.setLocation(map.getLocations()[0]);
     }
 
 

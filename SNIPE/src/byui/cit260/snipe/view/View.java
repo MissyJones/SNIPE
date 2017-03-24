@@ -5,6 +5,7 @@
  */
 package byui.cit260.snipe.view;
 
+import byui.cit260.snipe.model.Game;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -18,14 +19,18 @@ public abstract class View implements ViewInterface {
 
     protected String displayMessage;
     protected double points = (SNIPE.getPlayer()).getHealthPoints();
-
-    
+    protected String scene;
     protected final BufferedReader keyboard = SNIPE.getInFile();
     protected final PrintWriter console = SNIPE.getOutFile();
 
 
     public View(String message) {
-        this.displayMessage = message;
+        if(SNIPE.getCurrentGame() == null){
+            this.displayMessage = message;
+        }
+        else{
+        message = this.findScene() + "\n\n\n" + this.displayMessage;
+        }
     }
 
     @Override
@@ -65,6 +70,14 @@ public abstract class View implements ViewInterface {
             }
         }
         return value;
+    }
+
+    private String findScene() {
+        int row = SNIPE.getPlayer().getRow();
+        String place = SNIPE.getCurrentGame().getMap().getLocations()[row].getScene();
+        
+
+        return place;
     }
 
 }
