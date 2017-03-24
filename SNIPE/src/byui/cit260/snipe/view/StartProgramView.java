@@ -24,28 +24,7 @@ public class StartProgramView {
 
     public final void displayBanner() {
         System.out.println(
-                "\n*----------------------------------------------*"
-                + "\n|                   ______                     |"
-                + "\n|                .-'      `-.                  |"
-                + "\n|              .'            `.                |"
-                + "\n|            /                 \\               |"
-                + "\n|           ;                   ;`             |"
-                + "\n|           |          /        |;             |"
-                + "\n|           ;          / / /    ;|             |"
-                + "\n|           '\\       / / /    /;               |"
-                + "\n|             \\      / /    .'/                |"
-                + "\n|               `. -._____.-'.'                |"
-                + "\n|                / /`_____.-'                  |"
-                + "\n|               / / /                          |"
-                + "\n|              / / /                           |"
-                + "\n|             / / /                            |"
-                + "\n|            / / /                             |"
-                + "\n|           / / /                              |"
-                + "\n|          / / /                               |"
-                + "\n|         / / /                                |"
-                + "\n|        / / /                                 |"
-                + "\n|       / / /                                  |"
-                + "\n|       \\/_/                                   |"
+                  "\n*----------------------------------------------*"
                 + "\n|  _______  _       _________ _______  _______ |\n"
                 + "|(  ____ \\( (    /|\\__   __/(  ____ )(  ____ \\ |\n"
                 + "|| (    \\/|  \\  ( |   ) (   | (    )|| (    \\/ |\n"
@@ -128,8 +107,8 @@ public class StartProgramView {
                 + "As you know, SNIPE stands for Super Nice Interesting People, Everywhere!\n"
                 + "Good luck!");
 
-        MainMenuView mainMenuView = new MainMenuView();
-        mainMenuView.display();
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.display();
 
     }
 }

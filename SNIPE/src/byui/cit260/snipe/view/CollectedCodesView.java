@@ -13,9 +13,13 @@ import java.util.Scanner;
  */
 
     public class CollectedCodesView extends View {
+
+    public CollectedCodesView(String message) {
+        super(message);
+    }
     @Override
     public boolean doAction(String value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Collected Codes?"); //To change body of generated methods, choose Tools | Templates.
 
     }
    }

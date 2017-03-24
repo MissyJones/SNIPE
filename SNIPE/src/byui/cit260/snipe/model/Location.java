@@ -30,32 +30,17 @@ public class Location implements Serializable {
     private String country;
     private int row;
     private int column;
+    private String scene;
 
     public Location() {
     }
 
-    public String getPassportView() {
-        return passportView;
+    public String getName() {
+        return name;
     }
 
-    public int getRow() {
-        return row;
-    }
-
-    public void setRow(int row) {
-        this.row = row;
-    }
-
-    public int getColumn() {
-        return column;
-    }
-
-    public void setColumn(int column) {
-        this.column = column;
-    }
-
-    public void setPassportView(String passportView) {
-        this.passportView = passportView;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
@@ -68,14 +53,6 @@ public class Location implements Serializable {
 
     public String getChallengeType() {
         return challengeType;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public void setChallengeType(String challengeType) {
@@ -106,50 +83,44 @@ public class Location implements Serializable {
         this.puzzleTrigger = puzzleTrigger;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 17 * hash + Objects.hashCode(this.name);
-        hash = 17 * hash + Objects.hashCode(this.description);
-        hash = 17 * hash + Objects.hashCode(this.challengeType);
-        hash = 17 * hash + (int) (Double.doubleToLongBits(this.placeID) ^ (Double.doubleToLongBits(this.placeID) >>> 32));
-        hash = 17 * hash + (int) (Double.doubleToLongBits(this.puzzleTrigger) ^ (Double.doubleToLongBits(this.puzzleTrigger) >>> 32));
-        return hash;
+    public String getPassportView() {
+        return passportView;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Location other = (Location) obj;
-        if (Double.doubleToLongBits(this.placeID) != Double.doubleToLongBits(other.placeID)) {
-            return false;
-        }
-        if (Double.doubleToLongBits(this.puzzleTrigger) != Double.doubleToLongBits(other.puzzleTrigger)) {
-            return false;
-        }
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        if (!Objects.equals(this.description, other.description)) {
-            return false;
-        }
-        if (!Objects.equals(this.challengeType, other.challengeType)) {
-            return false;
-        }
-        return true;
+    public void setPassportView(String passportView) {
+        this.passportView = passportView;
     }
 
-    @Override
-    public String toString() {
-        return "Location{" + "name=" + name + ", description=" + description + ", challengeType=" + challengeType + ", placeID=" + placeID + ", passportAdd=" + passportAdd + ", puzzleTrigger=" + puzzleTrigger + '}';
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public void setColumn(int column) {
+        this.column = column;
+    }
+
+    public String getScene() {
+        return scene;
+    }
+
+    public void setScene(String scene) {
+        this.scene = scene;
     }
 
 }

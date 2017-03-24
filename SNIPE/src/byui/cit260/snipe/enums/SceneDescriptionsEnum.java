@@ -44,7 +44,7 @@ public enum SceneDescriptionsEnum implements Serializable {
             + "\ncultural icon of France."),
     The_Louvre("The world's largest museum and a historic monument in Paris, "
             + "\nFrance."),
-    Some_random_Cafe("The Café de Flore is one of the oldest coffeehouses in "
+    Some_Cafe("The Café de Flore is one of the oldest coffeehouses in "
             + "\nParis. "),
     Olympic_Stadium(" Built in the mid-1970s as the main venue for the 1976 "
             + "\nSummer Olympics."),
@@ -71,8 +71,7 @@ public enum SceneDescriptionsEnum implements Serializable {
             + "\nHis preserved body has been on public display there since "
             + "\nshortly after his death in 1924."),
     StBasils_Cathedral("Built from 1555–61 on orders from Ivan the Terrible "
-            + "\nand commemorates the capture of Kazan and Astrakhan."),
-    SafeHouse("Home, sweet safe house.");
+            + "\nand commemorates the capture of Kazan and Astrakhan.");
 
     private final String description;
 

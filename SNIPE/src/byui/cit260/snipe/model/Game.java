@@ -6,6 +6,7 @@
 package byui.cit260.snipe.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -18,7 +19,7 @@ public class Game implements Serializable {
     Code[] codes = new Code[9];
     private Player player;
     private Map map;
-    Challenge[] challenges = new Challenge[4];
+    ArrayList <Challenge> challenges = new ArrayList();
 
     public Game() {
     }
@@ -31,13 +32,15 @@ public class Game implements Serializable {
         this.codes = codes;
     }
 
-    public Challenge[] getChallenges() {
+    public ArrayList<Challenge> getChallenges() {
         return challenges;
     }
 
-    public void setChallenges(Challenge[] challenges) {
+    public void setChallenges(ArrayList<Challenge> challenges) {
         this.challenges = challenges;
     }
+
+
 
     public double getMoveCounter() {
         return moveCounter;

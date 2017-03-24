@@ -5,11 +5,17 @@
  */
 package byui.cit260.snipe.view;
 
+
+
 /**
  *
  * @author Maxwell
  */
 public class LocationView extends View{
+
+    public LocationView(String message) {
+        super(message);
+    }
 
     @Override
     public boolean doAction(String value) {

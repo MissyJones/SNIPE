@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.snipe.model;
+package byui.cit260.snipe.enums;
 
 import java.io.Serializable;
 
@@ -11,7 +11,7 @@ import java.io.Serializable;
  *
  * @author elizabethkirby
  */
-public enum FamousSNIPGrads implements Serializable {
+public enum FamousSNIPEGrads implements Serializable {
     //List of Famous SNIPE Graduates who can help, though you might be better off without the help of some of them
     JAMES_BOND("The Brits were so happy with how well we trained him, they gave "
             +"\nus money to grow"),
@@ -40,14 +40,15 @@ public enum FamousSNIPGrads implements Serializable {
             +"\nwhen he got bit by the irridiated golden goose. He is the"
             +"\n\"Squirrel\" Boris and"
             +"\nNatasha don't like."),
-   AUSTIN_POWERS("He's so shagadelic. Also another one who turned away from "
+   AUSTIN_POWERS("He's so shaggadelic. Also another one who turned away from "
             +"\nsuper nice to the dark side. What can we say? You win some. "
             +"\nYou lose some."),
-    SECRET_AGENT_MAN("The best of the best. He's so good he got is own song.");
+    SECRET_AGENT_MAN("The best of the best. He's so good he got is own song."),
+    AGENT_X("Agent X. Like X and bacon!");
 
     private final String description;
 
-    FamousSNIPGrads(String description) {
+    FamousSNIPEGrads(String description) {
         this.description = description;
     }
 
@@ -57,11 +58,11 @@ public enum FamousSNIPGrads implements Serializable {
 
     @Override
     public String toString() {
-        System.out.println(java.util.Arrays.asList(FamousSNIPGrads.values()));
+        System.out.println(java.util.Arrays.asList(FamousSNIPEGrads.values()));
         return null;
     }
 
-    private void FamousSNIPGrads() {
+    private void FamousSNIPEGrads() {
         System.out.println("You are in good company; well mostly good company.");
     }
 }

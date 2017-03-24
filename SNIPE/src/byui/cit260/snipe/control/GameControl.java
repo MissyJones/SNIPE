@@ -16,6 +16,7 @@ import java.io.ObjectOutputStream;
 import byui.cit260.snipe.exceptions.GameControlException;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
+import java.util.ArrayList;
 import snipe.SNIPE;
 
 /**
@@ -31,10 +32,6 @@ public class GameControl {
 
         Player player = new Player();
         player.setName(playersName);
-        player.setCodeName(codeNameGen());
-
-        System.out.println("\n" + playersName + "! Your codename is: " + player.getCodeName() + ". "
-                + "\n\n Go get the bad guys, " + player.getCodeName() + "!");
 
         SNIPE.setPlayer(player);
         return player;
@@ -52,8 +49,6 @@ public class GameControl {
         Code[] item = GameControl.createCodes();
         game.setCodes(item);
 
-        Challenge[] challenges = GameControl.createChallenges();
-        game.setChallenges(challenges);
 
         MapControl.setStartingLocation(map, player);
 
@@ -161,11 +156,7 @@ public class GameControl {
         return null;
     }
 
-    private static Challenge[] createChallenges() {
-        System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 
-        return null;
-    }
 
     public static void saveGame(Game game, String filePath) throws GameControlException {
         try (FileOutputStream fops = new FileOutputStream(filePath)) {

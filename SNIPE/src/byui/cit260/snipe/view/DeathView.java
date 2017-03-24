@@ -18,7 +18,7 @@ public class DeathView extends View {
                 + "\n\n\nIn a somewhat... permanent way.\n"
                 + "Would you like to load your game,\n"
                 + "or would it be more helpful to go to the main menu?\n\n"
-                + "*------------------------*"
+                  + "*------------------------*"
                 + "\n|  You have been offed   |"
                 + "\n*------------------------*"
                 + "\n|  L  |       Load Game  |"

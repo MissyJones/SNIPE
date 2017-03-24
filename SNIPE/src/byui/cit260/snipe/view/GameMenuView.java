@@ -59,13 +59,17 @@ public class GameMenuView extends View {
         return false;
     }
 
-    private void startNewGame() {
-        GameControl.createNewGame(SNIPE.getPlayer());
 
-    }
 
     private void saveGame() {
-        System.out.println("called saveGame*******");
+        this.console.println("Where do you want this game to be saved?");
+        
+        String filePath = this.getInput();
+        
+        try {GameControl.saveGame(SNIPE.getCurrentGame(), filePath);
+        }catch (Exception ex) {
+            ErrorView.display("GameMenuView", ex.getMessage());
+        }
     }
 
     private void codeView() {
@@ -73,15 +77,24 @@ public class GameMenuView extends View {
     }
 
     private void loadGame() {
-        System.out.println("called loadGame*******");
+        this.console.println("Where is the save file located?");
+        
+        String filePath = this.getInput();
+        
+        try {
+            GameControl.loadGame(filePath);
+            
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
 
-    void displayMenu() {
-        System.out.println("called GameMenuView.displayMenu*******");
-    }
 
     private void lookAround() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.console.println("lookAround");
     }
 
     private void travelMenu() {
@@ -90,7 +103,7 @@ public class GameMenuView extends View {
     }
 
     private void passportsMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.console.println("passports");
     }
 
 }

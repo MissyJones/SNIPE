@@ -20,7 +20,7 @@ public class CodeControl {
         ArrayList <Code> codeList = player.getCodeInventory();
         if (codeList.contains(code)) {
             throw new CodeControlException("This code has already been acquired."
-                    + "\nYou're going to have to find another code for this to work.");
+                    + "\nYou're going to have to find a different code for this to work.");
         } else {
             player.addObjectToCodeInventory(code);
             System.out.println("You've got a new code!");

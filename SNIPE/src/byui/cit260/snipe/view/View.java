@@ -8,9 +8,6 @@ package byui.cit260.snipe.view;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import snipe.SNIPE;
 
 /**
@@ -20,14 +17,12 @@ import snipe.SNIPE;
 public abstract class View implements ViewInterface {
 
     protected String displayMessage;
-    protected double points = (snipe.SNIPE.getPlayer()).getHealthPoints();
+    protected double points = (SNIPE.getPlayer()).getHealthPoints();
+
     
     protected final BufferedReader keyboard = SNIPE.getInFile();
     protected final PrintWriter console = SNIPE.getOutFile();
 
-    public View() {
-
-    }
 
     public View(String message) {
         this.displayMessage = message;

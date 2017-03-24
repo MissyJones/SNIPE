@@ -10,13 +10,13 @@ import byui.cit260.snipe.model.Challenge;
 import byui.cit260.snipe.model.Player;
 import byui.cit260.snipe.model.Code;
 import byui.cit260.snipe.model.Location;
+import byui.cit260.snipe.view.MainMenuView;
 import byui.cit260.snipe.view.StartProgramView;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  *
@@ -35,6 +35,7 @@ public class SNIPE {
     
     public static void main(String[] args) {
         StartProgramView startProgramView = new StartProgramView();
+
         try { 
             SNIPE.inFile = new BufferedReader(new InputStreamReader(System.in));
             SNIPE.outFile = new PrintWriter(System.out, true);
@@ -46,7 +47,7 @@ public class SNIPE {
         }
         catch (Throwable te) {
             System.out.println("Your game has crashed. Gracefully. The specific error will"
-                    + "\n be displayed below. Your game will be restarted.");
+                    + " be displayed below. Your game will be restarted.");
             te.printStackTrace();
             startProgramView.displayStartProgramView();
             
