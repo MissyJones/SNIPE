@@ -5,6 +5,7 @@
  */
 package byui.cit260.snipe.enums;
 
+import byui.cit260.snipe.exceptions.LocationException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Serializable;
@@ -86,7 +87,7 @@ public enum SceneDescriptionsEnum implements Serializable {
         return description;
     }   
 
-public void printSceneDescriptions(String getDescription(){
+public void printSceneDescriptions(String description) throws LocationException {
         Writer outputLocation = null;
 //create BufferReader object for input file
 try(PrintWriter out = new PrintWriter (outputLocation)){
@@ -95,8 +96,6 @@ try(PrintWriter out = new PrintWriter (outputLocation)){
     out.println("\n\n       Scence Description        ");
     out.printf(description);
     }
-}catch (IOException ex) {
-    System.out.println("I/O Error:I HATE JAVA!");
 }
 }
 
