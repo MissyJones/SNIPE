@@ -5,7 +5,10 @@
  */
 package byui.cit260.snipe.enums;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.io.Serializable;
+import java.io.Writer;
 
 /**
  *
@@ -81,5 +84,29 @@ public enum SceneDescriptionsEnum implements Serializable {
 
     public String getDescription() {
         return description;
+    }   
+
+public void printSceneDescriptions(String getDescription(){
+        Writer outputLocation = null;
+//create BufferReader object for input file
+try(PrintWriter out = new PrintWriter (outputLocation)){
+    
+    //print title 
+    out.println("\n\n       Scence Description        ");
+    out.printf(description);
     }
+}catch (IOException ex) {
+    System.out.println("I/O Error:I HATE JAVA!");
 }
+}
+
+
+            
+
+       
+   
+
+
+
+
+
