@@ -40,7 +40,8 @@ public class GameControl {
     public static void createNewGame(Player player) {
         Game game = new Game();
         SNIPE.setCurrentGame(game);
-
+        String codeName = GameControl.codeNameGen();
+        player.setCodeName(codeName);
         game.setPlayer(player);
 
         Map map = new Map(26);
@@ -49,7 +50,13 @@ public class GameControl {
         Code[] item = GameControl.createCodes();
         game.setCodes(item);
 
-
+        System.out.println("A busy office sits before you. \"Agent "+codeName+"\". Your first assignment is as"
+                + "\nfollows.\" Says a woman in dark suit, \"You must recover parts to a secret code. The code goes to a lock box found within this"
+                + "\nbuilding. You must open the box. The safety of he country depends on it!\" You get the feeling"
+                + "\n that you should travel to another area to look for the codes."
+                + "\n\"You will undergo challenges that will strain you physically and mentally. If you become too tired or hurt,"
+                + "\n find your way to one of our safe houses. If you can answer the question correctly, you can enter and rest. "
+                + "\nThere will be a code in each country. Good luck!\"");
         MapControl.setStartingLocation(map, player);
 
     }
