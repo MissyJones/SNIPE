@@ -50,7 +50,7 @@ public class GameControl {
         Code[] item = GameControl.createCodes();
         game.setCodes(item);
 
-        System.out.println("A busy office sits before you. \"Agent "+codeName+"\". Your first assignment is as"
+        System.out.println("A busy office sits before you. \"Agent "+codeName+". Your first assignment is as"
                 + "\nfollows.\" Says a woman in dark suit, \"You must recover parts to a secret code. The code goes to a lock box found within this"
                 + "\nbuilding. You must open the box. The safety of he country depends on it!\" You get the feeling"
                 + "\n that you should travel to another area to look for the codes."

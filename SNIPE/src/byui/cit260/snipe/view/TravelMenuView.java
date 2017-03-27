@@ -5,7 +5,9 @@
  */
 package byui.cit260.snipe.view;
 
+import byui.cit260.snipe.model.Player;
 import java.util.Scanner;
+import snipe.SNIPE;
 
 /**
  *
@@ -73,8 +75,6 @@ public class TravelMenuView extends View{
                 + "\n*----------------------------*--------------*"
                 + "\n|       Other Options        |"
                 + "\n|----------------------------|"
-                + "\n| V  |   View Map            |"
-                + "\n|----|-----------------------|"
                 + "\n| M  |   Main Menu           |"
                 + "\n|----|-----------------------|"
                 + "\n| H  |   Help Menu           |"
@@ -85,88 +85,85 @@ public class TravelMenuView extends View{
     public boolean doAction(String menuOption) {
         switch (menuOption) {
             case "1":
-                this.usaSnipeView();
+                this.usaSnipeView(SNIPE.getPlayer());
                 break;
             case "2":
-                this.usaCongressView();
+                this.usaCongressView(SNIPE.getPlayer());
                 break;
             case "3":
-                this.usaArchView();
+                this.usaArchView(SNIPE.getPlayer());
                 break;
             case "4":
-                this.germanyBerlinView();
+                this.germanyBerlinView(SNIPE.getPlayer());
                 break;
             case "5":
-                this.germanyCologneView();
+                this.germanyCologneView(SNIPE.getPlayer());
                 break;
             case "6":
-                this.germanyRhineView();
+                this.germanyRhineView(SNIPE.getPlayer());
                 break;
             case "7":
-                this.englandBenView();
+                this.englandBenView(SNIPE.getPlayer());
                 break;
             case "8":
-                this.englandAbbeyView();
+                this.englandAbbeyView(SNIPE.getPlayer());
                 break;
             case "9":
-                this.englandPalaceView();
+                this.englandPalaceView(SNIPE.getPlayer());
                 break;
             case "10":
-                this.englandBuckinghamView();
+                this.englandBuckinghamView(SNIPE.getPlayer());
                 break;
             case "11":
-                this.spainTarragonaView();
+                this.spainTarragonaView(SNIPE.getPlayer());
                 break;
             case "12":
-                this.spainSevilleView();
+                this.spainSevilleView(SNIPE.getPlayer());
                 break;
             case "13":
-                this.spainValenciaView();
+                this.spainValenciaView(SNIPE.getPlayer());
                 break;
             case "14":
-                this.franceTowerView();
+                this.franceTowerView(SNIPE.getPlayer());
                 break;
             case "15":
-                this.franceCafeView();
+                this.franceCafeView(SNIPE.getPlayer());
                 break;
             case "16":
-                this.canadaMontrealView();
+                this.canadaMontrealView(SNIPE.getPlayer());
                 break;
             case "17":
-                this.canadaParlimentView();
+                this.canadaParlimentView(SNIPE.getPlayer());
                 break;
             case "18":
-                this.canadaCNTowerView();
+                this.canadaCNTowerView(SNIPE.getPlayer());
                 break;
             case "19":
-                this.brazilBeachView();
+                this.brazilBeachView(SNIPE.getPlayer());
                 break;
             case "20":
-                this.brazilAmazonView();
+                this.brazilAmazonView(SNIPE.getPlayer());
                 break;
             case "21":
-                this.brazilSaoPauloView();
+                this.brazilSaoPauloView(SNIPE.getPlayer());
                 break;
             case "22":
-                this.australiaOperaView();
+                this.australiaOperaView(SNIPE.getPlayer());
                 break;
             case "23":
-                this.australiaJailView();
+                this.australiaJailView(SNIPE.getPlayer());
                 break;
             case "24":
-                this.australiaBridgeView();
+                this.australiaBridgeView(SNIPE.getPlayer());
                 break;
             case "25":
-                this.russiaSquareView();
+                this.russiaSquareView(SNIPE.getPlayer());
                 break;
             case "26":
-                this.russiaLeninView();
+                this.russiaLeninView(SNIPE.getPlayer());
                 break;
             case "27":
-                this.russiaCathedralView();
-                break;
-            case "V":
-                this.viewMap();
+                this.russiaCathedralView(SNIPE.getPlayer());
                 break;
             case "M":
                 new MainMenuView().display();
@@ -181,116 +178,119 @@ public class TravelMenuView extends View{
         return false;
     }
 
-    private void usaSnipeView() {
-        System.out.print("You chose a place! Congrats.");
+    private void usaSnipeView(Player player) {
+        player.setRow(0);
+        this.console.println("You traveled to the SNIPE HQ");
+    }
+    
+    private void usaCongressView(Player player) {
+        player.setRow(1);
+            this.console.println("You traveled to the US Congress Building");
     }
 
-    private void usaCongressView() {
-        System.out.print("You chose a place! Congrats.");
+    private void usaArchView(Player player) {
+        player.setRow(2);
+        this.console.println("You traveled to the Gateway Arch!");
     }
 
-    private void usaArchView() {
-        System.out.print("You chose a place! Congrats.");
+    private void germanyBerlinView(Player player) {
+        player.setRow(3);
+        this.console.println("Ahhhhh Germany. This is Berlin!");
     }
 
-    private void germanyBerlinView() {
-        System.out.print("You chose a place! Congrats.");
+    private void germanyCologneView(Player player) {
+        player.setRow(4);
+        this.console.println("You arrived in Cologne. Germany!");
     }
 
-    private void germanyCologneView() {
-        System.out.print("You chose a place! Congrats.");
+    private void germanyRhineView(Player player) {
+        player.setRow(5);
+        this.console.println("Welcome to the Rhine River!");
     }
 
-    private void germanyRhineView() {
-        System.out.print("You chose a place! Congrats.");
+    private void englandBenView(Player player) {
+        player.setRow(6);
     }
 
-    private void englandBenView() {
-        System.out.print("You chose a place! Congrats.");
+    private void englandAbbeyView(Player player) {
+        player.setRow(7);
     }
 
-    private void englandAbbeyView() {
-        System.out.print("You chose a place! Congrats.");
+    private void englandPalaceView(Player player) {
+        player.setRow(8);
     }
 
-    private void englandPalaceView() {
-        System.out.print("You chose a place! Congrats.");
+    private void englandBuckinghamView(Player player) {
+        player.setRow(9);
     }
 
-    private void englandBuckinghamView() {
-        System.out.print("You chose a place! Congrats.");
+    private void spainTarragonaView(Player player) {
+        player.setRow(10);
     }
 
-    private void spainTarragonaView() {
-        System.out.print("You chose a place! Congrats.");
+    private void spainSevilleView(Player player) {
+         player.setRow(11);
     }
 
-    private void spainSevilleView() {
-        System.out.print("You chose a place! Congrats.");
+    private void spainValenciaView(Player player) {
+        player.setRow(12);
     }
 
-    private void spainValenciaView() {
-        System.out.print("You chose a place! Congrats.");
+    private void franceTowerView(Player player) {
+         player.setRow(13);
     }
 
-    private void franceTowerView() {
-        System.out.print("You chose a place! Congrats.");
+    private void franceCafeView(Player player) {
+        player.setRow(14);
     }
 
-    private void franceCafeView() {
-        System.out.print("You chose a place! Congrats.");
+    private void canadaMontrealView(Player player) {
+         player.setRow(15);
     }
 
-    private void canadaMontrealView() {
-        System.out.print("You chose a place! Congrats.");
+    private void canadaParlimentView(Player player) {
+        player.setRow(16);
     }
 
-    private void canadaParlimentView() {
-        System.out.print("You chose a place! Congrats.");
+    private void canadaCNTowerView(Player player) {
+        player.setRow(17);
     }
 
-    private void canadaCNTowerView() {
-        System.out.print("You chose a place! Congrats.");
+    private void brazilBeachView(Player player) {
+        player.setRow(18);
     }
 
-    private void brazilBeachView() {
-        System.out.print("You chose a place! Congrats.");
+    private void brazilAmazonView(Player player) {
+        player.setRow(19);
     }
 
-    private void brazilAmazonView() {
-        System.out.print("You chose a place! Congrats.");
+    private void brazilSaoPauloView(Player player) {
+        player.setRow(20);
     }
 
-    private void brazilSaoPauloView() {
-        System.out.print("You chose a place! Congrats.");
+    private void australiaOperaView(Player player) {
+        player.setRow(21);
     }
 
-    private void australiaOperaView() {
-        System.out.print("You chose a place! Congrats.");
+    private void australiaJailView(Player player) {
+        player.setRow(22);
     }
 
-    private void australiaJailView() {
-        System.out.print("You chose a place! Congrats.");
+    private void australiaBridgeView(Player player) {
+         player.setRow(23);
     }
 
-    private void australiaBridgeView() {
-        System.out.print("You chose a place! Congrats.");
+    private void russiaSquareView(Player player) {
+        player.setRow(24);
     }
 
-    private void russiaSquareView() {
-        System.out.print("You chose a place! Congrats.");
+    private void russiaLeninView(Player player) {
+        player.setRow(25);
     }
 
-    private void russiaLeninView() {
-        System.out.print("You chose a place! Congrats.");
+    private void russiaCathedralView(Player player) {
+        player.setRow(26);
     }
 
-    private void russiaCathedralView() {
-        System.out.print("You chose a place! Congrats.");
-    }
-
-    private void viewMap() {
-        System.out.print("You chose a place! Congrats.");
-    }
 
 }
