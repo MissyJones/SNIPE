@@ -10,6 +10,7 @@ import byui.cit260.snipe.model.Map;
 
 import byui.cit260.snipe.enums.SceneDescriptionsEnum;
 import byui.cit260.snipe.exceptions.LocationException;
+import byui.cit260.snipe.model.Location;
 import byui.cit260.snipe.model.Player;
 
     /**
@@ -25,7 +26,8 @@ public class MapControl implements Serializable {
     }
 
     static void setStartingLocation(Map map, Player player) {
-        player.setLocation(map.getLocations()[0]);
+        Location[] list = map.getLocations();
+        player.setLocation(list[0]);
     }
 
 

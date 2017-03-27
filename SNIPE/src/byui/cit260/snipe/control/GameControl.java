@@ -153,7 +153,7 @@ public class GameControl {
         codeNine.setItemDescription(CodeList.Code_Russia.getDescription());
         codes[CodeList.Code_Russia.ordinal()] = codeNine;
 
-        return null;
+        return codes;
     }
 
 

@@ -94,7 +94,7 @@ public class GameMenuView extends View {
 
 
     private void lookAround() {
-        this.console.println("lookAround");
+        this.console.println(findScene());
     }
 
     private void travelMenu() {
@@ -105,5 +105,11 @@ public class GameMenuView extends View {
     private void passportsMenu() {
         this.console.println("passports");
     }
+    private String findScene() {
+        int row = SNIPE.getPlayer().getRow();
+        String place = SNIPE.getCurrentGame().getMap().getLocations()[row].getScene();
+        
 
+        return place;
+    }
 }

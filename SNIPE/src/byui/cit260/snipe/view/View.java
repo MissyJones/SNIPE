@@ -25,12 +25,8 @@ public abstract class View implements ViewInterface {
 
 
     public View(String message) {
-        if(SNIPE.getCurrentGame() == null){
             this.displayMessage = message;
-        }
-        else{
-        message = this.findScene() + "\n\n\n" + this.displayMessage;
-        }
+
     }
 
     @Override
@@ -72,12 +68,6 @@ public abstract class View implements ViewInterface {
         return value;
     }
 
-    private String findScene() {
-        int row = SNIPE.getPlayer().getRow();
-        String place = SNIPE.getCurrentGame().getMap().getLocations()[row].getScene();
-        
 
-        return place;
-    }
 
 }

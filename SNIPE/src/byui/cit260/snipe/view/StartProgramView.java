@@ -92,12 +92,11 @@ public class StartProgramView {
             System.out.println("You need more than one character in your name, buddy. Try again.");
             return false;
         }
-        Player player = GameControl.createPlayer(playersName);
+        Player player = GameControl.createPlayer(playersName); 
         if (player == null) {
             System.out.println("Looks like that name won't work. Try again.");
             return false;
         }
-
         this.nextDisplayView(player);
         return true;
     }
