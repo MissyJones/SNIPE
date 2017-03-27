@@ -14,7 +14,7 @@ import snipe.SNIPE;
  * @author Missy
  */
 public class TravelMenuView extends View{
-
+        GameMenuView gameMenu;
     public TravelMenuView() {
             super("\n*-------------------------------------------*"
                 + "\n|                 Travel Menu               |"
@@ -80,6 +80,7 @@ public class TravelMenuView extends View{
                 + "\n| H  |   Help Menu           |"
                 + "\n*----------------------------*"
                 + "\n\n");
+        this.gameMenu = new GameMenuView();
     }
 @Override
     public boolean doAction(String menuOption) {
@@ -181,138 +182,166 @@ public class TravelMenuView extends View{
     private void usaSnipeView(Player player) {
         player.setRow(0);
         this.console.println("You traveled to the SNIPE HQ");
+        gameMenu.display();
     }
     
     private void usaCongressView(Player player) {
         player.setRow(1);
             this.console.println("You traveled to the US Congress Building");
+            gameMenu.display();
+            
     }
 
     private void usaArchView(Player player) {
         player.setRow(2);
         this.console.println("You traveled to the Gateway Arch!");
+        gameMenu.display();
     }
 
     private void germanyBerlinView(Player player) {
         player.setRow(3);
         this.console.println("Ahhhhh Germany. This is Berlin!");
+        gameMenu.display();
     }
 
     private void germanyCologneView(Player player) {
         player.setRow(4);
         this.console.println("You arrived in Cologne. Germany!");
+        gameMenu.display();
     }
 
     private void germanyRhineView(Player player) {
         player.setRow(5);
         this.console.println("Welcome to the Rhine River!");
+        gameMenu.display();
     }
 
     private void englandBenView(Player player) {
         player.setRow(6);
         this.console.println("The most iconic");
+        gameMenu.display();
     }
 
     private void englandAbbeyView(Player player) {
         player.setRow(7);
         this.console.println("You traveled to the US Congress Building");
+        gameMenu.display();
     }
 
     private void englandPalaceView(Player player) {
         player.setRow(8);
         this.console.println("You traveled to the US Congress Building");
+        gameMenu.display();
     }
 
     private void englandBuckinghamView(Player player) {
         player.setRow(9);
         this.console.println("You traveled to the US Congress Building");
+        gameMenu.display();
     }
 
     private void spainTarragonaView(Player player) {
         player.setRow(10);
         this.console.println("You traveled to the US Congress Building");
+        gameMenu.display();
     }
 
     private void spainSevilleView(Player player) {
          player.setRow(11);
          this.console.println("You traveled to the US Congress Building");
+         gameMenu.display();
     }
 
     private void spainValenciaView(Player player) {
         player.setRow(12);
         this.console.println("You traveled to the US Congress Building");
+        gameMenu.display();
     }
 
     private void franceTowerView(Player player) {
          player.setRow(13);
          this.console.println("You traveled to the US Congress Building");
+         gameMenu.display();
     }
 
     private void franceCafeView(Player player) {
         player.setRow(14);
         this.console.println("You traveled to the US Congress Building");
+        gameMenu.display();
     }
 
     private void canadaMontrealView(Player player) {
          player.setRow(15);
          this.console.println("You traveled to the US Congress Building");
+         gameMenu.display();
     }
 
     private void canadaParlimentView(Player player) {
         player.setRow(16);
         this.console.println("You traveled to the US Congress Building");
+        gameMenu.display();
     }
 
     private void canadaCNTowerView(Player player) {
         player.setRow(17);
         this.console.println("You traveled to the US Congress Building");
+        gameMenu.display();
     }
 
     private void brazilBeachView(Player player) {
         player.setRow(18);
         this.console.println("You traveled to the US Congress Building");
+        gameMenu.display();
     }
 
     private void brazilAmazonView(Player player) {
         player.setRow(19);
         this.console.println("You traveled to the US Congress Building");
+        gameMenu.display();
         
     }
 
     private void brazilSaoPauloView(Player player) {
         player.setRow(20);
         this.console.println("You traveled to the US Congress Building");
+        gameMenu.display();
     }
 
     private void australiaOperaView(Player player) {
         player.setRow(21);
         this.console.println("You traveled to the US Congress Building");
+        gameMenu.display();
     }
 
     private void australiaJailView(Player player) {
         player.setRow(22);
         this.console.println("You traveled to the US Congress Building");
+        gameMenu.display();
         
     }
 
     private void australiaBridgeView(Player player) {
          player.setRow(23);
          this.console.println("You traveled to the US Congress Building");
+         gameMenu.display();
     }
 
     private void russiaSquareView(Player player) {
         player.setRow(24);
         this.console.println("You traveled to the US Congress Building");
+        gameMenu.display();
     }
 
     private void russiaLeninView(Player player) {
         player.setRow(25);
         this.console.println("You traveled to the US Congress Building");
+        gameMenu.display();
     }
 
     private void russiaCathedralView(Player player) {
         player.setRow(26);
         this.console.println("You traveled to the US Congress Building");
+        gameMenu.display();
     }
 
 
