@@ -7,6 +7,10 @@ package byui.cit260.snipe.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 
 /**
  *

@@ -6,8 +6,11 @@
 package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.enums.ChallengeDescriptionEnum;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import static java.lang.Integer.parseInt;
 import java.util.Scanner;
+import snipe.SNIPE;
 
 /**
  *
@@ -15,8 +18,11 @@ import java.util.Scanner;
  */
 public class ChallengeView {
 
+    private static PrintWriter outFile = null;
+    private static BufferedReader inFile = null;
+
     public ChallengeView(int challengeNum) {
-        
+
         this.display(challengeNum);
     }
 
@@ -40,7 +46,7 @@ public class ChallengeView {
 
         while (!valid) { //loop while an invalid value is entered 
             System.out.println(ChallengeDescriptionEnum.values()[num]);
-            
+
             value = keyboard.nextLine();
             value = value.trim();
 
@@ -54,15 +60,26 @@ public class ChallengeView {
     }
 
     private boolean doAction(String value) {
-        
+
         try {
             Double number = Double.parseDouble(value);
-            
-        }
-        catch (NumberFormatException nf) {
+
+        } catch (NumberFormatException nf) {
             System.out.println("Please enter a nuimber. I assume you know"
                     + "\n what those are, don't you?");
         }
-         return true;   
+        return true;
+    }
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+    public static void setOutFile(PrintWriter outFile) {
+        SNIPE.outFile = outFile;
+    }
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+    public static void seInFile(BufferedReader inFile) {
+        SNIPE.inFile = inFile;
     }
 }
