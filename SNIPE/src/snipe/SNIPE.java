@@ -28,10 +28,10 @@ public class SNIPE {
     private static Player player = null;
     private static String passportList = null;
 
-    private static PrintWriter outFile = null;
-    private static BufferedReader inFile = null;
+    public static PrintWriter outFile = null;
+    public static BufferedReader inFile = null;
     
-    private static PrintWriter logFile = null;
+    public static PrintWriter logFile = null;
     
     public static void main(String[] args) {
         StartProgramView startProgramView = new StartProgramView();
