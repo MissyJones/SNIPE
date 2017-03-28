@@ -19,13 +19,9 @@ class HelpMenuView extends View {
         super("\n*-------------------------------*"
                 + "\n|           Help Menu           |"
                 + "\n*-------------------------------*"
-                + "\n| V |  View Health Pnts         |"
-                + "\n|---|---------------------------|"
                 + "\n| S |  Saving Your Game         |"
                 + "\n|---|---------------------------|"
                 + "\n| T |  Travel Help              |"
-                + "\n|---|---------------------------|"
-                + "\n| D |  Dossier Help             |"
                 + "\n|---|---------------------------|"
                 + "\n| C |  Collecting Codes         |"
                 + "\n|---|---------------------------|"
@@ -40,17 +36,11 @@ class HelpMenuView extends View {
     public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
-            case "V":
-                this.points();
-                break;
             case "S":
                 this.savingYourGame();
                 break;
             case "T":
                 this.travelHelp();
-                break;
-            case "D":
-                this.dossierIventroyHelp();
                 break;
             case "C":
                 this.collectingCodes();
@@ -68,27 +58,25 @@ class HelpMenuView extends View {
     }
 
     private void savingYourGame() {
-        System.out.println("Saves the game to a file based on the player’s assigned Agent Name. Don't forget your agent name when you come back!");
+        System.out.println("Saves the game to a file based on the player’s assigned Agent Name."
+                + "\nDon't forget your agent name when you come back!");
     }
 
     private void travelHelp() {
-        System.out.println("Information coming soon. You will see a list of local locations that you can visit. Don't forget to check your dossier, mate! Important happy little hints live there.");
+        System.out.println("Information coming soon. You will see a list of local"
+                + "\nlocations that you can visit. Don't forget to check your dossier,"
+                + "\nmate! Important happy little hints live there.");
     }
 
-    private void dossierIventroyHelp() {
-        System.out.println("Information about how the Dossier Inventory features work, opening the Dossier menu, and see a list of the dossiers acquired. Also you will be able to select a dossier to see the challenges you face in the current country/location. Mwahaahahaha!");
-    }
-
+ 
     private void collectingCodes() {
-        System.out.println("Coming to an assignment soon. Learn what codes are and how to use them, You must collect ALL codes or you flunk out SNIPE academy, and that would be so sad.");
+        System.out.println("Coming to an assignment soon. Learn what codes are and"
+                + "\nhow to use them, You must collect ALL codes or you flunk out "
+                + "\nSNIPE academy, and that would be so sad.");
     }
 
     private void playerLocation() {
-        System.out.println("called playerLocation*******");
     }
 
-    private void points() {
-        HealthPointsView healthPointsView = new HealthPointsView();
-        healthPointsView.display();
-    }
+
 }

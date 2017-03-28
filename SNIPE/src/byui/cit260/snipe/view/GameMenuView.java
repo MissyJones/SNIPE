@@ -52,6 +52,8 @@ public class GameMenuView extends View {
             case "S":
                 this.saveGame();
                 break;
+            case "Q":
+                this.quitGame();
             default:
                 System.out.println("Invalid entry, bro. Try again!");
                 break;
@@ -111,5 +113,10 @@ public class GameMenuView extends View {
         
 
         return place;
+    }
+
+    private void quitGame() {
+        QuitGameView quit = new QuitGameView();
+        quit.display();
     }
 }

@@ -18,7 +18,7 @@ public class Player implements Serializable {
 
     private String name;
     private double numberOfMoves;
-    private double healthPoints = 100;
+    private int healthPoints = 100;
     private String codeName;
     private Game game;
     ArrayList<Code> codeInventory = new ArrayList<>();
@@ -89,11 +89,11 @@ public class Player implements Serializable {
         this.numberOfMoves = numberOfMoves;
     }
 
-    public double getHealthPoints() {
+    public int getHealthPoints() {
         return healthPoints;
     }
 
-    public void setHealthPoints(double healthPoints) {
+    public void setHealthPoints(int healthPoints) {
         this.healthPoints = healthPoints;
     }
 

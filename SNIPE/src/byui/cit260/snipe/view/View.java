@@ -18,14 +18,14 @@ import snipe.SNIPE;
 public abstract class View implements ViewInterface {
 
     protected String displayMessage;
-    protected double points = (SNIPE.getPlayer()).getHealthPoints();
+    protected int points = SNIPE.getPlayer().getHealthPoints();
     protected String scene;
     protected final BufferedReader keyboard = SNIPE.getInFile();
     protected final PrintWriter console = SNIPE.getOutFile();
 
 
     public View(String message) {
-            this.displayMessage = message;
+            this.displayMessage = "You have "+points+" points of health left\n\n"+message;
 
     }
 
@@ -36,9 +36,6 @@ public abstract class View implements ViewInterface {
         do {
 
             String value = this.getInput();
-            if (value.toUpperCase().equals("Q")) {
-                return;
-            }
             done = this.doAction(value);
         } while (!done);
     }

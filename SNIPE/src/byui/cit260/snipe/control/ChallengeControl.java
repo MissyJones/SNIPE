@@ -60,17 +60,17 @@ public class ChallengeControl {
     public String dmgCalc(Challenge physChallenge, Player player) {
         Random rand = new Random();
         String reply;
-        double damage;
-        damage = (Math.ceil(rand.nextInt(29))) + 1;
+        int damage;
+        damage = (int) ((Math.ceil(rand.nextInt(29))) + 1);
 
         if (damage < 1) {
             reply = "ERROR '-1', you can't have negative damage.";
         } else if (damage > 30) {
             reply = "ERROR '+1', you can't do more than 30 points of damage.";
         } else {
-            double currentHealth;
+            int currentHealth;
             currentHealth = player.getHealthPoints();
-            double newHealth = currentHealth - damage;
+            int newHealth = currentHealth - damage;
             player.setHealthPoints(newHealth);
             if (newHealth < 1) {
                 reply = "You died";
