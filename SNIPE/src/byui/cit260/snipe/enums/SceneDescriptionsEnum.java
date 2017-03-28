@@ -50,16 +50,46 @@ public enum SceneDescriptionsEnum implements Serializable {
             + "\nFrance."),
     Some_Cafe("The Café de Flore is one of the oldest coffeehouses in "
             + "\nParis. "),
-    Olympic_Stadium(" Built in the mid-1970s as the main venue for the 1976 "
-            + "\nSummer Olympics."),
-    Lib_Parliment("The main information repository and research resource for "
-            + "\nthe Parliament of Canada. "),
-    CN_tower("The third tallest tower in the world and remains the tallest "
-            + "\nfree-standing structure in the Western Hemisphere.."),
-    Rio("One of the most visited cities in the Southern Hemisphere and is "
-            + "\nknown for its natural settings, Carnival, samba, bossa nova,"
-            + "\nand balneario beaches."),
-    Amazon_Rainforest("The Amazon represents over half of the planet's "
+    Olympic_Stadium("Ah! Montreal, Canada, eh? B. C. D... Traffic is moving "
+            + "\nsmoothly throughout Parc olympique de Montreal, otherwise "
+	    + "\nknown as Olympic Park. Pedestrians go in and out of the"
+	    + "\n local businesses, roam around the park, and so forth. "
+	    + "\nYou are in line at the Olympic Stadium, known to the locals"
+	    + "\nas the \"Big O\" because of its shape or the \"big owe\" due"
+	    + "\nthe cost to buid it. The stadium became a multipurpose venue"
+	    + "\nafter the Montreal Expos became the Washington Nationals. You"
+	    + "\nare in a line of chatty people as you wait to get in for the"
+	    + "\nMonster Spectacular; that is your cover story anyway. A contact"
+	    + "\nhas indicated there is a woman who may have what you need. "
+	    + "\nHowever, can you trust her? Is she really one of us? Maybe"
+	    + "\nMaybe she works for \"them\"? Or maybe she's a double spy or"
+	    + "\nor an assain. You see a woman who looks like who you need"
+	    + "\nmeet, she is even wearing the odd clothing described to you."
+	    + "\nBut then suddenly, you see two more women who als resemble the"
+	    + "\nwoman, and they too are dressed in the same odd manor. Who is"
+	    + "\nthe real contact? Can you trust any of them?"),
+    Lib_Parliment("You have arrived at Ontario. You make your way to the Library"
+            + "\nnof Parliment. Your next mission awaits you, eh? B. C. D..."
+            + "\nBefore entering the main repository, you take in the view from"
+            + "\narliment Hill, then carefully make your way to the Centre"
+            + "\nBlock. It is odd to see this gothic building surrounded by"
+            + "\nbuildings from an entirely different era, but you must not"
+            + "\ndelay staring your mission now. Carefully you go into the "
+            + "\nlibrary to go the the specific location of the record you need"
+            + "\nto\"borrow\" but you have to be careful, there is a duplicate"
+            + "\nthat may really be a booby trap. You see both records side by"
+            + "\nside. The look identical.It is a trap! Or maybe it's perfectly"
+            + "\nsafe. You decide at your own peril."),
+    CN_tower("You have come to Toronto, eh? B. C. D... As you look at the city"
+            + "\nkyline at dusk, you can make out what is perhaps Toronto's best"
+            + "\nknown attraction: the CN Tower. The roads are failry busy, so "
+            + "\nyou nmust try to make your way to the observatory where you see"
+            + "\nLake Ontario in all its glory. Somewhere up there is a message,"
+            + "\nor nperhaps a dossier, but where is it? Maybe you have to go "
+            + "\nto the edge. Nudge nudge, wink wink. Please be alert, we would"
+            + "\nhate tohear you \"fel\" to your death way, way up there."),
+    Rio("Ah! The beach. And it is Carnival time here in Rio de Janeiro."),
+    Amazon_Rainforest("The Amazon represents over half of the planet's"
             + "\nremaining rainforests,& comprises the largest and most "
             + "\nbiodiverse tract of tropical rainforest in the world."),
     Sao_paulo("The metropolis is an alpha global city & is the most populous"
