@@ -182,14 +182,14 @@ public class TravelMenuView extends View{
     private void usaSnipeView(Player player) {
         player.setRow(0);
         this.console.println("You traveled to the SNIPE HQ. Welcome. We would tell "
-                + "you where it is, but then we'd have to kill you.");
+                + "\nyou where it is, but then we'd have to kill you.");
         gameMenu.display();
     }
     
     private void usaCongressView(Player player) {
         player.setRow(1);
             this.console.println("You've made it to the Library of congress, "
-            + "the research library that officially serves the United "
+            + "\nthe research library that officially serves the United "
             + "\nStates Congress and is the de facto national library of the "
             + "\nUnited States.");
             gameMenu.display();
@@ -209,7 +209,7 @@ public class TravelMenuView extends View{
         player.setRow(3);
         this.console.println("Ahhhhh Germany. This is Berlin! You're at the "
                 + "\nBradenburg Gate, an 18th-century neoclassical monument in"
-                + " Berlin, and one of the best-known landmarks of Germany.");
+                + "\nBerlin, and one of the best-known landmarks of Germany.");
         gameMenu.display();
     }
 
@@ -225,16 +225,16 @@ public class TravelMenuView extends View{
     private void germanyRhineView(Player player) {
         player.setRow(5);
         this.console.println("Welcome to the Rhine River! The Rhine begins in the"
-                + " Swiss Alps,then flows through the Rhineland and eventually "
-                + "empties into the North Sea in the Netherlands.");
+                + "\nSwiss Alps,then flows through the Rhineland and eventually "
+                + "\nempties into the North Sea in the Netherlands.");
         gameMenu.display();
     }
 
     private void englandBenView(Player player) {
         player.setRow(6);
         this.console.println("You've made it to Enland! Big Ben, the Great Bell of "
-                + "the clock at the north end of the Palace of Westminster in London,"
-                + "is right in front of you.");
+                + "\nthe clock at the north end of the Palace of Westminster in London,"
+                + "\nis right in front of you.");
         gameMenu.display();
     }
 
@@ -265,8 +265,8 @@ public class TravelMenuView extends View{
     private void spainSevilleView(Player player) {
          player.setRow(10);
          this.console.println("You have arrived at the Cathedral Seville. This "
-                 + "is the largest Gothic cathedral and the third-largest church"
-                 + " in the world.");
+                 + "\nis the largest Gothic cathedral and the third-largest church"
+                 + "\nin the world.");
          gameMenu.display();
     }
 
@@ -290,54 +290,54 @@ public class TravelMenuView extends View{
     private void franceLouvreView(Player player){
         player.setRow(13);
         this.console.println("Welcome to the Lourve. It's the world's largest"
-                + " museum and a historic monument in Paris,");
+                + "\nmuseum and a historic monument in Paris,");
         gameMenu.display();
     }
 
     private void franceCafeView(Player player) {
         player.setRow(14);
         this.console.println("Hungry? You're now at The Café de Flore, one of the "
-                + "oldest coffeehouses in Paris.");
+                + "\noldest coffeehouses in Paris.");
         gameMenu.display();
     }
 
     private void canadaMontrealView(Player player) {
          player.setRow(15);
          this.console.println("Welcome to Canada! You're at Olympic Stadium,"
-                 + " built in the mid-1970s as the main venue for the 1976 "
-                 + "Summer Olympics." );
+                 + "\nbuilt in the mid-1970s as the main venue for the 1976 "
+                 + "\nSummer Olympics." );
          gameMenu.display();
     }
 
     private void canadaParlimentView(Player player) {
         player.setRow(16);
         this.console.println("Now you've made it to the Canada Parliment. It's "
-            + "the main information repository and research resource for the "
-            + "Parliament of Canada. ");
+            + "\nthe main information repository and research resource for the "
+            + "\nParliament of Canada. ");
         gameMenu.display();
     }
 
     private void canadaCNTowerView(Player player) {
         player.setRow(17);
         this.console.println("Look up! You're at the Cn Tower. Located in Toronto "
-                + "Canada, it's the third tallest tower in the world and remains "
-                + "the tallest free-standing structure in the Western Hemisphere.");
+                + "\nCanada, it's the third tallest tower in the world and remains "
+                + "\nthe tallest free-standing structure in the Western Hemisphere.");
         gameMenu.display();
     }
 
     private void brazilBeachView(Player player) {
         player.setRow(18);
         this.console.println("One of the most visited cities in the Southern Hemisphere"
-            + " and is known for Carnival, samba, bossa nova, and balneario beaches.");
+            + "\nand is known for Carnival, samba, bossa nova, and balneario beaches.");
         gameMenu.display();
     }
 
     private void brazilAmazonView(Player player) {
         player.setRow(19);
         this.console.println("Humid? You're in a rain forrest. The Amazon "
-            + "represents over half of the planet's remaining rainforests,& "
-            + "comprises the largest and most biodiverse tract of tropical "
-            + "rainforest in the world.");
+            + "\nrepresents over half of the planet's remaining rainforests,& "
+            + "\ncomprises the largest and most biodiverse tract of tropical "
+            + "\nrainforest in the world.");
         gameMenu.display();
         
     }
@@ -345,26 +345,26 @@ public class TravelMenuView extends View{
     private void brazilSaoPauloView(Player player) {
         player.setRow(20);
         this.console.println("You've arrived in SauPaulo, Brazil. The metropolis "
-            + "is an alpha global city & is the most populous city in Brazil, "
-            + "the Americas, and in the Southern Hemisphere");
+            + "\nis an alpha global city & is the most populous city in Brazil, "
+            + "\nthe Americas, and in the Southern Hemisphere");
         gameMenu.display();
     }
 
     private void australiaOperaView(Player player) {
         player.setRow(21);
         this.console.println("Do you hear music? You're in Australia Mate! Welcome"
-                + " to the Australia Opera House, a multi-venue performing arts "
-                + "centre. It is one of the 20th century's most famous & "
-                + "distinctive buildings");
+                + "\nto the Australia Opera House, a multi-venue performing arts "
+                + "\ncentre. It is one of the 20th century's most famous & "
+                + "\ndistinctive buildings");
         gameMenu.display();
     }
 
     private void australiaJailView(Player player) {
         player.setRow(22);
         this.console.println("Feel a sudden chill? You're in the Melbourne jail, "
-                + "or Gaol. It was built in the mid-1800s to hold dangerous "
-                + "criminals, petty offenders, the homeless and the mentally ill."
-                + "Now it's empty....well, of the living.");
+                + "\nor Gaol. It was built in the mid-1800s to hold dangerous "
+                + "\ncriminals, petty offenders, the homeless and the mentally ill."
+                + "\nNow it's empty....well, of the living.");
         gameMenu.display();
         
     }
@@ -378,27 +378,27 @@ public class TravelMenuView extends View{
     private void russiaSquareView(Player player) {
         player.setRow(24);
         this.console.println("Welcome to Russia! You're now in St. Peters Square. "
-                + "Between 1713–1728 and 1732–1918, Saint Petersburg was the "
-                + "capital of imperial Russia. In 1918, the central government "
-                + "bodies moved to Moscow.");
+                + "\nBetween 1713–1728 and 1732–1918, Saint Petersburg was the "
+                + "\ncapital of imperial Russia. In 1918, the central government "
+                + "\nbodies moved to Moscow.");
         gameMenu.display();
     }
 
     private void russiaLeninView(Player player) {
         player.setRow(25);
         this.console.println("Ready for something a little more lively? Sorry, "
-                + "you've made it to Lenin's Mausoleum. Lenin's Mausoleum "
-                + "Currently serves as the resting place of Vladimir Lenin. "
-                + "His preserved body has been on public display there since "
-                + "shortly after his death in 1924.");
+                + "\nyou've made it to Lenin's Mausoleum. Lenin's Mausoleum "
+                + "\nCurrently serves as the resting place of Vladimir Lenin. "
+                + "\nHis preserved body has been on public display there since "
+                + "\nshortly after his death in 1924.");
         gameMenu.display();
     }
 
     private void russiaCathedralView(Player player) {
         player.setRow(26);
         this.console.println("Now you're at St.Basil's Cathedral. Built from"
-                + " 1555–61 on orders from Ivan the Terrible, it commemorates the"
-                + " capture of Kazan and Astrakhan.");
+                + "\n1555–61 on orders from Ivan the Terrible, it commemorates the"
+                + "\ncapture of Kazan and Astrakhan.");
         gameMenu.display();
     }
 
