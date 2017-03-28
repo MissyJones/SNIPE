@@ -113,7 +113,7 @@ public class TravelMenuView extends View{
                 this.englandPalaceView(SNIPE.getPlayer());
                 break;
             case "10":
-                this.englandBuckinghamView(SNIPE.getPlayer());
+//                this.englandBuckinghamView(SNIPE.getPlayer());
                 break;
             case "11":
                 this.spainTarragonaView(SNIPE.getPlayer());
