@@ -16,50 +16,14 @@ import snipe.SNIPE;
  *
  * @author Maxwell
  */
-public class ChallengeView {
+public class ChallengeView extends View{
 
-    private static PrintWriter outFile = null;
-    private static BufferedReader inFile = null;
+    public ChallengeView() {
+        super("");
 
-    public ChallengeView(int challengeNum) {
-
-        this.display(challengeNum);
     }
 
-    public void display(int num) {
-
-        boolean done = false;
-        do {
-
-            String value = this.getInput(num);
-            if (value.toUpperCase().equals("Q")) {
-                return;
-            }
-            done = this.doAction(value);
-        } while (!done);
-    }
-
-    public String getInput(int num) {
-        Scanner keyboard = new Scanner(System.in);  //get infile for keyboard
-        String value = ""; //value to be returned
-        boolean valid = false; //initialize to not be void
-
-        while (!valid) { //loop while an invalid value is entered 
-            System.out.println(ChallengeDescriptionEnum.values()[num]);
-
-            value = keyboard.nextLine();
-            value = value.trim();
-
-            if (value.length() < 1) {
-                System.out.println("\nInvalid value: value cannot be blank, fool");
-                continue;
-            }
-            break;
-        }
-        return value;
-    }
-
-    private boolean doAction(String value) {
+    public boolean doAction(String value) {
 
         try {
             Double number = Double.parseDouble(value);
@@ -69,17 +33,5 @@ public class ChallengeView {
                     + "\n what those are, don't you?");
         }
         return true;
-    }
-    public static PrintWriter getOutFile() {
-        return outFile;
-    }
-    public static void setOutFile(PrintWriter outFile) {
-        SNIPE.outFile = outFile;
-    }
-    public static BufferedReader getInFile() {
-        return inFile;
-    }
-    public static void seInFile(BufferedReader inFile) {
-        SNIPE.inFile = inFile;
     }
 }

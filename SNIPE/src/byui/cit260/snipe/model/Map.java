@@ -6,6 +6,7 @@
 package byui.cit260.snipe.model;
 
 import byui.cit260.snipe.enums.SceneDescriptionsEnum;
+import byui.cit260.snipe.enums.TravelEnum;
 
 /**
  *
@@ -16,12 +17,16 @@ public class Map {
     private int rowCount;
     private Location[] locations;
     private String[] sceneTable = new String[27];
+    private String[] travelTable = new String[27];
+
+
 
     public Map(int rowCount) {
         if (rowCount < 1 ) {
             System.out.println("Nice try, but hacking won't get you anywhere in this game.");
             return;
         }
+        createTravelTable();
         createSceneTable();
         this.rowCount = rowCount;
 
@@ -36,7 +41,13 @@ public class Map {
             
         }
     }
+    public String[] getTravelTable() {
+        return travelTable;
+    }
 
+    public void setTravelTable(String[] travelTable) {
+        this.travelTable = travelTable;
+    }
     public String[] getSceneTable() {
         return sceneTable;
     }
@@ -61,7 +72,37 @@ public class Map {
         this.rowCount = rowCount;
     }
 
- 
+    private void createTravelTable(){
+        this.travelTable[0] = TravelEnum.SNIPE_HQ.getDescription();
+        this.travelTable[1] = TravelEnum.Lib_Of_Congress.getDescription();
+        this.travelTable[2] = TravelEnum.Gateway_Arch.getDescription();
+        this.travelTable[3] = TravelEnum.Bradenburg_gate.getDescription();
+        this.travelTable[4] = TravelEnum.Cologne_Cathedral.getDescription();
+        this.travelTable[5] = TravelEnum.Rhine_river.getDescription();
+        this.travelTable[6] = TravelEnum.Large_Ben.getDescription();
+        this.travelTable[7] = TravelEnum.Westminster_Abbey.getDescription();
+        this.travelTable[8] = TravelEnum.Buckingham_palace.getDescription();
+        this.travelTable[9] = TravelEnum.Tarragona.getDescription();
+        this.travelTable[10] = TravelEnum.Cathedral_Seville.getDescription();
+        this.travelTable[11] = TravelEnum.Valencia.getDescription();
+        this.travelTable[12] = TravelEnum.Eiffel_tower.getDescription();
+        this.travelTable[13] = TravelEnum.The_Louvre.getDescription();
+        this.travelTable[14] = TravelEnum.Some_random_Cafe.getDescription();
+        this.travelTable[15] = TravelEnum.Olympic_Stadium.getDescription();
+        this.travelTable[16] = TravelEnum.Lib_Parliment.getDescription();
+        this.travelTable[17] = TravelEnum.CN_tower.getDescription();
+        this.travelTable[18] = TravelEnum.Rio.getDescription();
+        this.travelTable[19] = TravelEnum.Amazon_Rainforest.getDescription();
+        this.travelTable[20] = TravelEnum.Sao_paulo.getDescription();
+        this.travelTable[21] = TravelEnum.Sydney_Opera_House.getDescription();
+        this.travelTable[22] = TravelEnum.Melbourne_Jail.getDescription();
+        this.travelTable[23] = TravelEnum.Bridge.getDescription();
+        this.travelTable[24] = TravelEnum.StPeters_Square.getDescription();
+        this.travelTable[25] = TravelEnum.Lenins_Mausoleum.getDescription();
+        this.travelTable[26] = TravelEnum.StBasils_Cathedral.getDescription();
+        
+        
+    }
 
     private void createSceneTable() {
         this.sceneTable[0] = SceneDescriptionsEnum.SNIPE_HQ.getDescription();

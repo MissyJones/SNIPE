@@ -78,20 +78,19 @@ public class MainMenuView extends View {
         helpMenuView.display();
     }
 
-    private void loadGame() {
-        this.console.println("Where is the save file located?");
-        
-        String filePath = this.getInput();
-        
+    private void loadGame() {     
         try {
+            this.console.println("Where is the save file located?");
+            String filePath = this.getInput();
             GameControl.loadGame(filePath);
+            GameMenuView gameMenu = new GameMenuView();
+            gameMenu.display();
             
         } catch (Exception ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
         }
         
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.display();
+
     }
 
 }
