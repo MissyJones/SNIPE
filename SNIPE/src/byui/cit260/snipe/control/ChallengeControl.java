@@ -11,6 +11,7 @@ import byui.cit260.snipe.model.Challenge;
 import byui.cit260.snipe.model.Player;
 import java.util.Random;
 import byui.cit260.snipe.exceptions.ChallengeControlException;
+import byui.cit260.snipe.view.ChallengeView;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import snipe.SNIPE;
@@ -130,29 +131,29 @@ public class ChallengeControl {
         physTwo.setCode(SNIPE.getCurrentGame().getCodes()[4]);
         challenges[4] = physTwo;
         
-        Challenge mentalOne = new Challenge();
-        mentalOne.setDescription(ChallengeDescriptionEnum.mentalOne.getDescription());
-        mentalOne.setUsedFlag(false);
-        mentalOne.setCode(SNIPE.getCurrentGame().getCodes()[5]);
-        challenges[5] = mentalOne;
+        Challenge physThree = new Challenge();
+        physThree.setDescription(ChallengeDescriptionEnum.physThree.getDescription());
+        physThree.setUsedFlag(false);
+        physThree.setCode(SNIPE.getCurrentGame().getCodes()[5]);
+        challenges[5] = physThree;
         
-        Challenge mentalOne = new Challenge();
-        mentalOne.setDescription(ChallengeDescriptionEnum.mentalOne.getDescription());
-        mentalOne.setUsedFlag(false);
-        mentalOne.setCode(SNIPE.getCurrentGame().getCodes()[6]);
-        challenges[6] = mentalOne;
+        Challenge physFour = new Challenge();
+        physFour.setDescription(ChallengeDescriptionEnum.physFour.getDescription());
+        physFour.setUsedFlag(false);
+        physFour.setCode(SNIPE.getCurrentGame().getCodes()[6]);
+        challenges[6] = physFour;
         
-        Challenge mentalOne = new Challenge();
-        mentalOne.setDescription(ChallengeDescriptionEnum.mentalOne.getDescription());
-        mentalOne.setUsedFlag(false);
-        mentalOne.setCode(SNIPE.getCurrentGame().getCodes()[7]);
-        challenges[7] = mentalOne;
+        Challenge physFive = new Challenge();
+        physFive.setDescription(ChallengeDescriptionEnum.physFive.getDescription());
+        physFive.setUsedFlag(false);
+        physFive.setCode(SNIPE.getCurrentGame().getCodes()[7]);
+        challenges[7] = physFive;
         
-        Challenge mentalOne = new Challenge();
-        mentalOne.setDescription(ChallengeDescriptionEnum.mentalOne.getDescription());
-        mentalOne.setUsedFlag(false);
-        mentalOne.setCode(SNIPE.getCurrentGame().getCodes()[8]);
-        challenges[8] = mentalOne;
+        Challenge physSix = new Challenge();
+        physSix.setDescription(ChallengeDescriptionEnum.physSix.getDescription());
+        physSix.setUsedFlag(false);
+        physSix.setCode(SNIPE.getCurrentGame().getCodes()[8]);
+        challenges[8] = physSix;
         
         return challenges;
     }
@@ -160,35 +161,47 @@ public class ChallengeControl {
     
     
     
-    /**
-    public void challengeEncounter(int challenge) {
-        Random rand = new Random();
-        int chance = (int) ((Math.ceil(rand.nextInt(100))));
-        if (chance > 29) {
-            
-            
-        }
-        * 
+    public void challengeEncounter(int location) {
+        Challenge[] challengeList = SNIPE.getCurrentGame().getChallenges();
+        
        
-       if (challenge == 2) {
-           
-       } else if (challenge == 4) {
-           
-       } else if (challenge == 8) {
-           
-       } else if (challenge == 10) {
-           
-       } else if (challenge == 12) {
-           
-       } else if (challenge == 15) {
-           
-       } else if (challenge == 17) {
-           
-       } else if (challenge == 21) {
-           
-       } else if (challenge == 25) {
-           
+       if (location == 1) {
+           String situation = challengeList[0].getDescription();
+           ChallengeView challenge = new ChallengeView(situation, 1);
+           challenge.display();
+       } else if (location == 4) {
+           String situation = challengeList[1].getDescription();
+           ChallengeView challenge = new ChallengeView(situation, 2);
+           challenge.display();
+       } else if (location == 8) {
+           String situation = challengeList[2].getDescription();
+           ChallengeView challenge = new ChallengeView(situation, 3);
+           challenge.display();
+       } else if (location == 10) {
+           String situation = challengeList[3].getDescription();
+           ChallengeView challenge = new ChallengeView(situation, 4);
+           challenge.display();
+       } else if (location == 12) {
+           String situation = challengeList[4].getDescription();
+           ChallengeView challenge = new ChallengeView(situation, 4);
+           challenge.display();
+       } else if (location == 15) {
+           String situation = challengeList[5].getDescription();
+           ChallengeView challenge = new ChallengeView(situation, 4);
+           challenge.display();
+       } else if (location == 17) {
+           String situation = challengeList[6].getDescription();
+           ChallengeView challenge = new ChallengeView(situation, 4);
+           challenge.display();
+       } else if (location == 21) {
+           String situation = challengeList[7].getDescription();
+           ChallengeView challenge = new ChallengeView(situation, 4);
+           challenge.display();
+       } else if (location == 25) {
+           String situation = challengeList[8].getDescription();
+           ChallengeView challenge = new ChallengeView(situation, 4);
+           challenge.display();
        } else {}
     }
-     * */
+  
 }

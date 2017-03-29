@@ -29,7 +29,7 @@ public enum SceneDescriptionsEnum implements Serializable {
             + "\nup at an enormous clock tower."),
     Westminster_Abbey("Your footsteps echo as you walk down a dark corridor of an "
             + "\nantiquated abbey."),
-    Buckingham_palace(" A line of soldiers wearing red coats, black pants and tall"
+    Buckingham_palace("A line of soldiers wearing red coats, black pants and tall"
             + "\nblack hats passes by as you gaze at an enornous white palace."),
     Tarragona("An almost endless beach of sparkling white sand stretches out on"
             + "\neither side and slopes into gorgeous blue ocean. "),
