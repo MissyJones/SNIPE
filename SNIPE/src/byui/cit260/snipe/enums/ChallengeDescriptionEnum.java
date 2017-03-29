@@ -63,12 +63,37 @@ public enum ChallengeDescriptionEnum implements Serializable {
             + "\nPoint in Sydney Harbor?"),
     RUSSIARIDDLE("Vladimir Ilyich Ulyanov is entombed at Red Square, and is "
             + "\nbetter known by what name?"),
-    physOne(""),
+    physOne("You notice you're being followed. It's not even discreet! The two men in"
+            + "\nlong black trench coats move between people as if they weren't even there."
+            + "\n'Now's probably a good time to run,' you think. Off you dash into the"
+            + "\nnearest shop, disrupting the scene around you. Do you hide in the"
+            + "\nbathroom, or do you try to find a way out?"),
+    physOneOptionOne("You dash into the bathroom and stand on a toilet, preparing your"
+            + "\ngun, just in case. Footsteps come crashing outside the door and fall silent."
+            + "\nYou hear shouts. They must be asking where you went. Then the door opens."
+            + "\nThe other stall doors are open, so it's pretty obvious where you're hiding."
+            + "\nYou leap out to take your pursuers by surprise and manage to subdue both of them."
+            + "\nBu not before taking a bullet. Inside the coat pocket of one of your"
+            + "\npursuers you find a USB drive. This must be a code!"),
+    physOneOptionTwo("You run out the back of the store, only to find three other guys waiting for you."
+            + "\n You pull a sick ninja move and take out all three at once, but the scuffle has called your"
+            + "\noriginal tail from inside the store. They manaage to get a shot off before you take care of them."
+            + "\nYou find a USB inside one of their pockets. This must be a code."),
     physTwo(""),
+    physTwoOptionOne(""),
+    physTwoOptionTwo(""),
     physThree(""),
+    physThreeOptionOne(""),
+    physThreeOptionTwo(""),
     physFour(""),
+    physFourOptionOne(""),
+    physFourOptionTwo(""),
     physFive(""),
-    physSix("");
+    physFiveOptionOne(""),
+    physFiveOptionTwo(""),
+    physSix(""),
+    physSixOptionOne(""),
+    physSixOptionTwo("");
 
     private final String description;
 

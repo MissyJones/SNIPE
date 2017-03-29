@@ -28,6 +28,8 @@ public class GameMenuView extends View {
             + "\n|-----|---------------------|"
             + "\n|  C  |       Codes         |"
             + "\n|-----|---------------------|"
+            + "\n|  H  |       Safe House    |"
+            + "\n|-----|---------------------|"
             + "\n|  P  |       Passports     |"
             + "\n|-----|---------------------|"
             + "\n|  S  |       Save Game     |"
@@ -58,6 +60,9 @@ public class GameMenuView extends View {
                 break;
             case "A":
                 attemptChallenge();
+                break;
+            case "H":
+                safeHouse();
                 break;
             case "Q":
                 this.quitGame();
@@ -155,5 +160,9 @@ public class GameMenuView extends View {
             ErrorView.display(GameMenuView.class.getName(), "Please enter a number");
         }
         
+    }
+
+    private void safeHouse() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

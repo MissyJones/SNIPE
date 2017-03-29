@@ -22,7 +22,7 @@ public class ChallengeControl {
     public int calcArea(int length, int width) throws ChallengeControlException {
         
         if(length <= 0 || width <= 0 || length > 10 || width > 10) {
-            throw new ChallengeControlException("Length or Width out of bounds");
+            throw new ChallengeControlException("Length or width out of bounds");
         }
         
         return length * width;
@@ -62,13 +62,7 @@ public class ChallengeControl {
         String answer;
         if (number == Math.sqrt(20857489)) {
             answer = "The door unlocks, enter at your own risk.";
-        }else if (number != answer){
-            try {
-                throw new ChallengeControlException("Nope, not today.");
-            } catch (ChallengeControlException ex) {
-                Logger.getLogger(ChallengeControl.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        } else {
+        }else {
             answer = "Think again sucker!";
         }
         return answer;
@@ -99,4 +93,14 @@ public class ChallengeControl {
         }
         return reply;
     }
+    
+    public void challengeEncounter() {
+        Random rand = new Random();
+        int chance = (int) ((Math.ceil(rand.nextInt(100))));
+        if (chance > 29) {
+            
+            
+        }
+    }
+    
 }
