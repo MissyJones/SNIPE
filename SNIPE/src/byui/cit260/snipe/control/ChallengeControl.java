@@ -9,6 +9,8 @@ import byui.cit260.snipe.model.Challenge;
 import byui.cit260.snipe.model.Player;
 import java.util.Random;
 import byui.cit260.snipe.exceptions.ChallengeControlException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -60,6 +62,12 @@ public class ChallengeControl {
         String answer;
         if (number == Math.sqrt(20857489)) {
             answer = "The door unlocks, enter at your own risk.";
+        }else if (number != answer){
+            try {
+                throw new ChallengeControlException("Nope, not today.");
+            } catch (ChallengeControlException ex) {
+                Logger.getLogger(ChallengeControl.class.getName()).log(Level.SEVERE, null, ex);
+            }
         } else {
             answer = "Think again sucker!";
         }
