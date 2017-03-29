@@ -62,22 +62,26 @@ public class ChallengeControl {
         }
 }
 
-    public String mathPuzzleOne(double number) {
-        String answer;
+    public String mathPuzzleOne(double number) throws ChallengeControlException{
+        String answer = null;
+        try {
         if (number == Math.sqrt(20857489)) {
             answer = "The door unlocks, enter at your own risk.";
+  
         }else if (number != Math.sqrt(20857489)){
-            try {
-                throw new ChallengeControlException("Nope, not today.");
+            answer = "Think again sucker!";
+        }         else {
+            
+            throw new ChallengeControlException();
+            
+        }
             } catch (ChallengeControlException ex) {
                 Logger.getLogger(ChallengeControl.class.getName()).log(Level.SEVERE, null, ex);
             }
-        } else {
-            answer = "Think again sucker!";
-        }
         return answer;
-
     }
+  
+       
 
     public String dmgCalc(Challenge physChallenge, Player player) {
         Random rand = new Random();
