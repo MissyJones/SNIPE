@@ -5,7 +5,11 @@
  */
 package byui.cit260.snipe.view;
 
+import byui.cit260.snipe.control.ChallengeControl;
 import byui.cit260.snipe.control.GameControl;
+import byui.cit260.snipe.exceptions.ChallengeControlException;
+import java.io.IOException;
+import java.util.Random;
 import snipe.SNIPE;
 
 /**
@@ -51,6 +55,9 @@ public class GameMenuView extends View {
                 break;
             case "S":
                 this.saveGame();
+                break;
+            case "A":
+                attemptChallenge();
                 break;
             case "Q":
                 this.quitGame();
@@ -118,5 +125,35 @@ public class GameMenuView extends View {
     private void quitGame() {
         QuitGameView quit = new QuitGameView();
         quit.display();
+    }
+
+    private void attemptChallenge() {
+        
+        Random rand = new Random();
+        int length = rand.nextInt(10) + 1;
+        int width = rand.nextInt(10) + 1;
+        
+        System.out.println("Please find the area if length=" + length + " and width=" + width + "\n");
+        try {
+            String playerAnswer = keyboard.readLine();
+        
+            int playerAnswerNum = Integer.parseInt(playerAnswer);
+            
+            ChallengeControl cc = new ChallengeControl();
+            int correctAnswer = cc.calcArea(length, width);
+            
+            if(playerAnswerNum == correctAnswer) {
+                console.write("Congratulations! You got it right!\n");
+            } else {
+                console.write("Wrong!\n");
+            }
+        } catch(ChallengeControlException cce) {
+            ErrorView.display(GameMenuView.class.getName(), cce.getMessage());
+        } catch(IOException ioe) {
+            ErrorView.display(GameMenuView.class.getName(), ioe.getMessage());
+        } catch(NumberFormatException nfe) {
+            ErrorView.display(GameMenuView.class.getName(), "Please enter a number");
+        }
+        
     }
 }

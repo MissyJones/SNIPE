@@ -16,6 +16,16 @@ import byui.cit260.snipe.exceptions.ChallengeControlException;
  */
 public class ChallengeControl {
 
+    
+    public int calcArea(int length, int width) throws ChallengeControlException {
+        
+        if(length <= 0 || width <= 0 || length > 10 || width > 10) {
+            throw new ChallengeControlException("Length or Width out of bounds");
+        }
+        
+        return length * width;
+    }
+    
     public boolean mathPuzzleThree(double height, double width, double answer) {
         double area = height * width;
         Boolean response;
