@@ -16,10 +16,10 @@ public class Game implements Serializable {
 
     private double moveCounter;
     private double noCodes;
-    Code[] codes = new Code[9];
+    Code[] codes;
     private Player player;
     private Map map;
-    ArrayList <Challenge> challenges = new ArrayList();
+    Challenge[] challenges;
 
     public Game() {
     }
@@ -32,13 +32,15 @@ public class Game implements Serializable {
         this.codes = codes;
     }
 
-    public ArrayList<Challenge> getChallenges() {
+    public Challenge[] getChallenges() {
         return challenges;
     }
 
-    public void setChallenges(ArrayList<Challenge> challenges) {
+    public void setChallenges(Challenge[] challenges) {
         this.challenges = challenges;
     }
+
+
 
 
 

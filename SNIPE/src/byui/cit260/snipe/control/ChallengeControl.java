@@ -5,12 +5,15 @@
  */
 package byui.cit260.snipe.control;
 
+import byui.cit260.snipe.enums.ChallengeDescriptionEnum;
+
 import byui.cit260.snipe.model.Challenge;
 import byui.cit260.snipe.model.Player;
 import java.util.Random;
 import byui.cit260.snipe.exceptions.ChallengeControlException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import snipe.SNIPE;
 
 /**
  *
@@ -94,13 +97,98 @@ public class ChallengeControl {
         return reply;
     }
     
-    public void challengeEncounter() {
+    public Challenge[] createChallenges() {
+        Challenge[] challenges = new Challenge[9];
+        
+        Challenge mentalOne = new Challenge();
+        mentalOne.setDescription(ChallengeDescriptionEnum.mentalOne.getDescription());
+        mentalOne.setUsedFlag(false);
+        mentalOne.setCode(SNIPE.getCurrentGame().getCodes()[0]);
+        challenges[0] = mentalOne;
+        
+        Challenge mentalTwo = new Challenge();
+        mentalTwo.setDescription(ChallengeDescriptionEnum.mentalTwo.getDescription());
+        mentalTwo.setUsedFlag(false);
+        mentalTwo.setCode(SNIPE.getCurrentGame().getCodes()[1]);
+        challenges[1] = mentalTwo;
+        
+        Challenge mentalThree = new Challenge();
+        mentalThree.setDescription(ChallengeDescriptionEnum.mentalThree.getDescription());
+        mentalThree.setUsedFlag(false);
+        mentalThree.setCode(SNIPE.getCurrentGame().getCodes()[2]);
+        challenges[2] = mentalThree;
+        
+        Challenge physOne = new Challenge();
+        physOne.setDescription(ChallengeDescriptionEnum.physOne.getDescription());
+        physOne.setUsedFlag(false);
+        physOne.setCode(SNIPE.getCurrentGame().getCodes()[3]);
+        challenges[3] = physOne;
+        
+        Challenge physTwo = new Challenge();
+        physTwo.setDescription(ChallengeDescriptionEnum.physTwo.getDescription());
+        physTwo.setUsedFlag(false);
+        physTwo.setCode(SNIPE.getCurrentGame().getCodes()[4]);
+        challenges[4] = physTwo;
+        
+        Challenge mentalOne = new Challenge();
+        mentalOne.setDescription(ChallengeDescriptionEnum.mentalOne.getDescription());
+        mentalOne.setUsedFlag(false);
+        mentalOne.setCode(SNIPE.getCurrentGame().getCodes()[5]);
+        challenges[5] = mentalOne;
+        
+        Challenge mentalOne = new Challenge();
+        mentalOne.setDescription(ChallengeDescriptionEnum.mentalOne.getDescription());
+        mentalOne.setUsedFlag(false);
+        mentalOne.setCode(SNIPE.getCurrentGame().getCodes()[6]);
+        challenges[6] = mentalOne;
+        
+        Challenge mentalOne = new Challenge();
+        mentalOne.setDescription(ChallengeDescriptionEnum.mentalOne.getDescription());
+        mentalOne.setUsedFlag(false);
+        mentalOne.setCode(SNIPE.getCurrentGame().getCodes()[7]);
+        challenges[7] = mentalOne;
+        
+        Challenge mentalOne = new Challenge();
+        mentalOne.setDescription(ChallengeDescriptionEnum.mentalOne.getDescription());
+        mentalOne.setUsedFlag(false);
+        mentalOne.setCode(SNIPE.getCurrentGame().getCodes()[8]);
+        challenges[8] = mentalOne;
+        
+        return challenges;
+    }
+    
+    
+    
+    
+    /**
+    public void challengeEncounter(int challenge) {
         Random rand = new Random();
         int chance = (int) ((Math.ceil(rand.nextInt(100))));
         if (chance > 29) {
             
             
         }
+        * 
+       
+       if (challenge == 2) {
+           
+       } else if (challenge == 4) {
+           
+       } else if (challenge == 8) {
+           
+       } else if (challenge == 10) {
+           
+       } else if (challenge == 12) {
+           
+       } else if (challenge == 15) {
+           
+       } else if (challenge == 17) {
+           
+       } else if (challenge == 21) {
+           
+       } else if (challenge == 25) {
+           
+       } else {}
     }
-    
+     * */
 }

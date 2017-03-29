@@ -5,6 +5,7 @@
  */
 package byui.cit260.snipe.view;
 
+import byui.cit260.snipe.control.ChallengeControl;
 import byui.cit260.snipe.model.Location;
 import byui.cit260.snipe.model.Player;
 import java.util.Scanner;
@@ -190,7 +191,7 @@ public class TravelMenuView extends View{
         boolean passportStatus = place.getPassportAdd();
         if (passportStatus = false) {
             place.setPassportAdd(true);
-        
+            
     }
     }
     
