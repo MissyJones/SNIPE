@@ -16,40 +16,32 @@ import java.io.Writer;
  * @author Home
  */
 public enum SceneDescriptionsEnum implements Serializable {
-    SNIPE_HQ("Headquarters of the super secret SNIPE Agency"),
-    Lib_Of_Congress("\nThe research library that officially serves the United "
-            + "\nStates Congress and is the de facto national library of the "
-            + "\nUnited States. "),
-    Gateway_Arch("\nThe world's tallest arch,the tallest man-made monument in "
-            + "\nthe Western Hemisphere,and Missouri's tallest accessible"
-            + "\nbuilding."),
-    Bradenburg_gate("\nAn 18th-century neoclassical monument in Berlin, and "
-            + "\none of the best-known landmarks of Germany."),
-    Cologne_Cathedral("A renowned monument of German Catholicism and Gothic "
-            + "\narchitecture and was declared a World Heritage Site in 1996."),
-    Rhine_river("Begins in the Swiss Alps,then flows through the Rhineland and "
-            + "\neventually empties into the North Sea in the Netherlands."),
-    Large_Ben(" the Great Bell of the clock at the north end of the Palace of "
-            + "\nWestminster in London."),
-    Westminster_Abbey("One of the United Kingdom's most notable religious "
-            + "\nbuildings and the traditional place of coronation and burial "
-            + "\nsite for English and, later, British monarchs."),
-    Buckingham_palace(" The London residence and administrative headquarters "
-            + "\nof the reigning monarch of the United Kingdom. God save "
-            + "\nyour mom!"),
-    Tarragona("A port city located in northeast Spain on the Costa Daurada "
-            + "\nby the Mediterranean Sea."),
-    Cathedral_Seville("The largest Gothic cathedral and the third-largest "
-            + "\nchurch in the world."),
-    Valencia("The capital of the autonomous community of Valencia and the "
-            + "\nthird largest city in Spain after Madrid and Barcelona"),
-    Eiffel_tower("Initially criticized by some of France's leading artists and "
-            + "\nintellectuals for its design, but it has become a global "
-            + "\ncultural icon of France."),
-    The_Louvre("The world's largest museum and a historic monument in Paris, "
-            + "\nFrance."),
-    Some_Cafe("The Café de Flore is one of the oldest coffeehouses in "
-            + "\nParis. "),
+    SNIPE_HQ("\nYou enter a pristine office"),
+    Lib_Of_Congress("\nYour in a circular room lined with bookshelves."),
+    Gateway_Arch("\n A simple, silver arch fills the skyline in front of you."),
+    Bradenburg_gate("\n You see a large monument lined with pillars. At the top"
+            + "\n is a statue of a godess with a chariot and 4 horses."),
+    Cologne_Cathedral("You're inside a large sanctuary with stained glass windows"
+            + "\nand craved wood benches down a narrow aisle."),
+    Rhine_river("There is a beautiful river with rolling green hills on each side."
+            + "\nIn the distance is the silohette of a ancient castle."),
+    Large_Ben(" A red double decker bus speeds by as you cross the street and look"
+            + "\nup at an enormous clock tower."),
+    Westminster_Abbey("Your footsteps echo as you walk down a dark corridor of an "
+            + "\nantiquated abbey."),
+    Buckingham_palace("A line of soldiers wearing red coats, black pants and tall"
+            + "\nblack hats passes by as you gaze at an enornous white palace."),
+    Tarragona("An almost endless beach of sparkling white sand stretches out on"
+            + "\neither side and slopes into gorgeous blue ocean. "),
+    Cathedral_Seville("Palm trees flank the most enormous, gothic cathedral you've"
+            + "\never seen."),
+    Valencia("You walk towards a beautiful sprawling city on the edge of a deep"
+            + "\nblue sea."),
+    Eiffel_tower("One of the worlds most iconic structures towers over you."),
+    The_Louvre("Light streams through the glasses ceiling above you as you stroll"
+            + "\ndown a hallway lined with works of priceless art."),
+    Some_Cafe("A quaint white awnig over shadows several small circular tables "
+            + "\ndown the walk way. The smell of fresh baked baguettes fills the air."),    
     Olympic_Stadium("Ah! Montreal, Canada, eh? B. C. D... Traffic is moving "
             + "\nsmoothly throughout Parc olympique de Montreal, otherwise "
 	    + "\nknown as Olympic Park. Pedestrians go in and out of the"
@@ -81,7 +73,29 @@ public enum SceneDescriptionsEnum implements Serializable {
             + "\nside. The look identical.It is a trap! Or maybe it's perfectly"
             + "\nsafe. You decide at your own peril."),
     CN_tower("You have come to Toronto, eh? B. C. D... As you look at the city"
-            + "\nkyline at dusk, you can make out what is perhaps Toronto's best"
+            + "\nskyline at dusk, you can make out what is perhaps Toronto's "
+            + "best nown attraction: the CN Tower. You approach the tower from"
+            + "Front Street and begin climbing the concrete steps (Elevators"
+            + "and escalators are for wimps!) and the parking roadway is too "
+            + "crowded, and you are on a covert mission after all. It starts"
+            + "to get a a little crowded because people are still coming and"
+            + "going at the Convention Centre. \"Darned Canucks can't even"
+            + "spell properly!\" you think to yourself. The Rogers Centre is on"
+            + "your right; too bad it's not baseball season or you could have"
+            + "taken in a Blue Jays game, to unwind from the stress of your"
+            + "training. Oh! There are murals of people at a baseball game doing"
+            + "baseball fan things. GO ahead and admire the murals for a few "
+            + "minutes, but do not get too absorbed you lose awareness of your "
+            + "surroundings. That would be very, very bad. To the left, beyond "
+            + "another set of stairs and Ripley's Aquarium (a very popular "
+            + "place even at this time) is the CN Tower - your whole reason for "
+            + "being here."
+            + "You make your way to the observatory, where you see Lake Ontario"
+            + "and all its greatness, as well as the lit skyline of the Toronto."
+            + "Somewhere up there is a message, or dossier - maybe - but where "
+            + "is it? Maybe you have to go to the edge. Nudge, nudge, wink wink."
+            + " Please be lert; we would truly hate to hear you \"fell\" from "
+            + "way up there. Those kinds of things don't end well at all."
             + "\nknown attraction: the CN Tower. The roads are failry busy, so "
             + "\nyou nmust try to make your way to the observatory where you see"
             + "\nLake Ontario in all its glory. Somewhere up there is a message,"
@@ -108,7 +122,8 @@ public enum SceneDescriptionsEnum implements Serializable {
             + "\nthe 20th century's most famous & distinctive buildings"),
     Melbourne_Jail("Got some shrimp on the barbie"),
     Bridge("A bridge mate."),
-    StPeters_Square("Between 1713–1728 and 1732–1918, Saint Petersburg was the "
+    StPeters_Square("You have arrived at St. Petersburg in Russia. You think you "
+            + "need to go to the Winter Palace to meet a \"friend\". "
             + "\ncapital of imperial Russia. In 1918, the central government "
             + "\nbodies moved to Moscow."),
     Lenins_Mausoleum("Currently serves as the resting place of Vladimir Lenin. "

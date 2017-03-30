@@ -23,7 +23,7 @@ public class ChallengeControl {
             throw new ChallengeControlException("Length or Width out of bounds");
         }
         
-        return length * width;
+       return length * width;
     }
     
     public boolean mathPuzzleThree(double height, double width, double answer) {
@@ -39,8 +39,8 @@ public class ChallengeControl {
         return response;
     }
 
-    public double mathPuzzleTwo(double radius, double radius2, double height1, double answer1) throws ChallengeControlException {
-        answer1 = Math.PI * height1 * radius * radius2;//4825.49
+    public double mathPuzzleTwo(double radius, double radius2, double height1) throws ChallengeControlException {
+        double answer1 = Math.PI * height1 * radius * radius2;//4825.49
         
         if (answer1 <= 0) {
             throw new ChallengeControlException("Aw come on! Pleae enter a "

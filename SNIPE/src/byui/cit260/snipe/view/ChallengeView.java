@@ -46,7 +46,7 @@ public class ChallengeView extends View {
             double playerAnswer1Num = Double.parseDouble(playerAnswer1);
 
             ChallengeControl cc = new ChallengeControl();
-            double correctAnswer = cc.mathPuzzleTwo(1.0, 2.0, 3.0, 4.0);
+            double correctAnswer = cc.mathPuzzleTwo(8.0, 8.0, 24.0);
             //answer is 4825.49
             if (playerAnswer1Num == correctAnswer) {
                 console.write("A compartment opens and you, exercising the\n"
