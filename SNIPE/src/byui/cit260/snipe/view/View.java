@@ -24,7 +24,7 @@ public abstract class View implements ViewInterface {
     protected final PrintWriter console = SNIPE.getOutFile();
 
     public View(String message) {
-        this.displayMessage = "You have " + points + " points of health left\n\n" + message;
+        this.displayMessage = "You have " + points + " points of health left\n" + message;
 
     }
 

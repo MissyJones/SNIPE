@@ -21,6 +21,8 @@ public class Challenge implements Serializable {
     private String description;
     private boolean usedFlag;
     private Code code;
+    private String choiceOne;
+    private String choiceTwo;
 
     public Challenge() {
     }
@@ -31,6 +33,22 @@ public class Challenge implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getChoiceOne() {
+        return choiceOne;
+    }
+
+    public void setChoiceOne(String choiceOne) {
+        this.choiceOne = choiceOne;
+    }
+
+    public String getChoiceTwo() {
+        return choiceTwo;
+    }
+
+    public void setChoiceTwo(String choiceTwo) {
+        this.choiceTwo = choiceTwo;
     }
 
     public boolean isUsedFlag() {

@@ -8,6 +8,7 @@ package byui.cit260.snipe.view;
 import byui.cit260.snipe.control.ChallengeControl;
 import byui.cit260.snipe.enums.ChallengeDescriptionEnum;
 import byui.cit260.snipe.exceptions.ChallengeControlException;
+import byui.cit260.snipe.model.Challenge;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -24,23 +25,51 @@ import snipe.SNIPE;
 public class ChallengeView extends View {
 
     private int type;
+    private Challenge event;
 
-    public ChallengeView(String message, int challengeType) {
+    public ChallengeView(String message, int challengeType, Challenge event) {
         super(message);
         this.type = challengeType;
+        this.event = event;
     }
 
+    
+    public void initializeChallenge(Challenge event, int type) {
+        
+    }
+    
     @Override
-    public boolean doAction(String value) {
-
+    public boolean doAction(String value){
+        if(this.type == 1) {
         try {
             Double number = Double.parseDouble(value);
 
         } catch (NumberFormatException nf) {
-            System.out.println("Please enter a nuimber. I assume you know"
+            System.out.println("Please enter a number. I assume you know"
                     + "\n what those are, don't you?");
         }
         return true;
+        } else if(this.type == 2) {
+            
+            
+        } else if(this.type == 3) {
+            
+        } else if(this.type == 4) {
+            value = value.toUpperCase();
+        switch (value) {
+            case "O":
+                this.console.println(event.getChoiceOne());
+                SNIPE.getPlayer().addObjectToCodeInventory(event.getCode());
+                break;
+            default:
+                break;
+        }
+        return false;
+            
+        } else {
+            
+        }
+        return false;
     }
 
     public void MathPuzzleTwo() {
