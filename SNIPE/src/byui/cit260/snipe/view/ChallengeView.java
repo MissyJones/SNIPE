@@ -40,13 +40,13 @@ public class ChallengeView extends View {
         return true;
     }
 
-    public double MathPuzzleTwo() {
+    public void MathPuzzleTwo() {
         try {
             String playerAnswer1 = keyboard.readLine();
             double playerAnswer1Num = Double.parseDouble(playerAnswer1);
 
             ChallengeControl cc = new ChallengeControl();
-            double correctAnswer = cc.MathPuzzleTwo(radius, radius2, height1, answer1);
+            double correctAnswer = cc.mathPuzzleTwo(1.0, 2.0, 3.0, 4.0);
             //answer is 4825.49
             if (playerAnswer1Num == correctAnswer) {
                 console.write("A compartment opens and you, exercising the\n"
