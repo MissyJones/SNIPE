@@ -39,21 +39,22 @@ public class ChallengeControl {
         return response;
     }
 
-    public void mathPuzzleTwo(double radius, double height1, double answer1) throws ChallengeControlException {
-        double volume = Math.PI * height1 * radius * radius;
+    public double mathPuzzleTwo(double radius, double radius2, double height1, double answer1) throws ChallengeControlException {
+        answer1 = Math.PI * height1 * radius * radius2;//4825.49
         
         if (answer1 <= 0) {
-            throw new ChallengeControlException("Pleae enter a positive, "
-            +"\nrational number, silly!");
-        } else if (volume != answer1) {
-             throw new ChallengeControlException("Oops! You won't be getting "
-                     + "\nthis code. Too bad for you!");            
-        } else {
-            System.out.println("A compartment opens and you carefully, "
-                               +"\nexercising the utmost of caution, retrieve "
-                               +"\nthe code. Be careful! It's a trap! Well, "
-                               + "\nmaybe. It could be perfectly safe too.");
+            throw new ChallengeControlException("Aw come on! Pleae enter a "
+            +"\npositive, rational number, you fool!");
+        //} else //(volume != answer1) {
+          //   throw new ChallengeControlException("Oops! You won't be getting "
+          //           + "\nthis code you fool! Too bad for you!");            
+        //else {
+           // System.out.println("A compartment opens and you carefully, "
+           //                    +"\nexercising the utmost of caution, retrieve "
+           //                    +"\nthe code. Be careful! It's a trap! Well, "
+            //                   + "\nmaybe. It could be perfectly safe too.");
         }
+    return Math.PI * height1 * radius * radius;
 }
 
     public String mathPuzzleOne(double number) {
