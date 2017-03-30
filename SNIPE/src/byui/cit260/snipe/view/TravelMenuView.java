@@ -7,6 +7,7 @@ package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.control.ChallengeControl;
 import byui.cit260.snipe.model.Location;
+import byui.cit260.snipe.model.LocationType;
 import byui.cit260.snipe.model.Player;
 import java.util.Scanner;
 import snipe.SNIPE;
@@ -15,10 +16,12 @@ import snipe.SNIPE;
  *
  * @author Missy
  */
-public class TravelMenuView extends View{
-        GameMenuView gameMenu;
+public class TravelMenuView extends View {
+
+    GameMenuView gameMenu;
+
     public TravelMenuView() {
-            super("\n*-------------------------------------------*"
+        super("\n*-------------------------------------------*"
                 + "\n|                 Travel Menu               |"
                 + "\n*-------------------------------------------*"
                 + "\n| 1  | USA       |  SNIPE Academy           |"
@@ -85,7 +88,7 @@ public class TravelMenuView extends View{
         this.gameMenu = new GameMenuView();
     }
 
-@Override
+    @Override
     public boolean doAction(String menuOption) {
         switch (menuOption) {
             case "1":
@@ -179,21 +182,22 @@ public class TravelMenuView extends View{
                 System.out.println("Why did you choose an invalid option? Try again!");
                 break;
         }
-        return false;
+        return true;
     }
 
-    private void changeLocation(Player player, int location){
-                player.setRow(location);
+    private void changeLocation(Player player, int location) {
+        player.setRow(location);
         String[] travelTable = SNIPE.getCurrentGame().getMap().getTravelTable();
         this.console.println(travelTable[location]);
-        gameMenu.display();
         Location place = SNIPE.getCurrentGame().getMap().getLocations()[location];
         boolean passportStatus = place.getPassportAdd();
         if (passportStatus = false) {
             place.setPassportAdd(true);
-            
+        }
+        
+        if(place.getLocationType() == LocationType.SafeHouse) {
+            System.out.println("\nYou made it to a safe house");
+        }
     }
-    }
-    
-    
+
 }

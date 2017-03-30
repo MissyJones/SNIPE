@@ -21,18 +21,19 @@ import snipe.SNIPE;
  *
  * @author Maxwell
  */
-public class ChallengeView extends View {
-
-    public ChallengeView() {
-        super("");
-
+public class ChallengeView extends View{
+    private int type;
+    public ChallengeView(String message, int challengeType) {
+        super(message);
+        this.type = challengeType;
     }
 
+    @Override
     public boolean doAction(String value) {
 
         try {
             Double number = Double.parseDouble(value);
-
+            
         } catch (NumberFormatException nf) {
             System.out.println("Please enter a nuimber. I assume you know"
                     + "\n what those are, don't you?");

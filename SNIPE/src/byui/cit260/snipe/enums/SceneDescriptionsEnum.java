@@ -41,7 +41,7 @@ public enum SceneDescriptionsEnum implements Serializable {
     The_Louvre("Light streams through the glasses ceiling above you as you stroll"
             + "\ndown a hallway lined with works of priceless art."),
     Some_Cafe("A quaint white awnig over shadows several small circular tables "
-            + "\ndown the walk way. The smell of fresh baked baguettes fills the air."),    
+            + "\ndown the walk way. The smell of fresh baked baguettes fills the air."),
     Olympic_Stadium("Ah! Montreal, Canada, eh? B. C. D... Traffic is moving "
             + "\nsmoothly throughout Parc olympique de Montreal, otherwise "
 	    + "\nknown as Olympic Park. Pedestrians go in and out of the"
