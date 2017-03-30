@@ -37,9 +37,12 @@ public class Map {
             location.setRow(i);
             location.setPassportAdd(false);
             location.setScene(this.sceneTable[i]);
-            locations[i] = location;
-            
+            location.setLocationType(LocationType.Nothing);
+            locations[i] = location; 
         }
+        
+        locations[5].setLocationType(LocationType.SafeHouse);
+        locations[2].setLocationType(LocationType.MentalChallenge);
     }
     public String[] getTravelTable() {
         return travelTable;

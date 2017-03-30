@@ -34,16 +34,16 @@ public enum ChallengeDescriptionEnum implements Serializable {
             + "\nYou notice a keg that you THINK is different from the rest. "
             + "\nYour eagle-eye tells you the diameter is 16 inches and its "
             + "\nheight is 24 inches. Is this the keg that hold your code? "
-            + "\nEnter its volume to find out. Note: You do not need to "
-            + "\n include \"cubic inches\" or \"inches^3j\" in your answer."),
+            + "\nEnter its volume to find out. Note: just enter the number,"
+            + "\nNo units required."),
     mentalThree("You stand at the Louvre, pondering the Mona Lisa. Has it "
             + "\nalways been this size? If it has been replaced.... Then there "
             + "\nmust be a dossier behind it! You know that the original Mona "
             + "\nLisa had an area of 630 inches^2. Just from looking at it, "
             + "\nyou can tell that this painting (the supposed Mona Lisa) has "
             + "\na height of 24 inches and a width of 16 inches. Is this the "
-            + "\nreal Mona Lisa? Input the area to find out. Note: You do not "
-            + "\n need to add \"inches squared\" or \"inches^2\". "),
+            + "\nreal Mona Lisa? Input the area to find out. Note: just enter "
+            + "\nthe number, no units required."),
     USARIDDLE("This free-standing world record holding manmade structure is "
             + "\n630 feet (or 192 meters) high and is a monument to the USA’ s "
             + "\nwestern expansion. What is it?"),
@@ -63,6 +63,7 @@ public enum ChallengeDescriptionEnum implements Serializable {
             + "\nPoint in Sydney Harbor?"),
     RUSSIARIDDLE("Vladimir Ilyich Ulyanov is entombed at Red Square, and is "
             + "\nbetter known by what name?"),
+    //physOne(""),
     physOne("As you peruse the books in the Library, you notice a small package attached"
             + "\nto the chandelier. As you notice it, you see a panel open above the chandelier."
             + "\nA masked figure appears in the panel and begins to lower a rope with what looks"
@@ -128,3 +129,5 @@ public enum ChallengeDescriptionEnum implements Serializable {
     }
 
 }
+
+

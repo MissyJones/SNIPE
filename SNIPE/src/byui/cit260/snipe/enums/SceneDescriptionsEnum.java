@@ -73,7 +73,29 @@ public enum SceneDescriptionsEnum implements Serializable {
             + "\nside. The look identical.It is a trap! Or maybe it's perfectly"
             + "\nsafe. You decide at your own peril."),
     CN_tower("You have come to Toronto, eh? B. C. D... As you look at the city"
-            + "\nkyline at dusk, you can make out what is perhaps Toronto's best"
+            + "\nskyline at dusk, you can make out what is perhaps Toronto's "
+            + "best nown attraction: the CN Tower. You approach the tower from"
+            + "Front Street and begin climbing the concrete steps (Elevators"
+            + "and escalators are for wimps!) and the parking roadway is too "
+            + "crowded, and you are on a covert mission after all. It starts"
+            + "to get a a little crowded because people are still coming and"
+            + "going at the Convention Centre. \"Darned Canucks can't even"
+            + "spell properly!\" you think to yourself. The Rogers Centre is on"
+            + "your right; too bad it's not baseball season or you could have"
+            + "taken in a Blue Jays game, to unwind from the stress of your"
+            + "training. Oh! There are murals of people at a baseball game doing"
+            + "baseball fan things. GO ahead and admire the murals for a few "
+            + "minutes, but do not get too absorbed you lose awareness of your "
+            + "surroundings. That would be very, very bad. To the left, beyond "
+            + "another set of stairs and Ripley's Aquarium (a very popular "
+            + "place even at this time) is the CN Tower - your whole reason for "
+            + "being here."
+            + "You make your way to the observatory, where you see Lake Ontario"
+            + "and all its greatness, as well as the lit skyline of the Toronto."
+            + "Somewhere up there is a message, or dossier - maybe - but where "
+            + "is it? Maybe you have to go to the edge. Nudge, nudge, wink wink."
+            + " Please be lert; we would truly hate to hear you \"fell\" from "
+            + "way up there. Those kinds of things don't end well at all."
             + "\nknown attraction: the CN Tower. The roads are failry busy, so "
             + "\nyou nmust try to make your way to the observatory where you see"
             + "\nLake Ontario in all its glory. Somewhere up there is a message,"
@@ -81,16 +103,27 @@ public enum SceneDescriptionsEnum implements Serializable {
             + "\nto the edge. Nudge nudge, wink wink. Please be alert, we would"
             + "\nhate tohear you \"fel\" to your death way, way up there."),
     Rio("Ah! The beach. And it is Carnival time here in Rio de Janeiro."),
-    Amazon_Rainforest("The Amazon represents over half of the planet's"
-            + "\nremaining rainforests,& comprises the largest and most "
-            + "\nbiodiverse tract of tropical rainforest in the world."),
+    Amazon_Rainforest("You have made the long and ardous journey to Manaus,"
+            + "\nBrazil, a booming Metropolis of two million people sitting"
+            + "\na dense and otherwise sparsely populsted part of the"
+            + "\nAmazon Basin to meet your supposedly \"reputable\" guide, to"
+            + "\nlead you through the Amazon Rainforest, but first you take in"
+            + "\nsome of the historic areas built by the rubber boon,"
+            + "\nincluding the Municipal Market which looks oddly familiar,"
+            + "\n almost Parisian is this de ja vu? You can hear Macaws and"
+            + "\nHarpy Eagles in the distant jungle. Dare  you trek through"
+            + "\n\\nthe jungle as assigned? Ah! You can see dolphins, golden"
+            + "\nlion tamarin and maybe a sloth or two. BUT! Beware of the man-"
+            + "\neating anacondas, the poison dart frogs, and jaguars. Are you"
+            + "\nbrave enough to carry on with your mission? Or are you a wimp?"),
     Sao_paulo("The metropolis is an alpha global city & is the most populous"
             + "\ncity in Brazil, the Americas, and in the Southern Hemisphere"),
     Sydney_Opera_House(" A multi-venue performing arts centre. It is one of "
             + "\nthe 20th century's most famous & distinctive buildings"),
     Melbourne_Jail("Got some shrimp on the barbie"),
     Bridge("A bridge mate."),
-    StPeters_Square("Between 1713–1728 and 1732–1918, Saint Petersburg was the "
+    StPeters_Square("You have arrived at St. Petersburg in Russia. You think you "
+            + "need to go to the Winter Palace to meet a \"friend\". "
             + "\ncapital of imperial Russia. In 1918, the central government "
             + "\nbodies moved to Moscow."),
     Lenins_Mausoleum("Currently serves as the resting place of Vladimir Lenin. "
