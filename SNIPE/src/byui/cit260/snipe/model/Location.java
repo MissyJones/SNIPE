@@ -29,6 +29,7 @@ public class Location implements Serializable {
     private String passportView;
     private String country;
     private int row;
+    private LocationType locationType;
 
     private String scene;
 
@@ -41,6 +42,14 @@ public class Location implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public LocationType getLocationType() {
+        return locationType;
+    }
+
+    public void setLocationType(LocationType locationType) {
+        this.locationType = locationType;
     }
 
     public String getDescription() {
@@ -107,7 +116,6 @@ public class Location implements Serializable {
         this.row = row;
     }
 
- 
     public String getScene() {
         return scene;
     }
