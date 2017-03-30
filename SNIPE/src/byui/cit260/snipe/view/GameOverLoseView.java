@@ -9,23 +9,18 @@ package byui.cit260.snipe.view;
  *
  * @author Home
  */
-public class GameOverLoseView {
-
-    private final String displayMessage;
+public class GameOverLoseView extends View{
 
     public GameOverLoseView() {
-        this.displayMessage = "\nEPIC Mission FAIL!Go back to the Main Menu and try again.";
+        super("\nEPIC Mission FAIL! Go back to the Main Menu and try again.");
     }
 
     private void MainMenuView() {
         System.out.print("Back to the Main Menu.");
     }
 
-    private void Credits() {
-        System.out.print("The usual credit block:");
-    }
-
-    private void FamousSNIPGrads() {
-        System.out.print("Maybe talk to these SNIPE graduates?");
+    @Override
+    public boolean doAction(String value) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

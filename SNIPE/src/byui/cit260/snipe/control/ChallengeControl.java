@@ -12,6 +12,7 @@ import byui.cit260.snipe.model.Player;
 import java.util.Random;
 import byui.cit260.snipe.exceptions.ChallengeControlException;
 import byui.cit260.snipe.view.ChallengeView;
+import byui.cit260.snipe.view.GameOverLoseView;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import snipe.SNIPE;
@@ -81,16 +82,27 @@ public class ChallengeControl {
         return answer;
     }
 
-    public String dmgCalc(Challenge physChallenge, Player player) {
+    public String dmgCalc(Challenge physChallenge, Player player) throws ChallengeControlException{
         Random rand = new Random();
         String reply;
         int damage;
         damage = (int) ((Math.ceil(rand.nextInt(29))) + 1);
+        GameOverLoseView gameOver = new GameOverLoseView();
 
         if (damage < 1) {
-            reply = "ERROR '-1', you can't have negative damage.";
+            throw new ChallengeControlException("You can't do negative damage");
         } else if (damage > 30) {
-            reply = "ERROR '+1', you can't do more than 30 points of damage.";
+            damage = 15;
+            int currentHealth = player.getHealthPoints();
+            int newHealth = currentHealth - damage;
+            player.setHealthPoints(newHealth);
+            if (newHealth < 1) {
+                reply = "You died";
+                gameOver.display();
+            } else {
+                reply = physChallenge.getDescription() +"You have " + newHealth + " points of health left.";
+            }
+
         } else {
             int currentHealth;
             currentHealth = player.getHealthPoints();
@@ -98,8 +110,9 @@ public class ChallengeControl {
             player.setHealthPoints(newHealth);
             if (newHealth < 1) {
                 reply = "You died";
+                gameOver.display();
             } else {
-                reply = physChallenge.getDescription() + newHealth + " points of health left.";
+                reply = physChallenge.getDescription() +"You have " + newHealth + " points of health left.";
             }
 
         }
@@ -166,76 +179,92 @@ public class ChallengeControl {
         return challenges;
     }
 
-    public void challengeEncounter(int location) {
+    public static void challengeEncounter(int location) {
         Challenge[] challengeList = SNIPE.getCurrentGame().getChallenges();
-
-        switch (location) {
-            case 1:
-                {
-                    String situation = challengeList[0].getDescription();
-                    ChallengeView challenge = new ChallengeView(situation, 1);
-                    challenge.display();
-                    break;
-                }
-            case 4:
-                {
-                    String situation = challengeList[1].getDescription();
-                    ChallengeView challenge = new ChallengeView(situation, 2);
-                    challenge.display();
-                    break;
-                }
-            case 8:
-                {
-                    String situation = challengeList[2].getDescription();
-                    ChallengeView challenge = new ChallengeView(situation, 3);
-                    challenge.display();
-                    break;
-                }
-            case 10:
-                {
-                    String situation = challengeList[3].getDescription();
-                    ChallengeView challenge = new ChallengeView(situation, 4);
-                    challenge.display();
-                    break;
-                }
-            case 12:
-                {
-                    String situation = challengeList[4].getDescription();
-                    ChallengeView challenge = new ChallengeView(situation, 4);
-                    challenge.display();
-                    break;
-                }
-            case 15:
-                {
-                    String situation = challengeList[5].getDescription();
-                    ChallengeView challenge = new ChallengeView(situation, 4);
-                    challenge.display();
-                    break;
-                }
-            case 17:
-                {
-                    String situation = challengeList[6].getDescription();
-                    ChallengeView challenge = new ChallengeView(situation, 4);
-                    challenge.display();
-                    break;
-                }
-            case 21:
-                {
-                    String situation = challengeList[7].getDescription();
-                    ChallengeView challenge = new ChallengeView(situation, 4);
-                    challenge.display();
-                    break;
-                }
-            case 25:
-                {
-                    String situation = challengeList[8].getDescription();
-                    ChallengeView challenge = new ChallengeView(situation, 4);
-                    challenge.display();
-                    break;
-                }
-            default:
-                break;
-        }
+        
+       
+       if (location == 1) {
+           Challenge event = challengeList[0];
+           boolean flag = event.isUsedFlag();
+           String situation = event.getDescription();
+           if (flag = false) {
+           ChallengeView challenge = new ChallengeView(situation, 1);
+           challenge.display();
+           }else {
+           }
+       } else if (location == 4) {
+           Challenge event = challengeList[1];
+           boolean flag = event.isUsedFlag();
+           String situation = event.getDescription();
+           if (flag = false) {
+           ChallengeView challenge = new ChallengeView(situation, 1);
+           challenge.display();
+           }else {
+           }
+       } else if (location == 8) {
+           Challenge event = challengeList[2];
+           boolean flag = event.isUsedFlag();
+           String situation = event.getDescription();
+           if (flag = false) {
+           ChallengeView challenge = new ChallengeView(situation, 1);
+           challenge.display();
+           }else {
+           }
+       } else if (location == 10) {
+           Challenge event = challengeList[3];
+           boolean flag = event.isUsedFlag();
+           String situation = event.getDescription();
+           if (flag = false) {
+           ChallengeView challenge = new ChallengeView(situation, 1);
+           challenge.display();
+           }else {
+           }
+       } else if (location == 12) {
+           Challenge event = challengeList[4];
+           boolean flag = event.isUsedFlag();
+           String situation = event.getDescription();
+           if (flag = false) {
+           ChallengeView challenge = new ChallengeView(situation, 1);
+           challenge.display();
+           }else {
+           }
+       } else if (location == 15) {
+           Challenge event = challengeList[5];
+           boolean flag = event.isUsedFlag();
+           String situation = event.getDescription();
+           if (flag = false) {
+           ChallengeView challenge = new ChallengeView(situation, 1);
+           challenge.display();
+           }else {
+           }
+       } else if (location == 17) {
+           Challenge event = challengeList[6];
+           boolean flag = event.isUsedFlag();
+           String situation = event.getDescription();
+           if (flag = false) {
+           ChallengeView challenge = new ChallengeView(situation, 1);
+           challenge.display();
+           }else {
+           }
+       } else if (location == 21) {
+           Challenge event = challengeList[7];
+           boolean flag = event.isUsedFlag();
+           String situation = event.getDescription();
+           if (flag = false) {
+           ChallengeView challenge = new ChallengeView(situation, 1);
+           challenge.display();
+           }else {
+           }
+       } else if (location == 25) {
+           Challenge event = challengeList[8];
+           boolean flag = event.isUsedFlag();
+           String situation = event.getDescription();
+           if (flag = false) {
+           ChallengeView challenge = new ChallengeView(situation, 1);
+           challenge.display();
+           }else {
+           }
+       } else {}
     }
-
+  
 }

@@ -108,15 +108,43 @@ public enum ChallengeDescriptionEnum implements Serializable {
     physThreeOptionTwo("You break into a dead sprint, away from the suspicoius figure. "
             + "\nTurns out that it wasn't anything, as he did not pursue. But in your hurry, you trip"
             + "\non the steps and break your face. Embarassing. Hope nobody saw that."),
-    physFour(""),
-    physFourOptionOne(""),
-    physFourOptionTwo(""),
-    physFive(""),
-    physFiveOptionOne(""),
-    physFiveOptionTwo(""),
-    physSix(""),
-    physSixOptionOne(""),
-    physSixOptionTwo("");
+    physFour("Raindrops begin to speckle the window of your cab as the driver pulls up to the curb next"
+            + "\nto your stop. You yell to the cabby 'Yo Homes, smell ya later!'"
+            + "\nas you throw some money through the window. Just as you turn toward the curb an old lady"
+            + "\non a ten speed slams into you....hard. Your wallet flys out of your hands. Before you know"
+            + "\nwhat's happening, a black SUV drives up and throws open the door. Granny grabs your wallet and"
+            + "\ndives into the vechicle as it peels away with a screech. All your IDs, your money, your"
+            + "\ncredit cards are in that wallet! You turn back to the cabbie, 'Wanna lift?'"
+            + "\nhe yells. That's when you notice the Aston Martin One-77 on the other side of the street. Coinsidence? I think...uh..hope not! You consider your"
+            + "\noptions. Do you jump in the cab or jack the Aston Martin?"),
+    physFourOptionOne("You shake your head with a laugh at the thought. This isn't Grand Theft Auto. You jump in the cab and the cabbie floors it.'This guy is "
+            + "\ngooooood', you think as you tail Betty White. Then, without warning, the SUV spins around and starts driving right at you. 'You wanna GO?!' the cabbie yells."
+            + "\nJust in time the SUV swerves around the cab and throws something through the window. A grenade?! No...a wig? Tied to a piece of curly, white hair is"
+            + "\nthe wallet, a USB now inside. Your next clue?"),
+    physFourOptionTwo("Is this even a choice? You jump in the Aston Martian and hot wire that baby. Within seconds you are on Grandy's tail. You drive up"
+            + "\nnext to her and steer right into the SUV. You're both swerving all over the road. With a spin the SUV stops suddenly and something flys from the "
+            + "\nopen window. A dead animal? No, a wig rolled up in supportive hosiery. In the center is your wallet and an USB drive."),
+    physFive("You are starvin' like marvin. You run into a near by restraunt for a quick snack. The sign says Italian. You're hoping for pizza, but when the waiter"
+            +"\nappears with your order you wonder if they missunderstood your poor attempt at the language. There might be dough and cheese under that grease,"
+            + "\nit's pretty hard to say. You stalk back to the kitchen to have a word with the chef. 'What is this....?' you start to demand. No one is there."
+            + "\nThen you notice the ticking. You look around quickly. Is it coming from the oven? You open the oven door and discover a ticking time bomb, counting down."
+            + "\nThere are two wires one red one blue. Which do you cut?"),
+    physFiveOptionOne("You grab the butcher knife and slash through the blue wire. The timer stops and a small compartment opens with a slight hiss. Inside is a USB drive."),
+    physFiveOptionTwo("You grab the butcher knife and slice through the red wire. The timer starts going faster! You run to the front of the restaurant yelling"
+            + "\n'RUN!'but no one is there. You keep running out the front door. As you cross the street you hear the explosion,dust and debris cloud the air"
+            + "\nand a small, silver container lands at your feet. Could there be a USB drive inside? You glance back at the destroyed building. 'Not really a loss'"
+            + "\nyou think as you flee the scene."),
+    physSix("The ring tone on your phone wakes you in the middle of the night 'Ah..Ah..Ah..Ah.. stayin' alive, stayin' alive' You grab for it and answer."
+            + "\nA cool female voice replys 'Meet me in the vault of the local bank in 10 mintues.' The line goes dead. You reach the building, silently cut a"
+            + "\nhole in the glass and then slip inside. A woman dressed in black waits for you at the entrance a long hallway leading the the vault. She"
+            + "\nintroduces herself as agent Blue Steel and explains that the next code is located inside the vault. She sprays something into the hallway"
+            + "\nuntil it is filled with the vapor, and you now see a laser maze before you. 'I have already opened the vault for you' she explains,'You just have to choose. Go down"
+            + "\nthe hallway or through the vents?' She points to the open vent above you. Which do you choose?"),
+    physSixOptionOne("You're very grateful for your training in power yoga. You decide to try the laser hallway. After rolling, bending, stooping and jumping over"
+            + "\nseveral high powered lasers you make it through the corridor an into the vault where the USB is waiting. Is that the smell of victory or singed hair?"),
+    physSixOptionTwo("You're very grateful for your training in power yoga. You jump up and grab the open mouth of the vent and pull yourself in. The south beach diet your"
+            + "\nspouse is forcing you to try may have its benfits. Trying to ignore the large family of cockroaches, you squeeze and scoot your way through the small"
+            + "\ncrawlways until you finally find a vent underneath you that drops down to the vault. The next USB is now yours.");;
 
     private final String description;
 
