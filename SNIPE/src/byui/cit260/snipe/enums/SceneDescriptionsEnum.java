@@ -89,9 +89,19 @@ public enum SceneDescriptionsEnum implements Serializable {
             + "\nto the edge. Nudge nudge, wink wink. Please be alert, we would"
             + "\nhate tohear you \"fel\" to your death way, way up there."),
     Rio("Ah! The beach. And it is Carnival time here in Rio de Janeiro."),
-    Amazon_Rainforest("The Amazon represents over half of the planet's"
-            + "\nremaining rainforests,& comprises the largest and most "
-            + "\nbiodiverse tract of tropical rainforest in the world."),
+    Amazon_Rainforest("You have made the long and ardous journey to Manaus,"
+            + "\nBrazil, a booming Metropolis of two million people sitting"
+            + "\na dense and otherwise sparsely populsted part of the"
+            + "\nAmazon Basin to meet your supposedly \"reputable\" guide, to"
+            + "\nlead you through the Amazon Rainforest, but first you take in"
+            + "\nsome of the historic areas built by the rubber boon,"
+            + "\nincluding the Municipal Market which looks oddly familiar,"
+            + "\n almost Parisian is this de ja vu? You can hear Macaws and"
+            + "\nHarpy Eagles in the distant jungle. Dare  you trek through"
+            + "\n\\nthe jungle as assigned? Ah! You can see dolphins, golden"
+            + "\nlion tamarin and maybe a sloth or two. BUT! Beware of the man-"
+            + "\neating anacondas, the poison dart frogs, and jaguars. Are you"
+            + "\nbrave enough to carry on with your mission? Or are you a wimp?"),
     Sao_paulo("The metropolis is an alpha global city & is the most populous"
             + "\ncity in Brazil, the Americas, and in the Southern Hemisphere"),
     Sydney_Opera_House(" A multi-venue performing arts centre. It is one of "
