@@ -19,10 +19,8 @@ public class Map {
     private String[] sceneTable = new String[27];
     private String[] travelTable = new String[27];
 
-
-
     public Map(int rowCount) {
-        if (rowCount < 1 ) {
+        if (rowCount < 1) {
             System.out.println("Nice try, but hacking won't get you anywhere in this game.");
             return;
         }
@@ -38,12 +36,13 @@ public class Map {
             location.setPassportAdd(false);
             location.setScene(this.sceneTable[i]);
             location.setLocationType(LocationType.Nothing);
-            locations[i] = location; 
+            locations[i] = location;
         }
-        
+
         locations[5].setLocationType(LocationType.SafeHouse);
         locations[2].setLocationType(LocationType.MentalChallenge);
     }
+
     public String[] getTravelTable() {
         return travelTable;
     }
@@ -51,6 +50,7 @@ public class Map {
     public void setTravelTable(String[] travelTable) {
         this.travelTable = travelTable;
     }
+
     public String[] getSceneTable() {
         return sceneTable;
     }
@@ -75,7 +75,7 @@ public class Map {
         this.rowCount = rowCount;
     }
 
-    private void createTravelTable(){
+    private void createTravelTable() {
         this.travelTable[0] = TravelEnum.SNIPE_HQ.getDescription();
         this.travelTable[1] = TravelEnum.Lib_Of_Congress.getDescription();
         this.travelTable[2] = TravelEnum.Gateway_Arch.getDescription();
@@ -103,8 +103,7 @@ public class Map {
         this.travelTable[24] = TravelEnum.StPeters_Square.getDescription();
         this.travelTable[25] = TravelEnum.Lenins_Mausoleum.getDescription();
         this.travelTable[26] = TravelEnum.StBasils_Cathedral.getDescription();
-        
-        
+
     }
 
     private void createSceneTable() {
@@ -136,9 +135,6 @@ public class Map {
         this.sceneTable[25] = SceneDescriptionsEnum.Lenins_Mausoleum.getDescription();
         this.sceneTable[26] = SceneDescriptionsEnum.StBasils_Cathedral.getDescription();
 
-
     }
 
-    
-    
 }

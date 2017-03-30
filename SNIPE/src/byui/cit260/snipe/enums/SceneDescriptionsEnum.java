@@ -44,22 +44,22 @@ public enum SceneDescriptionsEnum implements Serializable {
             + "\ndown the walk way. The smell of fresh baked baguettes fills the air."),
     Olympic_Stadium("Ah! Montreal, Canada, eh? B. C. D... Traffic is moving "
             + "\nsmoothly throughout Parc olympique de Montreal, otherwise "
-	    + "\nknown as Olympic Park. Pedestrians go in and out of the"
-	    + "\n local businesses, roam around the park, and so forth. "
-	    + "\nYou are in line at the Olympic Stadium, known to the locals"
-	    + "\nas the \"Big O\" because of its shape or the \"big owe\" due"
-	    + "\nthe cost to buid it. The stadium became a multipurpose venue"
-	    + "\nafter the Montreal Expos became the Washington Nationals. You"
-	    + "\nare in a line of chatty people as you wait to get in for the"
-	    + "\nMonster Spectacular; that is your cover story anyway. A contact"
-	    + "\nhas indicated there is a woman who may have what you need. "
-	    + "\nHowever, can you trust her? Is she really one of us? Maybe"
-	    + "\nMaybe she works for \"them\"? Or maybe she's a double spy or"
-	    + "\nor an assain. You see a woman who looks like who you need"
-	    + "\nmeet, she is even wearing the odd clothing described to you."
-	    + "\nBut then suddenly, you see two more women who als resemble the"
-	    + "\nwoman, and they too are dressed in the same odd manor. Who is"
-	    + "\nthe real contact? Can you trust any of them?"),
+            + "\nknown as Olympic Park. Pedestrians go in and out of the"
+            + "\n local businesses, roam around the park, and so forth. "
+            + "\nYou are in line at the Olympic Stadium, known to the locals"
+            + "\nas the \"Big O\" because of its shape or the \"big owe\" due"
+            + "\nthe cost to buid it. The stadium became a multipurpose venue"
+            + "\nafter the Montreal Expos became the Washington Nationals. You"
+            + "\nare in a line of chatty people as you wait to get in for the"
+            + "\nMonster Spectacular; that is your cover story anyway. A contact"
+            + "\nhas indicated there is a woman who may have what you need. "
+            + "\nHowever, can you trust her? Is she really one of us? Maybe"
+            + "\nMaybe she works for \"them\"? Or maybe she's a double spy or"
+            + "\nor an assain. You see a woman who looks like who you need"
+            + "\nmeet, she is even wearing the odd clothing described to you."
+            + "\nBut then suddenly, you see two more women who als resemble the"
+            + "\nwoman, and they too are dressed in the same odd manor. Who is"
+            + "\nthe real contact? Can you trust any of them?"),
     Lib_Parliment("You have arrived at Ontario. You make your way to the Library"
             + "\nnof Parliment. Your next mission awaits you, eh? B. C. D..."
             + "\nBefore entering the main repository, you take in the view from"
@@ -140,27 +140,16 @@ public enum SceneDescriptionsEnum implements Serializable {
 
     public String getDescription() {
         return description;
-    }   
+    }
 
-public void printSceneDescriptions(String description) throws LocationException {
+    public void printSceneDescriptions(String description) throws LocationException {
         Writer outputLocation = null;
 //create BufferReader object for input file
-try(PrintWriter out = new PrintWriter (outputLocation)){
-    
-    //print title 
-    out.println("\n\n       Scence Description        ");
-    out.printf(description);
+        try (PrintWriter out = new PrintWriter(outputLocation)) {
+
+            //print title 
+            out.println("\n\n       Scence Description        ");
+            out.printf(description);
+        }
     }
 }
-}
-
-
-            
-
-       
-   
-
-
-
-
-

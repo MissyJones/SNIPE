@@ -9,7 +9,7 @@ package byui.cit260.snipe.view;
  *
  * @author Maxwell
  */
-class QuitGameView extends View{
+class QuitGameView extends View {
 
     public QuitGameView() {
         super("Are you sure you want to close the game? (Have you saved first?)"
@@ -20,8 +20,6 @@ class QuitGameView extends View{
                 + "\n| N | No, I'd like to keep playing |"
                 + "\n*----------------------------------*");
     }
-
-
 
     @Override
     public boolean doAction(String choice) {
@@ -42,5 +40,5 @@ class QuitGameView extends View{
     private void quitGame() {
         System.exit(0);
     }
-    
+
 }

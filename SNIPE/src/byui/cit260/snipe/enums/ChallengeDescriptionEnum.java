@@ -129,5 +129,3 @@ public enum ChallengeDescriptionEnum implements Serializable {
     }
 
 }
-
-

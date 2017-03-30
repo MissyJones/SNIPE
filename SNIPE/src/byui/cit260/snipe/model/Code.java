@@ -20,6 +20,7 @@ public class Code implements Serializable {
 
     static {
     }
+
     public String getItemDescription() {
         return itemDescription;
     }

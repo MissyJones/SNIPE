@@ -194,8 +194,8 @@ public class TravelMenuView extends View {
         if (passportStatus = false) {
             place.setPassportAdd(true);
         }
-        
-        if(place.getLocationType() == LocationType.SafeHouse) {
+
+        if (place.getLocationType() == LocationType.SafeHouse) {
             System.out.println("\nYou made it to a safe house");
         }
     }

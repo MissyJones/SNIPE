@@ -21,8 +21,10 @@ import snipe.SNIPE;
  *
  * @author Maxwell
  */
-public class ChallengeView extends View{
+public class ChallengeView extends View {
+
     private int type;
+
     public ChallengeView(String message, int challengeType) {
         super(message);
         this.type = challengeType;
@@ -33,7 +35,7 @@ public class ChallengeView extends View{
 
         try {
             Double number = Double.parseDouble(value);
-            
+
         } catch (NumberFormatException nf) {
             System.out.println("Please enter a nuimber. I assume you know"
                     + "\n what those are, don't you?");
@@ -58,13 +60,13 @@ public class ChallengeView extends View{
                 console.write("Oops! You won't be getting this code you fool!\n"
                         + "Too bad for you!\n");
             }
-        } catch(ChallengeControlException cce) {
+        } catch (ChallengeControlException cce) {
             ErrorView.display(ChallengeView.class.getName(), cce.getMessage());
-        } catch(IOException ioe) {
+        } catch (IOException ioe) {
             ErrorView.display(ChallengeView.class.getName(), ioe.getMessage());
-        }catch(NumberFormatException nfe) {
-            ErrorView.display(ChallengeView.class.getName(), "Aw! Come on! Please\n"+
-                    "enter a positive, rational number, you fool!");
-        }
+        } catch (NumberFormatException nfe) {
+            ErrorView.display(ChallengeView.class.getName(), "Aw! Come on! Please\n"
+                    + "enter a positive, rational number, you fool!");
         }
     }
+}

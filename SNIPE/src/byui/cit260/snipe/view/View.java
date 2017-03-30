@@ -23,9 +23,8 @@ public abstract class View implements ViewInterface {
     protected final BufferedReader keyboard = SNIPE.getInFile();
     protected final PrintWriter console = SNIPE.getOutFile();
 
-
     public View(String message) {
-            this.displayMessage = "You have "+points+" points of health left\n\n"+message;
+        this.displayMessage = "You have " + points + " points of health left\n\n" + message;
 
     }
 
@@ -45,26 +44,24 @@ public abstract class View implements ViewInterface {
         String value = ""; //value to be returned
         boolean valid = false; //initialize to not be void
 
-        while (!valid) { 
+        while (!valid) {
             try {
-            //loop while an invalid value is entered
-            this.console.println("\n" + this.displayMessage);
+                //loop while an invalid value is entered
+                this.console.println("\n" + this.displayMessage);
 
-            value = this.keyboard.readLine();
-            value = value.trim();
+                value = this.keyboard.readLine();
+                value = value.trim();
 
-            if (value.length() < 1) {
-                System.out.println("\nInvalid value: value cannot be blank, fool");
-                continue;
-            }
-            break;
+                if (value.length() < 1) {
+                    System.out.println("\nInvalid value: value cannot be blank, fool");
+                    continue;
+                }
+                break;
             } catch (IOException ex) {
                 ;
             }
         }
         return value;
     }
-
-
 
 }

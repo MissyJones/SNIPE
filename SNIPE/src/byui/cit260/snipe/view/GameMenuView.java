@@ -20,23 +20,23 @@ public class GameMenuView extends View {
 
     public GameMenuView() {
         super("\n*---------------------------*"
-            + "\n|        Game Menu          |"
-            + "\n*---------------------------*"
-            + "\n|  L  |       Look around   |"
-            + "\n|-----|---------------------|"
-            + "\n|  T  |       Travel        |"
-            + "\n|-----|---------------------|"
-            + "\n|  C  |       Codes         |"
-            + "\n|-----|---------------------|"
-            + "\n|  H  |       Safe House    |"
-            + "\n|-----|---------------------|"
-            + "\n|  P  |       Passports     |"
-            + "\n|-----|---------------------|"
-            + "\n|  S  |       Save Game     |"
-            + "\n|-----|---------------------|"
-            + "\n|  Q  |       Quit          |"
-            + "\n*---------------------------*"
-            + "\n\n");
+                + "\n|        Game Menu          |"
+                + "\n*---------------------------*"
+                + "\n|  L  |       Look around   |"
+                + "\n|-----|---------------------|"
+                + "\n|  T  |       Travel        |"
+                + "\n|-----|---------------------|"
+                + "\n|  C  |       Codes         |"
+                + "\n|-----|---------------------|"
+                + "\n|  H  |       Safe House    |"
+                + "\n|-----|---------------------|"
+                + "\n|  P  |       Passports     |"
+                + "\n|-----|---------------------|"
+                + "\n|  S  |       Save Game     |"
+                + "\n|-----|---------------------|"
+                + "\n|  Q  |       Quit          |"
+                + "\n*---------------------------*"
+                + "\n\n");
     }
 
     @Override
@@ -73,15 +73,14 @@ public class GameMenuView extends View {
         return false;
     }
 
-
-
     private void saveGame() {
         this.console.println("Where do you want this game to be saved?");
-        
+
         String filePath = this.getInput();
-        
-        try {GameControl.saveGame(SNIPE.getCurrentGame(), filePath);
-        }catch (Exception ex) {
+
+        try {
+            GameControl.saveGame(SNIPE.getCurrentGame(), filePath);
+        } catch (Exception ex) {
             ErrorView.display("GameMenuView", ex.getMessage());
         }
     }
@@ -92,20 +91,19 @@ public class GameMenuView extends View {
 
     private void loadGame() {
         this.console.println("Where is the save file located?");
-        
+
         String filePath = this.getInput();
-        
+
         try {
             GameControl.loadGame(filePath);
-            
+
         } catch (Exception ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
         }
-        
+
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
     }
-
 
     private void lookAround() {
         this.console.println(findScene());
@@ -119,10 +117,10 @@ public class GameMenuView extends View {
     private void passportsMenu() {
         this.console.println("passports");
     }
+
     private String findScene() {
         int row = SNIPE.getPlayer().getRow();
         String place = SNIPE.getCurrentGame().getMap().getLocations()[row].getScene();
-        
 
         return place;
     }
@@ -133,33 +131,33 @@ public class GameMenuView extends View {
     }
 
     private void attemptChallenge() {
-        
+
         Random rand = new Random();
         int length = rand.nextInt(10) + 1;
         int width = rand.nextInt(10) + 1;
-        
+
         System.out.println("Please find the area if length=" + length + " and width=" + width + "\n");
         try {
             String playerAnswer = keyboard.readLine();
-        
+
             int playerAnswerNum = Integer.parseInt(playerAnswer);
-            
+
             ChallengeControl cc = new ChallengeControl();
             int correctAnswer = cc.calcArea(length, width);
-            
-            if(playerAnswerNum == correctAnswer) {
+
+            if (playerAnswerNum == correctAnswer) {
                 console.write("Congratulations! You got it right!\n");
             } else {
                 console.write("Wrong!\n");
             }
-        } catch(ChallengeControlException cce) {
+        } catch (ChallengeControlException cce) {
             ErrorView.display(GameMenuView.class.getName(), cce.getMessage());
-        } catch(IOException ioe) {
+        } catch (IOException ioe) {
             ErrorView.display(GameMenuView.class.getName(), ioe.getMessage());
-        } catch(NumberFormatException nfe) {
+        } catch (NumberFormatException nfe) {
             ErrorView.display(GameMenuView.class.getName(), "Please enter a number");
         }
-        
+
     }
 
     private void safeHouse() {

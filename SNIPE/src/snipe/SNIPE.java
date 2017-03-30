@@ -17,7 +17,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
-
 /**
  *
  * @author Maxwell, Missy
@@ -30,35 +29,37 @@ public class SNIPE {
 
     public static PrintWriter outFile = null;
     public static BufferedReader inFile = null;
-    
+
     public static PrintWriter logFile = null;
-    
+
     public static void main(String[] args) {
         StartProgramView startProgramView = new StartProgramView();
 
-        try { 
+        try {
             SNIPE.inFile = new BufferedReader(new InputStreamReader(System.in));
             SNIPE.outFile = new PrintWriter(System.out, true);
-            
+
             String filePath = "log.txt";
             SNIPE.logFile = new PrintWriter(filePath);
-            
+
             startProgramView.displayStartProgramView();
-        }
-        catch (Throwable te) {
+        } catch (Throwable te) {
             System.out.println("Your game has crashed. Gracefully. The specific error will"
                     + " be displayed below. Your game will be restarted.");
             te.printStackTrace();
             startProgramView.displayStartProgramView();
-            
+
         } finally {
             try {
-                if (SNIPE.inFile != null)
+                if (SNIPE.inFile != null) {
                     SNIPE.inFile.close();
-                if(SNIPE.outFile !=null)
+                }
+                if (SNIPE.outFile != null) {
                     SNIPE.outFile.close();
-                if(SNIPE.logFile != null)
+                }
+                if (SNIPE.logFile != null) {
                     SNIPE.logFile.close();
+                }
             } catch (IOException ex) {
                 System.out.println("There has been an error closing the files."
                         + "\nConsider it gracefully caught.");

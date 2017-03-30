@@ -10,5 +10,5 @@ package byui.cit260.snipe.enums;
  * @author Maxwell
  */
 public enum LocationDescriptionEnum {
-    
+
 }

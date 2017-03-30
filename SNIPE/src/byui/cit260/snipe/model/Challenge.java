@@ -21,8 +21,7 @@ public class Challenge implements Serializable {
     private String description;
     private boolean usedFlag;
     private Code code;
-    
-    
+
     public Challenge() {
     }
 
@@ -33,7 +32,6 @@ public class Challenge implements Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
-
 
     public boolean isUsedFlag() {
         return usedFlag;
@@ -51,5 +49,4 @@ public class Challenge implements Serializable {
         this.code = code;
     }
 
-   
 }

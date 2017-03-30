@@ -24,12 +24,12 @@ public enum Credits implements Serializable {
     MISSY_JONES("Missy Jones, one of the creators of this game who also  helped "
             + "\nkeep the team orgainzed. Her friendlieness and helpfulness were "
             + "\nof great benefit to the team. See? She too is Supper, Nice "
-            +"\nand Interesting. Thank you Missy!"),
+            + "\nand Interesting. Thank you Missy!"),
     BETH_KIRBY("Beth Kirby, the last of the creators of this game. She just "
-            +"\nasked a bunch of questions, and tried to make sure each "
-            +"\nassignment's rubic was met. She was an intrepid programmer who "
-            +"\nkept going even when she was ready to quit. But, is she Super, "
-            +"\nNice, and Interesting? It's a myster. Thank you Beth!"),
+            + "\nasked a bunch of questions, and tried to make sure each "
+            + "\nassignment's rubic was met. She was an intrepid programmer who "
+            + "\nkept going even when she was ready to quit. But, is she Super, "
+            + "\nNice, and Interesting? It's a myster. Thank you Beth!"),
     DISCLAIMER("This is only a game, not real life, and is meant to be purely "
             + "fictional. No humans or critters were harmed during this project."
             + "The destuction of computers is an entirely different story, but"

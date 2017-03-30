@@ -7,7 +7,7 @@ package byui.cit260.snipe.exceptions;
 
 /**
  *
- * 
+ *
  */
 public class ChallengeControlException extends Exception {
 

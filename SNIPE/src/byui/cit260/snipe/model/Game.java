@@ -40,10 +40,6 @@ public class Game implements Serializable {
         this.challenges = challenges;
     }
 
-
-
-
-
     public double getMoveCounter() {
         return moveCounter;
     }

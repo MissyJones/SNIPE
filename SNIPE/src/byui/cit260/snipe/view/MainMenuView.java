@@ -16,7 +16,7 @@ import snipe.SNIPE;
 public class MainMenuView extends View {
 
     public MainMenuView() {
-            super("\n*---------------------------*"
+        super("\n*---------------------------*"
                 + "\n|        Main Menu          |"
                 + "\n*---------------------------*"
                 + "\n|  N  |        New Game     |"
@@ -67,11 +67,12 @@ public class MainMenuView extends View {
 
     private void saveGame() {
         this.console.println("Where do you want this game to be saved?");
-        
+
         String filePath = this.getInput();
-        
-        try {GameControl.saveGame(SNIPE.getCurrentGame(), filePath);
-        }catch (Exception ex) {
+
+        try {
+            GameControl.saveGame(SNIPE.getCurrentGame(), filePath);
+        } catch (Exception ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
         }
     }
@@ -81,18 +82,17 @@ public class MainMenuView extends View {
         helpMenuView.display();
     }
 
-    private void loadGame() {     
+    private void loadGame() {
         try {
             this.console.println("Where is the save file located?");
             String filePath = this.getInput();
             GameControl.loadGame(filePath);
             GameMenuView gameMenu = new GameMenuView();
             gameMenu.display();
-            
+
         } catch (Exception ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
         }
-        
 
     }
 

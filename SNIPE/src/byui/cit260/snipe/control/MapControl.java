@@ -13,11 +13,10 @@ import byui.cit260.snipe.exceptions.LocationException;
 import byui.cit260.snipe.model.Location;
 import byui.cit260.snipe.model.Player;
 
-    /**
-         *
-         * @author Maxwell
-         */
-
+/**
+ *
+ * @author Maxwell
+ */
 public class MapControl implements Serializable {
 
     public static Map createMap() {
@@ -30,16 +29,14 @@ public class MapControl implements Serializable {
         player.setLocation(list[0]);
     }
 
-
     public void changeLocation(int row, int column, Player player) throws LocationException {
-        if (row > 2 || column > 8 || row < 0 || column < 0){
+        if (row > 2 || column > 8 || row < 0 || column < 0) {
             throw new LocationException("Cannot move to this location. This"
                     + "\nlocation is put of bounds.");
-            }
-        else {
+        } else {
             player.setRow(row);
             player.setColumn(column);
         }
-        
+
     }
 }

@@ -68,7 +68,6 @@ class HelpMenuView extends View {
                 + "\nmate! Important happy little hints live there.");
     }
 
- 
     private void collectingCodes() {
         System.out.println("Coming to an assignment soon. Learn what codes are and"
                 + "\nhow to use them, You must collect ALL codes or you flunk out "
@@ -77,6 +76,5 @@ class HelpMenuView extends View {
 
     private void playerLocation() {
     }
-
 
 }

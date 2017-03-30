@@ -10,11 +10,12 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Serializable;
 import java.io.Writer;
+
 /**
  *
  * @author Maxwell
  */
-public enum TravelEnum implements Serializable{
+public enum TravelEnum implements Serializable {
     SNIPE_HQ("Headquarters of the super secret SNIPE Agency"),
     Lib_Of_Congress("\nThe research library that officially serves the United "
             + "\nStates Congress and is the de facto national library of the "
@@ -84,6 +85,6 @@ public enum TravelEnum implements Serializable{
 
     public String getDescription() {
         return description;
-    }   
+    }
 
 }

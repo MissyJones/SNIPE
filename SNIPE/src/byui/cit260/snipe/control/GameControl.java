@@ -50,7 +50,7 @@ public class GameControl {
         Code[] item = GameControl.createCodes();
         game.setCodes(item);
 
-        System.out.println("A busy office sits before you. \"Agent "+codeName+". Your first assignment is as"
+        System.out.println("A busy office sits before you. \"Agent " + codeName + ". Your first assignment is as"
                 + "\nfollows.\" Says a woman in dark suit, \"You must recover parts to a secret code. The code goes to a lock box found within this"
                 + "\nbuilding. You must open the box. The safety of he country depends on it!\" You get the feeling"
                 + "\n that you should travel to another area to look for the codes."
@@ -163,27 +163,24 @@ public class GameControl {
         return codes;
     }
 
-
-
     public static void saveGame(Game game, String filePath) throws GameControlException {
         try (FileOutputStream fops = new FileOutputStream(filePath)) {
             ObjectOutputStream output = new ObjectOutputStream(fops);
         } catch (Exception e) {
             throw new GameControlException(e.getMessage());
-            
+
         }
-        
-        
+
     }
 
     public static void loadGame(String filePath) throws GameControlException {
         Game game = null;
-        
+
         try (FileInputStream fips = new FileInputStream(filePath)) {
             ObjectInputStream input = new ObjectInputStream(fips);
-            
+
             game = (Game) input.readObject();
-        }catch (Exception ex) {
+        } catch (Exception ex) {
             throw new GameControlException(ex.getMessage());
         }
         SNIPE.setCurrentGame(game);

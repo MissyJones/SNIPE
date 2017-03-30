@@ -5,13 +5,11 @@
  */
 package byui.cit260.snipe.view;
 
-
-
 /**
  *
  * @author Maxwell
  */
-public class LocationView extends View{
+public class LocationView extends View {
 
     public LocationView(String message) {
         super(message);
@@ -19,8 +17,8 @@ public class LocationView extends View{
 
     @Override
     public boolean doAction(String choice) {
-         choice = choice.toUpperCase();
-         this.console.println("");
+        choice = choice.toUpperCase();
+        this.console.println("");
         switch (choice) {
             case "N":
                 this.startNewGame();
@@ -56,5 +54,5 @@ public class LocationView extends View{
     private void saveGame() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

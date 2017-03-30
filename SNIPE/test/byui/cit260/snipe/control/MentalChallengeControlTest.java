@@ -91,7 +91,7 @@ public class MentalChallengeControlTest {
         expResult3 = -1;
         result3 = (int) instance.mathPuzzleTwo(radius, height1, answer1);
         assertEquals(expResult3, result3);
-        
+
         System.out.println("mathPuzzleTwo");
         System.out.println("\tTest Case 3");
         radius = 8;
