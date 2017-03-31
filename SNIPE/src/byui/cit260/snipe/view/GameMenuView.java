@@ -8,6 +8,7 @@ package byui.cit260.snipe.view;
 import byui.cit260.snipe.control.ChallengeControl;
 import byui.cit260.snipe.control.GameControl;
 import byui.cit260.snipe.exceptions.ChallengeControlException;
+import byui.cit260.snipe.model.Code;
 import java.io.IOException;
 import java.util.Random;
 import snipe.SNIPE;
@@ -106,6 +107,8 @@ public class GameMenuView extends View {
     }
 
     private void lookAround() {
+        ChallengeControl.challengeEncounter(SNIPE.getPlayer().getRow());
+                
         this.console.println(findScene());
     }
 

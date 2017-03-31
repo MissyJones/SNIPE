@@ -6,8 +6,10 @@
 package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.control.ChallengeControl;
+import byui.cit260.snipe.control.CodeControl;
 import byui.cit260.snipe.enums.ChallengeDescriptionEnum;
 import byui.cit260.snipe.exceptions.ChallengeControlException;
+import byui.cit260.snipe.exceptions.CodeControlException;
 import byui.cit260.snipe.model.Challenge;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -57,7 +59,11 @@ public class ChallengeView extends View {
                 System.out.println("Please enter a number. I assume you know"
                         + "\n what those are, don't you?");
             }
-            SNIPE.getPlayer().addObjectToCodeInventory(event.getCode());
+            try {
+                CodeControl.addCode(event.getCode(), SNIPE.getPlayer());
+            } catch (CodeControlException ex) {
+                Logger.getLogger(ChallengeView.class.getName()).log(Level.SEVERE, null, ex);
+            }
             event.setUsedFlag(true);
             gameMenu.display();
             return true;

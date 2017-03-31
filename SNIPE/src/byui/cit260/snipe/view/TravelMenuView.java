@@ -194,7 +194,6 @@ public class TravelMenuView extends View {
         if (passportStatus = false) {
             passportStatus = true;
             place.setPassportAdd(passportStatus);
-            ChallengeControl.challengeEncounter(location);
         }
 
         if (place.getLocationType() == LocationType.SafeHouse) {

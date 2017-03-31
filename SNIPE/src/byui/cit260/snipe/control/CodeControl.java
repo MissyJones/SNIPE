@@ -16,7 +16,7 @@ import java.util.ArrayList;
  */
 public class CodeControl {
 
-    public void addCode(Code code, Player player) throws CodeControlException {
+    public static void addCode(Code code, Player player) throws CodeControlException {
         ArrayList<Code> codeList = player.getCodeInventory();
         if (codeList.contains(code)) {
             throw new CodeControlException("This code has already been acquired."
