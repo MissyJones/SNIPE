@@ -6,19 +6,22 @@
 package byui.cit260.snipe.view;
 
 import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import snipe.SNIPE;
 
 /**
  *
  * @author elizabethkirby
  */
 public class CollectedCodesView extends View {
+    int i = 0;
+    String string = "---------";
+    String sub = "-----------";        
+    while(i < code Inventory.getLength() + 1){
+        sub = "\n" + code Inventory[i];
+        
+        string = string + sub;
+    }
+    
 
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
