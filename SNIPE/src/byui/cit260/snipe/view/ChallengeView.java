@@ -107,7 +107,7 @@ public class ChallengeView extends View {
             switch (value) {
                 case "O":
                     this.console.println(event.getChoiceOne());
-                    SNIPE.getPlayer().addObjectToCodeInventory(event.getCode());
+                    CodeControl.addCode(code, player);SNIPE.getPlayer().addObjectToCodeInventory(event.getCode());
                     gameMenu.display();
                     break;
                 case "T":
