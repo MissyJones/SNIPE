@@ -5,6 +5,7 @@
  */
 package byui.cit260.snipe.control;
 
+import byui.cit260.snipe.enums.ChallengeDescriptionEnum;
 import byui.cit260.snipe.model.Challenge;
 import byui.cit260.snipe.model.Game;
 import byui.cit260.snipe.model.Code;
@@ -47,9 +48,12 @@ public class GameControl {
         Map map = new Map(26);
         game.setMap(map);
 
-        Code[] item = GameControl.createCodes();
+        Code[] item = createCodes();
         game.setCodes(item);
 
+        Challenge[] challenge = createChallenges();
+        game.setChallenges(challenge);
+        
         System.out.println("A busy office sits before you. \"Agent " + codeName + ". Your first assignment is as"
                 + "\nfollows.\" Says a woman in dark suit, \"You must recover parts to a secret code. The code goes to a lock box found within this"
                 + "\nbuilding. You must open the box. The safety of he country depends on it!\" You get the feeling"
@@ -184,5 +188,83 @@ public class GameControl {
             throw new GameControlException(ex.getMessage());
         }
         SNIPE.setCurrentGame(game);
+    }
+
+    public static Challenge[] createChallenges() {
+        Challenge[] challenges = new Challenge[9];
+
+        Challenge mentalOne = new Challenge();
+        mentalOne.setDescription(ChallengeDescriptionEnum.mentalOne.getDescription());
+        mentalOne.setChoiceOne(null);
+        mentalOne.setChoiceTwo(null);
+        mentalOne.setUsedFlag(false);
+        mentalOne.setCode(SNIPE.getCurrentGame().getCodes()[0]);
+        challenges[0] = mentalOne;
+
+        Challenge mentalTwo = new Challenge();
+        mentalTwo.setDescription(ChallengeDescriptionEnum.mentalTwo.getDescription());
+        mentalTwo.setChoiceOne(null);
+        mentalTwo.setChoiceTwo(null);
+        mentalTwo.setUsedFlag(false);
+        mentalTwo.setCode(SNIPE.getCurrentGame().getCodes()[1]);
+        challenges[1] = mentalTwo;
+
+        Challenge mentalThree = new Challenge();
+        mentalThree.setDescription(ChallengeDescriptionEnum.mentalThree.getDescription());
+        mentalThree.setChoiceOne(null);
+        mentalThree.setChoiceTwo(null);
+        mentalThree.setUsedFlag(false);
+        mentalThree.setCode(SNIPE.getCurrentGame().getCodes()[2]);
+        challenges[2] = mentalThree;
+
+        Challenge physOne = new Challenge();
+        physOne.setDescription(ChallengeDescriptionEnum.physOne.getDescription());
+        physOne.setChoiceOne(ChallengeDescriptionEnum.physOneOptionOne.getDescription());
+        physOne.setChoiceTwo(ChallengeDescriptionEnum.physOneOptionTwo.getDescription());
+        physOne.setUsedFlag(false);
+        physOne.setCode(SNIPE.getCurrentGame().getCodes()[3]);
+        challenges[3] = physOne;
+
+        Challenge physTwo = new Challenge();
+        physTwo.setDescription(ChallengeDescriptionEnum.physTwo.getDescription());
+        physTwo.setChoiceOne(ChallengeDescriptionEnum.physTwoOptionOne.getDescription());
+        physTwo.setChoiceTwo(ChallengeDescriptionEnum.physTwoOptionTwo.getDescription());
+        physTwo.setUsedFlag(false);
+        physTwo.setCode(SNIPE.getCurrentGame().getCodes()[4]);
+        challenges[4] = physTwo;
+
+        Challenge physThree = new Challenge();
+        physThree.setDescription(ChallengeDescriptionEnum.physThree.getDescription());
+        physThree.setChoiceOne(ChallengeDescriptionEnum.physThreeOptionOne.getDescription());
+        physThree.setChoiceTwo(ChallengeDescriptionEnum.physThreeOptionTwo.getDescription());
+        physThree.setUsedFlag(false);
+        physThree.setCode(SNIPE.getCurrentGame().getCodes()[5]);
+        challenges[5] = physThree;
+
+        Challenge physFour = new Challenge();
+        physFour.setDescription(ChallengeDescriptionEnum.physFour.getDescription());
+        physFour.setChoiceOne(ChallengeDescriptionEnum.physFourOptionOne.getDescription());
+        physFour.setChoiceTwo(ChallengeDescriptionEnum.physFourOptionTwo.getDescription());
+        physFour.setUsedFlag(false);
+        physFour.setCode(SNIPE.getCurrentGame().getCodes()[6]);
+        challenges[6] = physFour;
+
+        Challenge physFive = new Challenge();
+        physFive.setDescription(ChallengeDescriptionEnum.physFive.getDescription());
+        physFive.setChoiceOne(ChallengeDescriptionEnum.physFiveOptionOne.getDescription());
+        physFive.setChoiceTwo(ChallengeDescriptionEnum.physFiveOptionTwo.getDescription());
+        physFive.setUsedFlag(false);
+        physFive.setCode(SNIPE.getCurrentGame().getCodes()[7]);
+        challenges[7] = physFive;
+
+        Challenge physSix = new Challenge();
+        physSix.setDescription(ChallengeDescriptionEnum.physSix.getDescription());
+        physSix.setChoiceOne(ChallengeDescriptionEnum.physSixOptionOne.getDescription());
+        physSix.setChoiceTwo(ChallengeDescriptionEnum.physSixOptionTwo.getDescription());
+        physSix.setUsedFlag(false);
+        physSix.setCode(SNIPE.getCurrentGame().getCodes()[8]);
+        challenges[8] = physSix;
+
+        return challenges;
     }
 }

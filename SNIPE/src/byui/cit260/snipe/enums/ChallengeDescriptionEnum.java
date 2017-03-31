@@ -36,14 +36,14 @@ public enum ChallengeDescriptionEnum implements Serializable {
             + "\nYour eagle-eye tells you the diameter is 16 inches and its "
             + "\nheight is 24 inches. Is this the keg that hold your code? "
             + "\nEnter its volume to find out. Note: just enter the number,"
-            + "\nNo units required."),
+            + "\nto two decimal places. No units required."),
     mentalThree("You stand at the Louvre, pondering the Mona Lisa. Has it "
             + "\nalways been this size? If it has been replaced.... Then there "
             + "\nmust be a dossier behind it! You know that the original Mona "
             + "\nLisa had an area of 630 inches^2. Just from looking at it, "
-            + "\nyou can tell that this painting (the supposed Mona Lisa) has "
+            + "\nyou can tell that this painting (the 'supposed' Mona Lisa) has "
             + "\na height of 24 inches and a width of 16 inches. Is this the "
-            + "\nreal Mona Lisa? Input the area to find out. Note: just enter "
+            + "\nreal Mona Lisa? Input the area of the painting to find out. Note: just enter "
             + "\nthe number, no units required."),
     USARIDDLE("This free-standing world record holding manmade structure is "
             + "\n630 feet (or 192 meters) high and is a monument to the USA’ s "

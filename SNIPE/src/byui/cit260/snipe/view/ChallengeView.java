@@ -33,54 +33,101 @@ public class ChallengeView extends View {
         this.event = event;
     }
 
-    
     public void initializeChallenge(Challenge event, int type) {
-        
+
     }
-    
+
     @Override
-    public boolean doAction(String value){
-        if(this.type == 1) {
-        try {
-            Double number = Double.parseDouble(value);
+    public boolean doAction(String value) {
+        GameMenuView gameMenu = new GameMenuView();
+        if (this.type == 1) {
+            try {
+                Double number = Double.parseDouble(value);
+                boolean validate = false;
+                while (validate = false) {
+                    try {
+                        ChallengeControl.mathPuzzleOne(number);
+                    } catch (ChallengeControlException ex) {
+                        Logger.getLogger(ChallengeView.class.getName()).log(Level.SEVERE, null, ex);
+                    }
 
-        } catch (NumberFormatException nf) {
-            System.out.println("Please enter a number. I assume you know"
-                    + "\n what those are, don't you?");
-        }
-        return true;
-        } else if(this.type == 2) {
-            
-            
-        } else if(this.type == 3) {
-            
-        } else if(this.type == 4) {
+                }
+
+            } catch (NumberFormatException nf) {
+                System.out.println("Please enter a number. I assume you know"
+                        + "\n what those are, don't you?");
+            }
+            SNIPE.getPlayer().addObjectToCodeInventory(event.getCode());
+            event.setUsedFlag(true);
+            gameMenu.display();
+            return true;
+        } else if (this.type == 2) {
+            try {
+                Double number = Double.parseDouble(value);
+
+                this.MathPuzzleTwo(number);
+            } catch (NumberFormatException ex) {
+                System.out.println("Please enter a real number.");
+            }
+            SNIPE.getPlayer().addObjectToCodeInventory(event.getCode());
+            event.setUsedFlag(true);
+            gameMenu.display();
+            return true;
+
+        } else if (this.type == 3) {
+            try {
+                Double number = Double.parseDouble(value);
+                boolean validate = false;
+                while (validate = false) {
+                    try {
+                        ChallengeControl.mathPuzzleThree(number);
+                    } catch (ChallengeControlException ex) {
+                        Logger.getLogger(ChallengeView.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+
+                }
+
+            } catch (NumberFormatException nf) {
+                System.out.println("Please enter a number. I assume you know"
+                        + "\n what those are, don't you?");
+            }
+            SNIPE.getPlayer().addObjectToCodeInventory(event.getCode());
+            event.setUsedFlag(true);
+            gameMenu.display();
+            return true;
+
+        } else if (this.type == 4) {
             value = value.toUpperCase();
-        switch (value) {
-            case "O":
-                this.console.println(event.getChoiceOne());
-                SNIPE.getPlayer().addObjectToCodeInventory(event.getCode());
-                break;
-            default:
-                break;
-        }
-        return false;
-            
+            switch (value) {
+                case "O":
+                    this.console.println(event.getChoiceOne());
+                    SNIPE.getPlayer().addObjectToCodeInventory(event.getCode());
+                    gameMenu.display();
+                    break;
+                case "T":
+                    this.console.println(event.getChoiceTwo());
+                    SNIPE.getPlayer().addObjectToCodeInventory(event.getCode());
+
+                    gameMenu.display();
+                    break;
+                default:
+                    break;
+            }
+            return false;
+
         } else {
-            
+
         }
         return false;
     }
 
-    public void MathPuzzleTwo() {
+    public void MathPuzzleTwo(double value) {
         try {
-            String playerAnswer1 = keyboard.readLine();
-            double playerAnswer1Num = Double.parseDouble(playerAnswer1);
 
             ChallengeControl cc = new ChallengeControl();
             double correctAnswer = cc.mathPuzzleTwo(8.0, 8.0, 24.0);
             //answer is 4825.49
-            if (playerAnswer1Num == correctAnswer) {
+            if (value == correctAnswer) {
                 console.write("A compartment opens and you, exercising the\n"
                         + "utmost of caution, retrieve the code.\n"
                         + "the code. Be careful! It's a trap! Well,\n"
@@ -91,11 +138,9 @@ public class ChallengeView extends View {
             }
         } catch (ChallengeControlException cce) {
             ErrorView.display(ChallengeView.class.getName(), cce.getMessage());
-        } catch (IOException ioe) {
-            ErrorView.display(ChallengeView.class.getName(), ioe.getMessage());
         } catch (NumberFormatException nfe) {
             ErrorView.display(ChallengeView.class.getName(), "Aw! Come on! Please\n"
-                    + "enter a positive, rational number, you fool!");
+                    + "enter a positive, rational number!");
         }
     }
 }

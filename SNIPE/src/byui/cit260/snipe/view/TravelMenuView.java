@@ -192,7 +192,8 @@ public class TravelMenuView extends View {
         Location place = SNIPE.getCurrentGame().getMap().getLocations()[location];
         boolean passportStatus = place.getPassportAdd();
         if (passportStatus = false) {
-            place.setPassportAdd(true);
+            passportStatus = true;
+            place.setPassportAdd(passportStatus);
             ChallengeControl.challengeEncounter(location);
         }
 
