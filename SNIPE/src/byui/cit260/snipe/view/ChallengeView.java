@@ -28,6 +28,8 @@ public class ChallengeView extends View {
 
     private int type;
     private Challenge event;
+    private double volume;
+    private double answer1;
 
     public ChallengeView(String message, int challengeType, Challenge event) {
         super(message);
@@ -69,11 +71,22 @@ public class ChallengeView extends View {
             return true;
         } else if (this.type == 2) {
             try {
-                Double number = Double.parseDouble(value);
 
-                this.MathPuzzleTwo(number);
-            } catch (NumberFormatException ex) {
-                System.out.println("Please enter a real number.");
+                //ChallengeControl cc = new ChallengeControl();
+                Double number = Double.parseDouble(value);
+                //answer is 4825.49
+                if (volume == answer1) {
+                    console.write("A compartment opens and you, exercising the\n"
+                            + "utmost of caution, retrieve the code.\n"
+                            + "the code. Be careful! It's a trap! Well,\n"
+                            + "maybe. It could be perfectly safe too.\n");
+                } else {
+                    console.write("Oops! You won't be getting this code you fool!\n"
+                            + "Too bad for you!\n");
+                }
+            } catch (NumberFormatException nfe) {
+                ErrorView.display(ChallengeView.class.getName(), "Aw! Come on! Please\n"
+                        + "enter a positive, rational number!");
             }
             SNIPE.getPlayer().addObjectToCodeInventory(event.getCode());
             event.setUsedFlag(true);
@@ -107,7 +120,8 @@ public class ChallengeView extends View {
             switch (value) {
                 case "O":
                     this.console.println(event.getChoiceOne());
-                    CodeControl.addCode(code, player);SNIPE.getPlayer().addObjectToCodeInventory(event.getCode());
+                    CodeControl.addCode(code, player);
+                    SNIPE.getPlayer().addObjectToCodeInventory(event.getCode());
                     gameMenu.display();
                     break;
                 case "T":
@@ -125,28 +139,5 @@ public class ChallengeView extends View {
 
         }
         return false;
-    }
-
-    public void MathPuzzleTwo(double value) {
-        try {
-
-            ChallengeControl cc = new ChallengeControl();
-            double correctAnswer = cc.mathPuzzleTwo(8.0, 8.0, 24.0);
-            //answer is 4825.49
-            if (value == correctAnswer) {
-                console.write("A compartment opens and you, exercising the\n"
-                        + "utmost of caution, retrieve the code.\n"
-                        + "the code. Be careful! It's a trap! Well,\n"
-                        + "maybe. It could be perfectly safe too.\n");
-            } else {
-                console.write("Oops! You won't be getting this code you fool!\n"
-                        + "Too bad for you!\n");
-            }
-        } catch (ChallengeControlException cce) {
-            ErrorView.display(ChallengeView.class.getName(), cce.getMessage());
-        } catch (NumberFormatException nfe) {
-            ErrorView.display(ChallengeView.class.getName(), "Aw! Come on! Please\n"
-                    + "enter a positive, rational number!");
-        }
     }
 }

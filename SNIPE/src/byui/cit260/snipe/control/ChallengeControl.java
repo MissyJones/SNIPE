@@ -23,6 +23,8 @@ import snipe.SNIPE;
  */
 public class ChallengeControl {
 
+    private boolean response;
+
     public int calcArea(int length, int width) throws ChallengeControlException {
 
         if (length <= 0 || width <= 0 || length > 10 || width > 10) {
@@ -43,23 +45,24 @@ public class ChallengeControl {
         return response;
     }
 
-    public double mathPuzzleTwo(double radius, double radius2, double height1) throws ChallengeControlException {
-        double answer1 = Math.PI * height1 * radius * radius2;//4825.49
-
-        if (answer1 <= 0) {
-            throw new ChallengeControlException("Aw come on! Pleae enter a "
-                    + "\npositive, rational number, you fool!");
-            //} else //(volume != answer1) {
-            //   throw new ChallengeControlException("Oops! You won't be getting "
-            //           + "\nthis code you fool! Too bad for you!");            
-            //else {
-            // System.out.println("A compartment opens and you carefully, "
-            //                    +"\nexercising the utmost of caution, retrieve "
-            //                    +"\nthe code. Be careful! It's a trap! Well, "
-            //                   + "\nmaybe. It could be perfectly safe too.");
+    public static boolean mathPuzzleTwo(double answer1) throws ChallengeControlException {
+        double volume = Math.PI*24*8*8;
+	//this is the correct answer 4825.49
+	//String answer1 = null;
+        boolean check = false;
+        try {
+                if (answer1 == Math.PI*24*8*8) {
+                    check = true;
+                } else if (volume != answer1) {
+                    check = false;
+                } else {
+                    throw new ChallengeControlException();          
+                }
+        } catch (ChallengeControlException ex) {
+            Logger.getLogger(ChallengeControl.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return Math.PI * height1 * radius * radius;
-    }
+        return check;
+    }  
 
     public static boolean mathPuzzleOne(double number) throws ChallengeControlException {
         String answer = null;
@@ -208,5 +211,4 @@ public class ChallengeControl {
            }
        } else {}
     }
-  
 }
