@@ -17,13 +17,13 @@ import java.io.Writer;
  */
 public enum TravelEnum implements Serializable {
     SNIPE_HQ("Headquarters of the super secret SNIPE Agency"),
-    Lib_Of_Congress("\nThe research library that officially serves the United "
+    Lib_Of_Congress("The research library that officially serves the United "
             + "\nStates Congress and is the de facto national library of the "
             + "\nUnited States. "),
-    Gateway_Arch("\nThe world's tallest arch,the tallest man-made monument in "
+    Gateway_Arch("The world's tallest arch,the tallest man-made monument in "
             + "\nthe Western Hemisphere,and Missouri's tallest accessible"
             + "\nbuilding."),
-    Bradenburg_gate("\nAn 18th-century neoclassical monument in Berlin, and "
+    Bradenburg_gate("An 18th-century neoclassical monument in Berlin, and "
             + "\none of the best-known landmarks of Germany."),
     Cologne_Cathedral("A renowned monument of German Catholicism and Gothic "
             + "\narchitecture and was declared a World Heritage Site in 1996."),
@@ -66,7 +66,7 @@ public enum TravelEnum implements Serializable {
             + "\ncity in Brazil, the Americas, and in the Southern Hemisphere"),
     Sydney_Opera_House(" A multi-venue performing arts centre. It is one of "
             + "\nthe 20th century's most famous & distinctive buildings"),
-    Melbourne_Jail("Got some shrimp on the barbie"),
+    Melbourne_Jail("Got some shrimp on the barbie?"),
     Bridge("A bridge mate."),
     StPeters_Square("Between 1713–1728 and 1732–1918, Saint Petersburg was the "
             + "\ncapital of imperial Russia. In 1918, the central government "
