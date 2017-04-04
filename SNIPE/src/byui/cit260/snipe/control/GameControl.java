@@ -44,15 +44,19 @@ public class GameControl {
         String codeName = GameControl.codeNameGen();
         player.setCodeName(codeName);
         game.setPlayer(player);
-
-        Map map = new Map(26);
-        game.setMap(map);
-
+        
         Code[] item = createCodes();
         game.setCodes(item);
 
         Challenge[] challenge = createChallenges();
         game.setChallenges(challenge);
+        
+        Map map = new Map(26, challenge);
+        game.setMap(map);
+
+        
+
+
         
         System.out.println("A busy office sits before you. \"Agent " + codeName + ". Your first assignment is as"
                 + "\nfollows.\" Says a woman in dark suit, \"You must recover parts to a secret code. The code goes to a lock box found within this"
@@ -191,7 +195,7 @@ public class GameControl {
     }
 
     public static Challenge[] createChallenges() {
-        Challenge[] challenges = new Challenge[9];
+        Challenge[] challenges = new Challenge[10];
 
         Challenge mentalOne = new Challenge();
         mentalOne.setDescription(ChallengeDescriptionEnum.mentalOne.getDescription());
@@ -199,6 +203,7 @@ public class GameControl {
         mentalOne.setChoiceTwo(null);
         mentalOne.setUsedFlag(false);
         mentalOne.setCode(SNIPE.getCurrentGame().getCodes()[0]);
+        mentalOne.setType(1);
         challenges[0] = mentalOne;
 
         Challenge mentalTwo = new Challenge();
@@ -207,6 +212,7 @@ public class GameControl {
         mentalTwo.setChoiceTwo(null);
         mentalTwo.setUsedFlag(false);
         mentalTwo.setCode(SNIPE.getCurrentGame().getCodes()[1]);
+        mentalTwo.setType(2);
         challenges[1] = mentalTwo;
 
         Challenge mentalThree = new Challenge();
@@ -215,6 +221,7 @@ public class GameControl {
         mentalThree.setChoiceTwo(null);
         mentalThree.setUsedFlag(false);
         mentalThree.setCode(SNIPE.getCurrentGame().getCodes()[2]);
+        mentalThree.setType(3);
         challenges[2] = mentalThree;
 
         Challenge physOne = new Challenge();
@@ -223,6 +230,7 @@ public class GameControl {
         physOne.setChoiceTwo(ChallengeDescriptionEnum.physOneOptionTwo.getDescription());
         physOne.setUsedFlag(false);
         physOne.setCode(SNIPE.getCurrentGame().getCodes()[3]);
+        physOne.setType(4);
         challenges[3] = physOne;
 
         Challenge physTwo = new Challenge();
@@ -231,6 +239,7 @@ public class GameControl {
         physTwo.setChoiceTwo(ChallengeDescriptionEnum.physTwoOptionTwo.getDescription());
         physTwo.setUsedFlag(false);
         physTwo.setCode(SNIPE.getCurrentGame().getCodes()[4]);
+        physTwo.setType(4);
         challenges[4] = physTwo;
 
         Challenge physThree = new Challenge();
@@ -239,6 +248,7 @@ public class GameControl {
         physThree.setChoiceTwo(ChallengeDescriptionEnum.physThreeOptionTwo.getDescription());
         physThree.setUsedFlag(false);
         physThree.setCode(SNIPE.getCurrentGame().getCodes()[5]);
+        physThree.setType(4);
         challenges[5] = physThree;
 
         Challenge physFour = new Challenge();
@@ -247,6 +257,7 @@ public class GameControl {
         physFour.setChoiceTwo(ChallengeDescriptionEnum.physFourOptionTwo.getDescription());
         physFour.setUsedFlag(false);
         physFour.setCode(SNIPE.getCurrentGame().getCodes()[6]);
+        physFour.setType(4);
         challenges[6] = physFour;
 
         Challenge physFive = new Challenge();
@@ -255,6 +266,7 @@ public class GameControl {
         physFive.setChoiceTwo(ChallengeDescriptionEnum.physFiveOptionTwo.getDescription());
         physFive.setUsedFlag(false);
         physFive.setCode(SNIPE.getCurrentGame().getCodes()[7]);
+        physFive.setType(4);
         challenges[7] = physFive;
 
         Challenge physSix = new Challenge();
@@ -263,8 +275,18 @@ public class GameControl {
         physSix.setChoiceTwo(ChallengeDescriptionEnum.physSixOptionTwo.getDescription());
         physSix.setUsedFlag(false);
         physSix.setCode(SNIPE.getCurrentGame().getCodes()[8]);
+        physSix.setType(4);
         challenges[8] = physSix;
 
+        Challenge space = new Challenge();
+        space.setDescription("");
+        space.setChoiceOne("");
+        space.setChoiceTwo("");
+        space.setUsedFlag(true);
+        space.setCode(null);
+        space.setType(0);
+        challenges[9] = space;
+        
         return challenges;
     }
 }

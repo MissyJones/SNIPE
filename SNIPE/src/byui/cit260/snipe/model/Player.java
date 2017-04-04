@@ -21,7 +21,7 @@ public class Player implements Serializable {
     private int healthPoints = 100;
     private String codeName;
     private Game game;
-    ArrayList<Code> codeInventory = new ArrayList<>();
+    ArrayList<String> codeInventory = new ArrayList<>();
     private int row;
     private int column;
     private Location location;
@@ -53,15 +53,15 @@ public class Player implements Serializable {
         this.location = location;
     }
 
-    public ArrayList<Code> getCodeInventory() {
+    public ArrayList<String> getCodeInventory() {
         return codeInventory;
     }
 
-    public void setCodeInventory(ArrayList<Code> codeInventory) {
+    public void setCodeInventory(ArrayList<String> codeInventory) {
         this.codeInventory = codeInventory;
     }
 
-    public void addObjectToCodeInventory(Code code) {
+    public void addObjectToCodeInventory(String code) {
         this.codeInventory.add(code);
     }
 

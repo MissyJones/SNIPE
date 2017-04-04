@@ -19,7 +19,7 @@ public class Map {
     private String[] sceneTable = new String[27];
     private String[] travelTable = new String[27];
 
-    public Map(int rowCount) {
+    public Map(int rowCount, Challenge[] challenge) {
         if (rowCount < 1) {
             System.out.println("Nice try, but hacking won't get you anywhere in this game.");
             return;
@@ -36,11 +36,21 @@ public class Map {
             location.setPassportAdd(false);
             location.setScene(this.sceneTable[i]);
             location.setLocationType(LocationType.Nothing);
+            location.setChallenge(challenge[9]);
             locations[i] = location;
         }
 
-        locations[5].setLocationType(LocationType.SafeHouse);
-        locations[2].setLocationType(LocationType.MentalChallenge);
+        locations[1].setChallenge(challenge[3]);
+        locations[4].setChallenge(challenge[4]);
+        locations[8].setChallenge(challenge[5]);
+        locations[10].setChallenge(challenge[6]);
+        locations[13].setChallenge(challenge[2]);
+        locations[15].setChallenge(challenge[8]);
+        locations[17].setChallenge(challenge[0]);
+        locations[21].setChallenge(challenge[7]);
+        locations[25].setChallenge(challenge[1]);
+        
+        
     }
 
     public String[] getTravelTable() {

@@ -19,10 +19,7 @@ import byui.cit260.snipe.model.Player;
  */
 public class MapControl implements Serializable {
 
-    public static Map createMap() {
-        Map map = new Map(26);
-        return map;
-    }
+    
 
     static void setStartingLocation(Map map, Player player) {
         Location[] list = map.getLocations();

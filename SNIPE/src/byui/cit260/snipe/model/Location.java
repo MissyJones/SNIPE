@@ -27,13 +27,22 @@ public class Location implements Serializable {
     private Boolean passportAdd;
     private double puzzleTrigger;
     private String passportView;
-    private String country;
+    private int country;
     private int row;
     private LocationType locationType;
+    private Challenge challenge;
 
     private String scene;
 
     public Location() {
+    }
+
+    public Challenge getChallenge() {
+        return challenge;
+    }
+
+    public void setChallenge(Challenge challenge) {
+        this.challenge = challenge;
     }
 
     public String getName() {
@@ -100,11 +109,11 @@ public class Location implements Serializable {
         this.passportView = passportView;
     }
 
-    public String getCountry() {
+    public int getCountry() {
         return country;
     }
 
-    public void setCountry(String country) {
+    public void setCountry(int country) {
         this.country = country;
     }
 
