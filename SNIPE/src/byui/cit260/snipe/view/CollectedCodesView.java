@@ -13,7 +13,7 @@ import java.io.PrintWriter;
  * @author elizabethkirby
  */
 public class CollectedCodesView extends View {
-    int i = 0;
+    int i = 0;`
     String string = "---------";
     String sub = "-----------";        
     while(i < code Inventory.getLength() + 1){
