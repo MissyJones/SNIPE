@@ -9,7 +9,7 @@ package byui.cit260.snipe.view;
  *
  * @author Home
  */
-public class GameOverLoseView extends View{
+public class GameOverLoseView extends View {
 
     public GameOverLoseView() {
         super("\nEPIC Mission FAIL! Go back to the Main Menu and try again.");

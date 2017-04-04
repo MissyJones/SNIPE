@@ -7,12 +7,12 @@ package byui.cit260.snipe.view;
 
 /**
  *
- * @author Maxwell
+ * @author riku9
  */
-public class SafeHouseView extends View {
+public class RiddleView extends View {
 
-    public SafeHouseView() {
-        super("You arrive in the safe house*-------------------------*");
+    public RiddleView(String message) {
+        super(message);
     }
 
     @Override

@@ -23,8 +23,17 @@ public class Challenge implements Serializable {
     private Code code;
     private String choiceOne;
     private String choiceTwo;
+    private int type;
 
     public Challenge() {
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 
     public String getDescription() {

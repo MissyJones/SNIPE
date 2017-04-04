@@ -17,12 +17,13 @@ import java.util.ArrayList;
 public class CodeControl {
 
     public static void addCode(Code code, Player player) throws CodeControlException {
-        ArrayList<Code> codeList = player.getCodeInventory();
-        if (codeList.contains(code)) {
+        ArrayList<String> codeList = player.getCodeInventory();
+        String string = code.getItemDescription();
+        if (codeList.contains(string)) {
             throw new CodeControlException("This code has already been acquired."
                     + "\nYou're going to have to find a different code for this to work.");
         } else {
-            player.addObjectToCodeInventory(code);
+            player.addObjectToCodeInventory(string);
             System.out.println("You've got a new code!");
 
         }

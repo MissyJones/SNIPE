@@ -11,4 +11,8 @@ package byui.cit260.snipe.control;
  */
 public class SafeHouseControl {
 
+    public static boolean riddleFun(int country) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

@@ -13,21 +13,9 @@ import java.io.PrintWriter;
  * @author elizabethkirby
  */
 public class CollectedCodesView extends View {
-    int i = 0;`
-    String string = "---------";
-    String sub = "-----------";        
-    while(i < code Inventory.getLength() + 1){
-        sub = "\n" + code Inventory[i];
-        
-        string = string + sub;
-    }
-    
-
-    private static PrintWriter outFile = null;
-    private static BufferedReader inFile = null;
 
     public CollectedCodesView(String message) {
-        super(message+"\nPress 'R' to return to game;");
+        super(message + "\nPress 'R' to return to game;\n");
     }
 
     @Override
@@ -43,7 +31,6 @@ public class CollectedCodesView extends View {
         }
         return false;
     }
-
 
     private void returnToMenu() {
         GameMenuView gameMenu = new GameMenuView();

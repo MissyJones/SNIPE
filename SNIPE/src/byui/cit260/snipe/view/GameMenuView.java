@@ -7,10 +7,15 @@ package byui.cit260.snipe.view;
 
 import byui.cit260.snipe.control.ChallengeControl;
 import byui.cit260.snipe.control.GameControl;
+import byui.cit260.snipe.control.SafeHouseControl;
 import byui.cit260.snipe.exceptions.ChallengeControlException;
+import byui.cit260.snipe.exceptions.CodeControlException;
 import byui.cit260.snipe.model.Code;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import snipe.SNIPE;
 
 /**
@@ -44,9 +49,16 @@ public class GameMenuView extends View {
     public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
-            case "L":
-                this.lookAround();
-                break;
+            case "L": {
+                try {
+                    this.lookAround();
+                } catch (ChallengeControlException ex) {
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (CodeControlException ex) {
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            break;
             case "T":
                 this.travelMenu();
                 break;
@@ -87,6 +99,21 @@ public class GameMenuView extends View {
     }
 
     private void codeView() {
+        int i = 0;
+        ArrayList codeInventory = SNIPE.getPlayer().getCodeInventory();
+        String string = "*----------------------*"
+                + "\n|   Aquired Codes      |"
+                + "\n*----------------------*"
+                + "\n";
+        String sub = "";
+        do {
+            sub = "\n" + codeInventory.get(i);
+            string = string + sub;
+            i++;
+        } while (i < codeInventory.size());
+
+        CollectedCodesView codeMenu = new CollectedCodesView(string);
+        codeMenu.display();
 
     }
 
@@ -106,10 +133,9 @@ public class GameMenuView extends View {
         gameMenu.display();
     }
 
-    private void lookAround() {
-        ChallengeControl.challengeEncounter(SNIPE.getPlayer().getRow());
-                
+    private void lookAround() throws ChallengeControlException, CodeControlException {
         this.console.println(findScene());
+        ChallengeControl.challengeEncounter(SNIPE.getPlayer().getRow());
     }
 
     private void travelMenu() {
@@ -164,6 +190,13 @@ public class GameMenuView extends View {
     }
 
     private void safeHouse() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int country = SNIPE.getPlayer().getLocation().getCountry();
+        boolean response = SafeHouseControl.riddleFun(country);
+        if (response = true) {
+            SafeHouseView safeHouse = new SafeHouseView();
+            safeHouse.display();
+        } else if (response = false) {
+
+        }
     }
 }
