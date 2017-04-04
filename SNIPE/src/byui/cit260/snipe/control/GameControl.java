@@ -44,20 +44,16 @@ public class GameControl {
         String codeName = GameControl.codeNameGen();
         player.setCodeName(codeName);
         game.setPlayer(player);
-        
+
         Code[] item = createCodes();
         game.setCodes(item);
 
         Challenge[] challenge = createChallenges();
         game.setChallenges(challenge);
-        
+
         Map map = new Map(26, challenge);
         game.setMap(map);
 
-        
-
-
-        
         System.out.println("A busy office sits before you. \"Agent " + codeName + ". Your first assignment is as"
                 + "\nfollows.\" Says a woman in dark suit, \"You must recover parts to a secret code. The code goes to a lock box found within this"
                 + "\nbuilding. You must open the box. The safety of he country depends on it!\" You get the feeling"
@@ -286,7 +282,7 @@ public class GameControl {
         space.setCode(null);
         space.setType(0);
         challenges[9] = space;
-        
+
         return challenges;
     }
 }

@@ -15,7 +15,7 @@ import java.io.PrintWriter;
 public class CollectedCodesView extends View {
 
     public CollectedCodesView(String message) {
-        super(message+"\nPress 'R' to return to game;\n");
+        super(message + "\nPress 'R' to return to game;\n");
     }
 
     @Override
@@ -31,7 +31,6 @@ public class CollectedCodesView extends View {
         }
         return false;
     }
-
 
     private void returnToMenu() {
         GameMenuView gameMenu = new GameMenuView();

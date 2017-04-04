@@ -9,7 +9,7 @@ package byui.cit260.snipe.view;
  *
  * @author riku9
  */
-public class RiddleView extends View{
+public class RiddleView extends View {
 
     public RiddleView(String message) {
         super(message);
@@ -19,5 +19,5 @@ public class RiddleView extends View{
     public boolean doAction(String value) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

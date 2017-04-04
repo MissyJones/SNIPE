@@ -49,17 +49,16 @@ public class GameMenuView extends View {
     public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
-            case "L":
-        {
-            try {
-                this.lookAround();
-            } catch (ChallengeControlException ex) {
-                Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (CodeControlException ex) {
-                Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+            case "L": {
+                try {
+                    this.lookAround();
+                } catch (ChallengeControlException ex) {
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (CodeControlException ex) {
+                    Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
-        }
-                break;
+            break;
             case "T":
                 this.travelMenu();
                 break;
@@ -100,23 +99,22 @@ public class GameMenuView extends View {
     }
 
     private void codeView() {
-    int i = 0;
-    ArrayList codeInventory = SNIPE.getPlayer().getCodeInventory();
-    String string = "*----------------------*"
+        int i = 0;
+        ArrayList codeInventory = SNIPE.getPlayer().getCodeInventory();
+        String string = "*----------------------*"
                 + "\n|   Aquired Codes      |"
                 + "\n*----------------------*"
-            + "\n";
-    String sub = ""; 
-    do {
-        sub = "\n" + codeInventory.get(i);
-        string = string + sub;
-        i++;
-    }
-    while( i < codeInventory.size());
+                + "\n";
+        String sub = "";
+        do {
+            sub = "\n" + codeInventory.get(i);
+            string = string + sub;
+            i++;
+        } while (i < codeInventory.size());
 
-    CollectedCodesView codeMenu = new CollectedCodesView(string);
-    codeMenu.display();
-    
+        CollectedCodesView codeMenu = new CollectedCodesView(string);
+        codeMenu.display();
+
     }
 
     private void loadGame() {
@@ -139,7 +137,7 @@ public class GameMenuView extends View {
         this.console.println(findScene());
         ChallengeControl.challengeEncounter(SNIPE.getPlayer().getRow());
     }
-    
+
     private void travelMenu() {
         TravelMenuView travelMenu = new TravelMenuView();
         travelMenu.display();
@@ -195,10 +193,10 @@ public class GameMenuView extends View {
         int country = SNIPE.getPlayer().getLocation().getCountry();
         boolean response = SafeHouseControl.riddleFun(country);
         if (response = true) {
-        SafeHouseView safeHouse = new SafeHouseView();
-        safeHouse.display();
-        } else if (response = false){
-            
+            SafeHouseView safeHouse = new SafeHouseView();
+            safeHouse.display();
+        } else if (response = false) {
+
         }
     }
 }

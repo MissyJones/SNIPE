@@ -197,7 +197,7 @@ public enum SceneDescriptionsEnum implements Serializable {
     StBasils_Cathedral("St. Basil's Cathedral. You've seen pictures of it and"
             + "\nit does not disappoint you. It looks so very large! But, when"
             + "\nwhen you walk in you are amazed to find how small it really is "
-            + "\nYou head to the specified pew, bench really, and wait, but" 
+            + "\nYou head to the specified pew, bench really, and wait, but"
             + "\nfor what?");
 
     private final String description;

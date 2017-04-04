@@ -45,7 +45,7 @@ public class ChallengeControl {
                         + "\nreveal a steel box containing one of your secret codes."
                         + "\nGood work!");
                 answer = true;
-                
+
             } else if (number != area) {
                 System.out.println("Ughh... Math is hard. It's probably nothing. You leave the painting"
                         + "\nwell enough alone, and walk away. No codes for you today.");
@@ -67,7 +67,7 @@ public class ChallengeControl {
                         + "\ncontain a code! You scoop in and find it resting safely in a plastic bag. "
                         + "\nGood work, agent! You got the code!");
                 answer = true;
-                
+
             } else if (number != answer1) {
                 System.out.println("Nope, you picked the wrong barrel! The alarm goes off and you"
                         + "\nskedaddle out of there before they can get you.");
@@ -145,66 +145,66 @@ public class ChallengeControl {
         Challenge here = SNIPE.getCurrentGame().getMap().getLocations()[location].getChallenge();
         int type = here.getType();
         if (here.isUsedFlag() != true) {
-        ChallengeView challengeView = new ChallengeView(here.getDescription());
-        String string = challengeView.challengeInput();
-        double num;
-        boolean result;
-        switch (type) {
-            case 1:
-                num = Double.parseDouble(string);
-                result = ChallengeControl.mathPuzzleOne(num);
-                if (result = true) {
-                    SNIPE.getPlayer().addObjectToCodeInventory(here.getCode().getItemDescription());
-                }
-                here.setUsedFlag(true);
-                break;
-            case 2:
-                num = Double.parseDouble(string);
-                result = ChallengeControl.mathPuzzleTwo(num);
-                if (result = true) {
-                    SNIPE.getPlayer().addObjectToCodeInventory(here.getCode().getItemDescription());
-                }
-                here.setUsedFlag(true);
-                
-                break;
-            case 3:
-                num = Double.parseDouble(string);
-                result = ChallengeControl.mathPuzzleThree(num);
-                if (result = true) {
-                    SNIPE.getPlayer().addObjectToCodeInventory(here.getCode().getItemDescription());
-                }
-                here.setUsedFlag(true);
-                break;
-            case 4:
-                ChallengeControl.physChallengeControl(string, here);
-                here.setUsedFlag(true);
-                ChallengeControl.dmgCalc(SNIPE.getPlayer());
-                break;
-            default:
-                break;
+            ChallengeView challengeView = new ChallengeView(here.getDescription());
+            String string = challengeView.challengeInput();
+            double num;
+            boolean result;
+            switch (type) {
+                case 1:
+                    num = Double.parseDouble(string);
+                    result = ChallengeControl.mathPuzzleOne(num);
+                    if (result = true) {
+                        SNIPE.getPlayer().addObjectToCodeInventory(here.getCode().getItemDescription());
+                    }
+                    here.setUsedFlag(true);
+                    break;
+                case 2:
+                    num = Double.parseDouble(string);
+                    result = ChallengeControl.mathPuzzleTwo(num);
+                    if (result = true) {
+                        SNIPE.getPlayer().addObjectToCodeInventory(here.getCode().getItemDescription());
+                    }
+                    here.setUsedFlag(true);
+
+                    break;
+                case 3:
+                    num = Double.parseDouble(string);
+                    result = ChallengeControl.mathPuzzleThree(num);
+                    if (result = true) {
+                        SNIPE.getPlayer().addObjectToCodeInventory(here.getCode().getItemDescription());
+                    }
+                    here.setUsedFlag(true);
+                    break;
+                case 4:
+                    ChallengeControl.physChallengeControl(string, here);
+                    here.setUsedFlag(true);
+                    ChallengeControl.dmgCalc(SNIPE.getPlayer());
+                    break;
+                default:
+                    break;
+            }
         }
-        }
-        
-        
+
     }
 
-
     private static void physChallengeControl(String string, Challenge here) {
-                if (string == null) {
-                    System.out.println("Looks like you didn't get this one. Too bad, so sad.");
-                } else switch (string) {
-            case "O":
-                System.out.println(here.getChoiceOne());
-                SNIPE.getPlayer().addObjectToCodeInventory(here.getCode().getItemDescription());
-                break;
-            case "T":
-                System.out.println(here.getChoiceTwo());
-                SNIPE.getPlayer().addObjectToCodeInventory(here.getCode().getItemDescription());
-                break;
-            default:
-                System.out.println("Looks like you didn't make the right decision fast enough. "
-                        + "\nYou've let this code slip through your fingers...");
-                break;
+        if (string == null) {
+            System.out.println("Looks like you didn't get this one. Too bad, so sad.");
+        } else {
+            switch (string) {
+                case "O":
+                    System.out.println(here.getChoiceOne());
+                    SNIPE.getPlayer().addObjectToCodeInventory(here.getCode().getItemDescription());
+                    break;
+                case "T":
+                    System.out.println(here.getChoiceTwo());
+                    SNIPE.getPlayer().addObjectToCodeInventory(here.getCode().getItemDescription());
+                    break;
+                default:
+                    System.out.println("Looks like you didn't make the right decision fast enough. "
+                            + "\nYou've let this code slip through your fingers...");
+                    break;
+            }
         }
     }
 

@@ -49,8 +49,7 @@ public class Map {
         locations[17].setChallenge(challenge[0]);
         locations[21].setChallenge(challenge[7]);
         locations[25].setChallenge(challenge[1]);
-        
-        
+
     }
 
     public String[] getTravelTable() {

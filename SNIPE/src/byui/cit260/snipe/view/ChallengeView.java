@@ -26,13 +26,10 @@ import snipe.SNIPE;
  */
 public class ChallengeView extends View {
 
-
     public ChallengeView(String message) {
-          super (message);
+        super(message);
     }
 
-
-    
     public String challengeInput() {
         String value = ""; //value to be returned
         boolean valid = false; //initialize to not be void
@@ -40,12 +37,12 @@ public class ChallengeView extends View {
         while (!valid) {
             try {
                 //loop while an invalid value is entered
- 
-               // this.console.println(this.displayMessage);
-               this.console.println("*----------------------*"
-                       + "\n|      CHALLENGE       |"
-                       + "\n*----------------------*\n\n"
-                       +this.displayMessage);
+
+                // this.console.println(this.displayMessage);
+                this.console.println("*----------------------*"
+                        + "\n|      CHALLENGE       |"
+                        + "\n*----------------------*\n\n"
+                        + this.displayMessage);
                 value = this.keyboard.readLine();
                 value = value.trim();
                 value = value.toUpperCase();
@@ -61,12 +58,10 @@ public class ChallengeView extends View {
 
         return value;
     }
-    
-    
+
     @Override
     public boolean doAction(String value) {
         return true;
     }
 
-   
 }
