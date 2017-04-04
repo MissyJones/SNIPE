@@ -11,6 +11,7 @@ import byui.cit260.snipe.model.Challenge;
 import byui.cit260.snipe.model.Player;
 import java.util.Random;
 import byui.cit260.snipe.exceptions.ChallengeControlException;
+import byui.cit260.snipe.exceptions.CodeControlException;
 import byui.cit260.snipe.view.ChallengeView;
 import byui.cit260.snipe.view.GameOverLoseView;
 import java.util.logging.Level;
@@ -32,45 +33,64 @@ public class ChallengeControl {
         return length * width;
     }
 
-    public static boolean mathPuzzleThree(double answer) throws ChallengeControlException {
-        double area = 24*16;
-        Boolean response = false;
-        if (answer == area) {
-            response = true;
-        } else if (area != answer) {
-            response = false;
+    public static boolean mathPuzzleThree(double number) throws ChallengeControlException, CodeControlException {
+        double area = 24 * 16;
+        boolean answer = false;
+        try {
+            if (number == area) {
+                System.out.println("You see that the area isn't consistent with the real Mona Lisa."
+                        + "\nWhen nobody is looking you peek behind it. It swings open to"
+                        + "\nreveal a steel box containing one of your secret codes."
+                        + "\nGood work!");
+                answer = true;
+                
+            } else if (number != area) {
+                System.out.println("Ughh... Math is hard. It's probably nothing. You leave the painting"
+                        + "\nwell enough alone, and walk away. No codes for you today.");
+            } else {
+                throw new ChallengeControlException();
+            }
+        } catch (ChallengeControlException ex) {
+            Logger.getLogger(ChallengeControl.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return response;
+        return answer;
     }
 
-    public double mathPuzzleTwo(double radius, double radius2, double height1) throws ChallengeControlException {
-        double answer1 = Math.PI * height1 * radius * radius2;//4825.49
-
-        if (answer1 <= 0) {
-            throw new ChallengeControlException("Aw come on! Pleae enter a "
-                    + "\npositive, rational number, you fool!");
-            //} else //(volume != answer1) {
-            //   throw new ChallengeControlException("Oops! You won't be getting "
-            //           + "\nthis code you fool! Too bad for you!");            
-            //else {
-            // System.out.println("A compartment opens and you carefully, "
-            //                    +"\nexercising the utmost of caution, retrieve "
-            //                    +"\nthe code. Be careful! It's a trap! Well, "
-            //                   + "\nmaybe. It could be perfectly safe too.");
+    public static boolean mathPuzzleTwo(double number) throws ChallengeControlException, CodeControlException {
+        double answer1 = Math.PI * 24 * 8 * 8;//4825.49
+        boolean answer = false;
+        try {
+            if (number == answer1) {
+                System.out.println("You successfully calculate the barrel volume. Arbitrarily, it MUST"
+                        + "\ncontain a code! You scoop in and find it resting safely in a plastic bag. "
+                        + "\nGood work, agent! You got the code!");
+                answer = true;
+                
+            } else if (number != answer1) {
+                System.out.println("Nope, you picked the wrong barrel! The alarm goes off and you"
+                        + "\nskedaddle out of there before they can get you.");
+            } else {
+                throw new ChallengeControlException();
+            }
+        } catch (ChallengeControlException ex) {
+            Logger.getLogger(ChallengeControl.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return Math.PI * height1 * radius * radius;
+
+        return answer;
     }
 
-    public static boolean mathPuzzleOne(double number) throws ChallengeControlException {
-        String answer = null;
-        boolean check = false;
+    public static boolean mathPuzzleOne(double number) throws ChallengeControlException, CodeControlException {
+        boolean answer = false;
+
         try {
             if (number == Math.sqrt(20857489)) {
-                answer = "The door unlocks, enter at your own risk.";
-                check = true;
+                System.out.println("The door unlocks and you snatch the code. Good work!");
+                answer = true;
 
             } else if (number != Math.sqrt(20857489)) {
-                answer = "Think again sucker!";
+                System.out.println("You got the wrong number! You hear a beep and see smoke"
+                        + "\nslip through the cracks in the safe. It seems you won't be"
+                        + "\nable to attain this code.");
             } else {
 
                 throw new ChallengeControlException();
@@ -79,10 +99,10 @@ public class ChallengeControl {
         } catch (ChallengeControlException ex) {
             Logger.getLogger(ChallengeControl.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return check;
+        return answer;
     }
 
-    public String dmgCalc(Challenge physChallenge, Player player) throws ChallengeControlException{
+    public static String dmgCalc(Player player) throws ChallengeControlException {
         Random rand = new Random();
         String reply;
         int damage;
@@ -100,7 +120,7 @@ public class ChallengeControl {
                 reply = "You died";
                 gameOver.display();
             } else {
-                reply = physChallenge.getDescription() +"You have " + newHealth + " points of health left.";
+                reply = "You have " + newHealth + " points of health left.";
             }
 
         } else {
@@ -112,101 +132,78 @@ public class ChallengeControl {
                 reply = "You died";
                 gameOver.display();
             } else {
-                reply = physChallenge.getDescription() +"You have " + newHealth + " points of health left.";
+                reply = "You have " + newHealth + " points of health left.";
             }
 
         }
         return reply;
     }
 
-    
-
-    public static void challengeEncounter(int location) {
-        Challenge[] challengeList = SNIPE.getCurrentGame().getChallenges();
+    public static void challengeEncounter(int location) throws ChallengeControlException, CodeControlException {
+        Challenge here = SNIPE.getCurrentGame().getMap().getLocations()[location].getChallenge();
+        int type = here.getType();
+        if (here.isUsedFlag() != true) {
+        ChallengeView challengeView = new ChallengeView(here.getDescription());
+        String string = challengeView.challengeInput();
+        double num;
+        boolean result;
+        switch (type) {
+            case 1:
+                num = Double.parseDouble(string);
+                result = ChallengeControl.mathPuzzleOne(num);
+                if (result = true) {
+                    SNIPE.getPlayer().addObjectToCodeInventory(here.getCode().getItemDescription());
+                }
+                here.setUsedFlag(true);
+                break;
+            case 2:
+                num = Double.parseDouble(string);
+                result = ChallengeControl.mathPuzzleTwo(num);
+                if (result = true) {
+                    SNIPE.getPlayer().addObjectToCodeInventory(here.getCode().getItemDescription());
+                }
+                here.setUsedFlag(true);
+                
+                break;
+            case 3:
+                num = Double.parseDouble(string);
+                result = ChallengeControl.mathPuzzleThree(num);
+                if (result = true) {
+                    SNIPE.getPlayer().addObjectToCodeInventory(here.getCode().getItemDescription());
+                }
+                here.setUsedFlag(true);
+                break;
+            case 4:
+                ChallengeControl.physChallengeControl(string, here);
+                here.setUsedFlag(true);
+                ChallengeControl.dmgCalc(SNIPE.getPlayer());
+                break;
+            default:
+                break;
+        }
+        }
         
-       
-       if (location == 1) {
-           Challenge event = challengeList[3];
-           boolean flag = event.isUsedFlag();
-           String situation = event.getDescription();
-           if (flag != true) {
-           ChallengeView challenge = new ChallengeView(situation, 4, event);
-           challenge.display();
-           }else {
-           }
-       } else if (location == 4) {
-           Challenge event = challengeList[4];
-           boolean flag = event.isUsedFlag();
-           String situation = event.getDescription();
-           if (flag = false) {
-           ChallengeView challenge = new ChallengeView(situation, 4, event);
-           challenge.display();
-           }else {
-           }
-       } else if (location == 8) {
-           Challenge event = challengeList[5];
-           boolean flag = event.isUsedFlag();
-           String situation = event.getDescription();
-           if (flag = false) {
-           ChallengeView challenge = new ChallengeView(situation, 4, event);
-           challenge.display();
-           }else {
-           }
-       } else if (location == 10) {
-           Challenge event = challengeList[6];
-           boolean flag = event.isUsedFlag();
-           String situation = event.getDescription();
-           if (flag = false) {
-           ChallengeView challenge = new ChallengeView(situation, 4, event);
-           challenge.display();
-           }else {
-           }
-       } else if (location == 14) {
-           Challenge event = challengeList[2];
-           boolean flag = event.isUsedFlag();
-           String situation = event.getDescription();
-           if (flag = false) {
-           ChallengeView challenge = new ChallengeView(situation, 3, event);
-           challenge.display();
-           }else {
-           }
-       } else if (location == 15) {
-           Challenge event = challengeList[8];
-           boolean flag = event.isUsedFlag();
-           String situation = event.getDescription();
-           if (flag = false) {
-           ChallengeView challenge = new ChallengeView(situation, 4, event);
-           challenge.display();
-           }else {
-           }
-       } else if (location == 17) {
-           Challenge event = challengeList[0];
-           boolean flag = event.isUsedFlag();
-           String situation = event.getDescription();
-           if (flag = false) {
-           ChallengeView challenge = new ChallengeView(situation, 1, event);
-           challenge.display();
-           }else {
-           }
-       } else if (location == 21) {
-           Challenge event = challengeList[7];
-           boolean flag = event.isUsedFlag();
-           String situation = event.getDescription();
-           if (flag = false) {
-           ChallengeView challenge = new ChallengeView(situation, 4, event);
-           challenge.display();
-           }else {
-           }
-       } else if (location == 25) {
-           Challenge event = challengeList[1];
-           boolean flag = event.isUsedFlag();
-           String situation = event.getDescription();
-           if (flag = false) {
-           ChallengeView challenge = new ChallengeView(situation, 2, event);
-           challenge.display();
-           }else {
-           }
-       } else {}
+        
     }
-  
+
+
+    private static void physChallengeControl(String string, Challenge here) {
+                if (string == null) {
+                    System.out.println("Looks like you didn't get this one. Too bad, so sad.");
+                } else switch (string) {
+            case "O":
+                System.out.println(here.getChoiceOne());
+                SNIPE.getPlayer().addObjectToCodeInventory(here.getCode().getItemDescription());
+                break;
+            case "T":
+                System.out.println(here.getChoiceTwo());
+                SNIPE.getPlayer().addObjectToCodeInventory(here.getCode().getItemDescription());
+                break;
+            default:
+                System.out.println("Looks like you didn't make the right decision fast enough. "
+                        + "\nYou've let this code slip through your fingers...");
+                break;
+        }
+    }
+
 }
