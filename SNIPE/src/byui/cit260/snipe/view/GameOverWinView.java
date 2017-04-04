@@ -14,7 +14,8 @@ public class GameOverWinView {
     private final String displayMessage;
 
     public GameOverWinView() {
-        this.displayMessage = "\nCONGRATULATIONS! YOU WON! Welcome to the elite S.N.I.P.E.";
+        this.displayMessage = "\nThe code you entered unlocks the lock box with a satisfying 'click'"
+                + "\nCONGRATULATIONS! Welcome to the elite S.N.I.P.E., agent!";
     }
 
     private void MainMenuView() {
