@@ -12,7 +12,8 @@ package byui.cit260.snipe.view;
 public class GameOverLoseView extends View {
 
     public GameOverLoseView() {
-        super("\nEPIC Mission FAIL! Go back to the Main Menu and try again.");
+        super("\nEPIC Mission FAIL! We are sorry, but the code you have entered is wrong. You will"
+                + "\nnot become a SNIPE Agent at this time. Go back to the Main Menu and try again.");
     }
 
     private void MainMenuView() {
