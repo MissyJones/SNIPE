@@ -24,6 +24,8 @@ import snipe.SNIPE;
  */
 public class ChallengeControl {
 
+    private boolean response;
+
     public int calcArea(int length, int width) throws ChallengeControlException {
 
         if (length <= 0 || width <= 0 || length > 10 || width > 10) {

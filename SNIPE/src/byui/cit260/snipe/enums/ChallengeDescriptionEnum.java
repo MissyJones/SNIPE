@@ -35,8 +35,8 @@ public enum ChallengeDescriptionEnum implements Serializable {
             + "\nYou notice a keg that you THINK is different from the rest. "
             + "\nYour eagle-eye tells you the diameter is 16 inches and its "
             + "\nheight is 24 inches. Is this the keg that hold your code? "
-            + "\nEnter its volume to find out. Note: just enter the number,"
-            + "\nto two decimal places. No units required."),
+            + "\nEnter its volume to find out. Note: Note: just enter your "
+            + "\nresponse out to two decimal places. No units required."),
     mentalThree("You stand at the Louvre, pondering the Mona Lisa. Has it "
             + "\nalways been this size? If it has been replaced.... Then there "
             + "\nmust be a dossier behind it! You know that the original Mona "
