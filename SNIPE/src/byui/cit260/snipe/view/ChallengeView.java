@@ -63,6 +63,5 @@ public class ChallengeView extends View {
     public boolean doAction(String value) {
         return true;
     }
-}
 
-   
+}
