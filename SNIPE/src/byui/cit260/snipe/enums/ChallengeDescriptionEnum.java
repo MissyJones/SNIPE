@@ -16,7 +16,7 @@ public enum ChallengeDescriptionEnum implements Serializable {
             + "\nThey don't always make your job easy, but when they"
             + "\ndo, they really do. As you gaze at it, you think of the "
             + "\nnumerous possibilities the code to unlock it could be. You "
-            + "\nhave to get into the to find the the code!"
+            + "\nhave to get into the safe to find the the code!"
             + "\nBy covertly watching the residents come and go throughout the "
             + "\nday you know that it’s a 4-digit number. Suddenly, a rock "
             + "\ncomes flying through the window and slams into "
@@ -26,7 +26,7 @@ public enum ChallengeDescriptionEnum implements Serializable {
             + "\nthe number 20,857,489. What could it mean?  What’s up with "
             + "\nthe strange yell you heard?! Could it be a clue?"),
     mentalTwo("You have made your way into a storehouse full of kegs, which are "
-            + "\nperfect cylinders and are, oddly, filled to the top, looking "
+            + "\nperfect cylinders and are, oddly, filled to the top;you're looking "
             + "\nfor your code. The keg you need is slightly different from "
             + "\nregular kegs and has been specially weighted to disguise the "
             + "\nfact it has a secret compartment. Since you were your high "
@@ -34,7 +34,7 @@ public enum ChallengeDescriptionEnum implements Serializable {
             + "\nvolume of a regular full-sized keg is 4,770.58 cubic inches. "
             + "\nYou notice a keg that you THINK is different from the rest. "
             + "\nYour eagle-eye tells you the diameter is 16 inches and its "
-            + "\nheight is 24 inches. Is this the keg that hold your code? "
+            + "\nheight is 24 inches. Is this the keg that holds your code? "
             + "\nEnter its volume to find out. Note: Note: just enter your "
             + "\nresponse out to two decimal places. No units required."),
     mentalThree("You stand at the Louvre, pondering the Mona Lisa. Has it "
@@ -59,7 +59,7 @@ public enum ChallengeDescriptionEnum implements Serializable {
             + "\nthe outside along the circumference of the roof of this famous "
             + "\nstructure of the Toronto skyline. What structure is this? "),
     BRAZILRIDDLE("This widely known iconic statue stands in Rio de Janeiro. "
-            + "]nWhat is it called?"),
+            + "\nWhat is it called?"),
     AUSTRALIARIDDLE("What iconic landmark takes up the whole of Bennelong "
             + "\nPoint in Sydney Harbor?"),
     RUSSIARIDDLE("Vladimir Ilyich Ulyanov is entombed at Red Square, and is "
@@ -78,7 +78,7 @@ public enum ChallengeDescriptionEnum implements Serializable {
             + "\n|   T   |         Option Two        |"
             + "\n*-----------------------------------*"),
     physOneOptionOne("You leap gracefully off the balcony, landing securely on the chandelier."
-            + "\nUnfortunately, the chandelier was not designed to handle your weight, and"
+            + "\nUnfortunately, the chandelier was not designed to handle your weight and"
             + "\npromptly falls to the ground. You manage to grab the package and jump away"
             + "\nbefore the shards of the shattered chandelier rip you to shreds. You have"
             + "\n managed to obtain the code! As you land, you feel a twist and a pop,"
@@ -106,11 +106,11 @@ public enum ChallengeDescriptionEnum implements Serializable {
             + "\nYou hear shouts. They must be asking where you went. Then the door opens."
             + "\nThe other stall doors are open, so it's pretty obvious where you're hiding."
             + "\nYou leap out to take your pursuers by surprise and manage to subdue both of them."
-            + "\nBu not before taking a bullet. Inside the coat pocket of one of your"
+            + "\nBut not before taking a bullet. Inside the coat pocket of one of your"
             + "\npursuers you find a USB drive. This must be a code!"),
     physTwoOptionTwo("You run out the back of the store, only to find three other guys waiting for you."
             + "\n You pull a sick ninja move and take out all three at once, but the scuffle has called your"
-            + "\noriginal tail from inside the store. They manaage to get a shot off before you take care of them."
+            + "\noriginal tail from inside the store. They manage to get a shot off before you take care of them."
             + "\nYou find a USB inside one of their pockets. This must be a code."),
     physThree("You notice one of the soldiers glancing at you inconspicuously. This must be the inside man"
             + "\nyou were supposed to meet. You casually walk up and he hands you the code. Just"
@@ -125,14 +125,14 @@ public enum ChallengeDescriptionEnum implements Serializable {
             + "\n*-----------------------------------*"),
     physThreeOptionOne("You punch the undercover guard in the face, and then duck out of the way as he"
             + "\ntries to tackle you. He manages to tackle a large man behind you who immediately"
-            + "\nbegins to fight back. You take a couple hard hits in the fray, butyou are able"
+            + "\nbegins to fight back. You take a couple hard hits in the fray, but you are able"
             + "\nto duck away and escape unseen."),
     physThreeOptionTwo("You break into a dead sprint, away from the suspicoius figure. "
             + "\nTurns out that it wasn't anything, as he did not pursue. But in your hurry, you trip"
             + "\non the steps and break your face. Embarassing. Hope nobody saw that."),
     physFour("Raindrops begin to speckle the window of your cab as the driver pulls up to the curb next"
             + "\nto your stop. You yell to the cabby 'Yo Homes, smell ya later!'"
-            + "\nas you throw some money through the window. Just as you turn toward the curb an old lady"
+            + "\nas you throw some money through the window. Just as you turn toward the curb, an old lady"
             + "\non a ten speed slams into you....hard. Your wallet flys out of your hands. Before you know"
             + "\nwhat's happening, a black SUV drives up and throws open the door. Granny grabs your wallet and"
             + "\ndives into the vechicle as it peels away with a screech. All your IDs, your money, your"
@@ -160,9 +160,9 @@ public enum ChallengeDescriptionEnum implements Serializable {
             + "\nWith a spin the SUV stops suddenly and something flys from the "
             + "\nopen window. A dead animal? No, a wig rolled up in supportive hosiery."
             + "\nIn the center is your wallet and an USB drive."),
-    physFive("You are starvin' like marvin. You run into a near by restraunt for a quick"
+    physFive("You are starvin' like marvin. You run into a nearby restraunt for a quick"
             + "\nsnack. The sign says Italian. You're hoping for pizza, but when the waiter"
-            + "\nappears with your order you wonder if they missunderstood your poor"
+            + "\nappears with your order you wonder if they misunderstood your poor"
             + "\nattempt at the language. There might be dough and cheese under that grease,"
             + "\nit's pretty hard to say. You stalk back to the kitchen to have a"
             + "\nword with the chef. 'What is this....?' you start to demand. No one is there."
