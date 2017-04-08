@@ -5,68 +5,34 @@
  */
 package byui.cit260.snipe.view;
 
-import java.io.BufferedReader;
+import byui.cit260.snipe.enums.CodeList;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintWriter;
 import snipe.SNIPE;
-import byui.cit260.snipe.exceptions.CodeControlException;
-import byui.cit260.snipe.model.Code;
-import java.io.IOException;
-import byui.cit260.snipe.model.Player;
-import java.io.FileNotFoundException;
-import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import snipe.SNIPE;
-import java.util.ArrayList;
-import static snipe.SNIPE.inFile;
-import java.util.Scanner;
-import java.io.Reader;
+
 /**
  *
  * @author elizabethkirby
  */
 public class CollectedCodesView extends View {
-
-    Scanner keyboard = new Scanner(System.in);
-    
-    private static PrintWriter outFile = null;
-    private static BufferedReader infile = null;
-
-    private static PrintWriter logFile = null;
     
     public CollectedCodesView(String message) {
-        super(message + "\nPress 'R' to return to game;\n");
+        super(message);
+    }
     
-        try {
-            SNIPE.inFile = new BufferedReader(new InputStreamReader(System.in));
-            SNIPE.outFile = new PrintWriter(System.out, true);
-      
-            String filePath = "log.txt";
-        
-            SNIPE.logFile = new PrintWriter(filePath);
-        } catch (Exception e) {
-            System.out.println("Gaceful Exeption: " + e.toString() +
-                                "\nGraceful Cause: " + e.getCause() +
-                                "\nGraceful Message: " + e.getMessage());
-            e.printStackTrace();;
-    }
-        finally {
-        try {
-            if (SNIPE.inFile != null)
-            SNIPE.inFile.close();
-            if (SNIPE.outFile != null)
-            SNIPE.outFile.close();
-            if (SNIPE.logFile != null)
-                SNIPE.logFile.close();
-        } catch (IOException ex) {
-            System.out.println("Gracefull error closing files");
-            return;
-        }
-      }
-    }
-public boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
         choice = choice.toUpperCase();
         switch (choice) {
+            case "P":
+                this.console.println("");
+                break;
             case "R":
                 this.returnToMenu();
                 break;
@@ -81,47 +47,26 @@ public boolean doAction(String choice) {
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
     }
-
-    public static PrintWriter getOutFile() {
-        return outFile;
-    }
-
-    public static void setOutFile(PrintWriter outFile) {
-        SNIPE.outFile = outFile;
-    }
-
-    public static BufferedReader getInFile() {
-        return inFile;
-    }
-
-    public static void setInFile(BufferedReader inFile) {
-        SNIPE.inFile = inFile;
-    }
-    public static PrintWriter getLogFile() {
-        return logFile;
-    }
-    public static void setLogFile(PrintWriter logFile) {
-        SNIPE.logFile = logFile;
-    }
-    
-    public String getInput() {
-        boolean valid = false;
-        String selection = null;
-        try {
-            while (!valid) {
-                selection = this.keyboard.readLine();
-                selection = selection.trim();
-            if (selection.length() < 1) {
-                ErrorView.display(this.getClass().getName(),
-                            "We gracefully ask that you enter a value.");
-                continue;
-            }
-            break;
-            }
-            } catch (Exception e) {
-                ErrorView.display(this.getClass().getName(),
-                                "Graceful Error reading input: " + e.getMessage());
-            }
-        return null;
+    private void printCodeList(ArrayList<CodeList> enums,
+                                String outputLocation) {
+        //create BufferedReader object for input file
+        try (PrintWriter out = new PrintWriter(outputLocation)) {
+            //print title and column headings
+            out.println("\n\n               Code List                  ");
+            out.printf("%n%-66s%15%", "Code", "Location");
+            out.printf("%n%-66s%15s%", "-------", "------------");
+            Iterable<String> CodeList = null;
+            
+            //print the code and its location
+            for (String Enums : CodeList) {
+                out.printf("n%-20s%110%s", enums.getCodeList()
+                                         , enums.getLocation());
         }
+    }   catch (IOException ex) {   
+            System.out.println("Graceful I/O error: " + ex.getMessage()); 
+            //Logger.getLogger(CollectedCodesView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
     }
+}
+  
