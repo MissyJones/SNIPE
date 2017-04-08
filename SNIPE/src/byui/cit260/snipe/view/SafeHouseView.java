@@ -29,7 +29,8 @@ public class SafeHouseView extends View {
                 + "\nmen's and women's dormitories (furnished with comfortable "
                 + "wooden bedsteads, all covered in patchwork quilts). Yes, the"
                 + "\nSafe House is the common room for the House of Hufflepuff."
-                + "\nNow you know you're at Hogwarrs. Welcome Muggle!"
+                + "\nNow you know you're at Hogwarrs in a parallel universe."
+                + "\nWelcome Muggle!"
                 + "\nNow, are you feeling rested and healed? Are you ready to"
                 + "\nreturn to the game? Are you reall ready? Are you sure?"
                 + "\nPress 'R' to return to the game.");
